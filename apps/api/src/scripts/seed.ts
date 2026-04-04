@@ -180,7 +180,7 @@ async function main() {
             xpReward: lesson.xpReward,
             contentHash: lesson.contentHash,
             exercises: content,
-            isPublished: lesson.id === 'l1-u1-l1',
+            isPublished: lesson.id.startsWith('l1-'),
           },
         });
       }

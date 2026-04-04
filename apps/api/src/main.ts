@@ -7,7 +7,30 @@ import { errorHandler } from './middleware/errorHandler.js';
 const host = process.env['HOST'] ?? 'localhost';
 const port = process.env['PORT'] ? Number(process.env['PORT']) : 3001;
 
+// Allowed origins: web app in dev and any configured prod origin
+const ALLOWED_ORIGINS = new Set([
+  'http://localhost:5173',
+  ...(process.env['CORS_ORIGIN'] ? [process.env['CORS_ORIGIN']] : []),
+]);
+
 const app = express();
+
+// CORS — allow the web app to call the API
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (origin && ALLOWED_ORIGINS.has(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Vary', 'Origin');
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  res.setHeader('Access-Control-Max-Age', '86400');
+  if (req.method === 'OPTIONS') {
+    res.status(204).end();
+    return;
+  }
+  next();
+});
 
 // Raw body needed for Clerk webhook signature verification
 app.use('/api/v1/auth/webhook', express.raw({ type: 'application/json' }));

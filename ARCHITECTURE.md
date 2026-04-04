@@ -561,12 +561,14 @@ apps/web/src/
 
 > **Implemented:** Landing page at `apps/web/src/pages/Home.tsx` with hero section, features grid, full 6-level curriculum overview, and bottom CTA — Clerk sign-in buttons present but disabled (auth wired in Phase 5). Dashboard at `apps/web/src/pages/Dashboard.tsx` with inline XP bar (progress fill + star icon), streak badge (flame icon + count), words-learned counter, and a Duolingo-style level map: Level 1 fully expanded with 5 units × 3 lessons each, active lesson pulsing with play icon, locked lessons shown with lock icons, Levels 2–6 collapsed and locked. Routing via `react-router-dom` in `apps/web/src/app/app.tsx` (routes: `/` → Home, `/dashboard` → Dashboard). shadcn/ui components (`Button`, `Badge`, `Card`) and `lucide-react` icons used throughout. Mock user data in place; live API + Clerk wiring deferred to Phase 5.
 
-### Phase 5 — Gamification + Word Bank
+### Phase 5 — Gamification + Word Bank ✅ COMPLETED
 1. Streak tracking (timezone-aware, stored as `DATE` not `TIMESTAMP`)
 2. XP accumulation with level thresholds
 3. Badge award triggers (streak milestones, words learned, lessons complete)
 4. `WordBank.tsx` — all learned words, filterable by root/type/mastery
 5. Daily review queue page (`Review.tsx`) — wired to SRS, but basic for MVP1
+
+> **Implemented:** Full Lesson runner (`apps/web/src/pages/Lesson.tsx`) with intro screen, useReducer state machine (idle → running → submitting → complete), all 5 exercise components (`WordTranslation`, `FillBlank`, `GrammarRole`, `RootRecognition`, `WordReorder` with @dnd-kit/sortable), `LearnCard` for learn-mode steps, `AyahCard` with teal word highlighting, `FeedbackBanner` (green auto-advance / amber with explanation), `WordDrawer` slide-up panel with root tree. `WordBank.tsx` with search + word-type filter + mastery level badges. `Review.tsx` daily SRS queue runner. Dashboard wired to live API (`/api/v1/levels` + `/api/v1/users/me/stats`). `AuthGuard` component protecting all private routes. CORS middleware added to API. All Level 1 lessons published in seed (`isPublished: lesson.id.startsWith('l1-')`). Vite aliases added for `@org/api-types` and `@org/srs`. Builds cleanly at 454 kB gzip-136 kB.
 
 ---
 

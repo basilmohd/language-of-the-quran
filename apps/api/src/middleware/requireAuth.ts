@@ -22,14 +22,12 @@ export const requireAuth = [
       fail(res, 'UNAUTHORIZED', 'Authentication required', 401);
       return;
     }
-    const user = await prisma.appUser.findUnique({
+    const user = await prisma.appUser.upsert({
       where: { clerkId },
+      create: { clerkId },
+      update: {},
       select: { id: true, clerkId: true, timezone: true },
     });
-    if (!user) {
-      fail(res, 'USER_NOT_FOUND', 'User record not found — try signing out and back in', 404);
-      return;
-    }
     req.appUser = user;
     next();
   },
