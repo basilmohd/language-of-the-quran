@@ -1,0 +1,154 @@
+[
+  {
+    "id": "word-kitab",    "rootId": "root-ktb",  "arabic": "كِتَاب",     "transliteration": "kitāb",
+    "meaning": "book / scripture",        "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 45
+  },
+  {
+    "id": "word-rabb",     "rootId": "root-rbb",  "arabic": "رَبّ",       "transliteration": "rabb",
+    "meaning": "Lord / Sustainer",        "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 5
+  },
+  {
+    "id": "word-nur",      "rootId": "root-nwr",  "arabic": "نُور",       "transliteration": "nūr",
+    "meaning": "light",                   "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 210
+  },
+  {
+    "id": "word-rahma",    "rootId": "root-rhm",  "arabic": "رَحْمَة",    "transliteration": "raḥma",
+    "meaning": "mercy / compassion",      "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 90
+  },
+  {
+    "id": "word-allah",    "rootId": "root-alh",  "arabic": "اَللّٰه",    "transliteration": "Allāh",
+    "meaning": "Allah (God)",             "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 1
+  },
+  {
+    "id": "word-rahman",   "rootId": "root-rhm",  "arabic": "اَلرَّحْمَٰن","transliteration": "ar-Raḥmān",
+    "meaning": "The Most Gracious",       "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 8
+  },
+  {
+    "id": "word-rahim",    "rootId": "root-rhm",  "arabic": "اَلرَّحِيم", "transliteration": "ar-Raḥīm",
+    "meaning": "The Most Merciful",       "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 9
+  },
+  {
+    "id": "word-hamd",     "rootId": "root-hmd",  "arabic": "حَمْد",      "transliteration": "ḥamd",
+    "meaning": "praise / gratitude",      "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 65
+  },
+  {
+    "id": "word-sama",     "rootId": "root-smw",  "arabic": "سَمَاء",     "transliteration": "samāʾ",
+    "meaning": "sky / heaven",            "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 25
+  },
+  {
+    "id": "word-ard",      "rootId": "root-rdh",  "arabic": "أَرْض",      "transliteration": "arḍ",
+    "meaning": "earth / land",            "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 22
+  },
+  {
+    "id": "word-maa",      "rootId": "root-mwy",  "arabic": "مَاء",       "transliteration": "māʾ",
+    "meaning": "water",                   "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 75
+  },
+  {
+    "id": "word-nar",      "rootId": "root-nwr",  "arabic": "نَار",       "transliteration": "nār",
+    "meaning": "fire",                    "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 95
+  },
+  {
+    "id": "word-shams",    "rootId": "root-shms", "arabic": "شَمْس",      "transliteration": "shams",
+    "meaning": "sun",                     "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 185
+  },
+  {
+    "id": "word-qamar",    "rootId": "root-qmr",  "arabic": "قَمَر",      "transliteration": "qamar",
+    "meaning": "moon",                    "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 195
+  },
+  {
+    "id": "word-muslim",   "rootId": "root-slm",  "arabic": "مُسْلِم",    "transliteration": "muslim",
+    "meaning": "one who submits / Muslim","wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 70
+  },
+  {
+    "id": "word-muslima",  "rootId": "root-slm",  "arabic": "مُسْلِمَة",  "transliteration": "muslima",
+    "meaning": "Muslim woman",            "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 72
+  },
+  {
+    "id": "word-mumin",    "rootId": "root-amn",  "arabic": "مُؤْمِن",    "transliteration": "muʾmin",
+    "meaning": "believer (male)",         "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 55
+  },
+  {
+    "id": "word-mumina",   "rootId": "root-amn",  "arabic": "مُؤْمِنَة",  "transliteration": "muʾmina",
+    "meaning": "believer (female)",       "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 57
+  },
+  {
+    "id": "word-rajul",    "rootId": "root-rjl",  "arabic": "رَجُل",      "transliteration": "rajul",
+    "meaning": "man",                     "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 120
+  },
+  {
+    "id": "word-imraa",    "rootId": null,         "arabic": "اِمْرَأَة",  "transliteration": "imraʾa",
+    "meaning": "woman",                   "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 125
+  },
+  {
+    "id": "word-walad",    "rootId": "root-wld",  "arabic": "وَلَد",      "transliteration": "walad",
+    "meaning": "child / son",             "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 130
+  },
+  {
+    "id": "word-quran",    "rootId": "root-qra",  "arabic": "قُرْآن",     "transliteration": "Qurʾān",
+    "meaning": "the Quran / recitation",  "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 30
+  },
+  {
+    "id": "word-alam",     "rootId": "root-alm",  "arabic": "عَالَم",     "transliteration": "ʿālam",
+    "meaning": "world / universe",        "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 40
+  },
+  {
+    "id": "word-salam",    "rootId": "root-slm",  "arabic": "سَلَام",     "transliteration": "salām",
+    "meaning": "peace",                   "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 80
+  },
+  {
+    "id": "word-ibrahim",  "rootId": null,         "arabic": "إِبْرَاهِيم","transliteration": "Ibrāhīm",
+    "meaning": "Abraham (Prophet)",       "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 155
+  },
+  {
+    "id": "word-muhammad", "rootId": "root-hmd",  "arabic": "مُحَمَّد",   "transliteration": "Muḥammad",
+    "meaning": "Muhammad (the Prophet)",  "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 170
+  },
+  {
+    "id": "word-maryam",   "rootId": null,         "arabic": "مَرْيَم",    "transliteration": "Maryam",
+    "meaning": "Mary / Maryam",           "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 200
+  },
+  {
+    "id": "word-musa",     "rootId": null,         "arabic": "مُوسَى",     "transliteration": "Mūsā",
+    "meaning": "Moses (Prophet)",         "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 160
+  },
+  {
+    "id": "word-ilm",      "rootId": "root-alm",  "arabic": "عِلْم",      "transliteration": "ʿilm",
+    "meaning": "knowledge",               "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 50
+  },
+  {
+    "id": "word-haqq",     "rootId": "root-hqq",  "arabic": "حَقّ",       "transliteration": "ḥaqq",
+    "meaning": "truth / right",           "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 35
+  },
+  {
+    "id": "word-yawm",     "rootId": "root-ywm",  "arabic": "يَوْم",      "transliteration": "yawm",
+    "meaning": "day",                     "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 15
+  },
+  {
+    "id": "word-bayt",     "rootId": "root-byt",  "arabic": "بَيْت",      "transliteration": "bayt",
+    "meaning": "house / home",            "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 145
+  },
+  {
+    "id": "word-abd",      "rootId": "root-abd",  "arabic": "عَبْد",      "transliteration": "ʿabd",
+    "meaning": "servant / worshipper",    "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 60
+  },
+  {
+    "id": "word-ahl",      "rootId": null,         "arabic": "أَهْل",      "transliteration": "ahl",
+    "meaning": "family / people / folk",  "wordType": "ISM", "gender": "MASCULINE", "number": "PLURAL",   "frequencyRank": 85
+  },
+  {
+    "id": "word-rasul",    "rootId": "root-rsl",  "arabic": "رَسُول",     "transliteration": "rasūl",
+    "meaning": "messenger / apostle",     "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 12
+  },
+  {
+    "id": "word-nabi",     "rootId": "root-nba",  "arabic": "نَبِيّ",     "transliteration": "nabī",
+    "meaning": "prophet",                 "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 100
+  },
+  {
+    "id": "word-qalb",     "rootId": "root-qlb",  "arabic": "قَلْب",      "transliteration": "qalb",
+    "meaning": "heart",                   "wordType": "ISM", "gender": "MASCULINE", "number": "SINGULAR", "frequencyRank": 110
+  },
+  {
+    "id": "word-nafs",     "rootId": "root-nfs",  "arabic": "نَفْس",      "transliteration": "nafs",
+    "meaning": "soul / self",             "wordType": "ISM", "gender": "FEMININE",  "number": "SINGULAR", "frequencyRank": 20
+  }
+]

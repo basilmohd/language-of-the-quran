@@ -16,6 +16,14 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@org/source"]
+    "baseUrl": ".",
+    "customConditions": ["@org/source"],
+    "paths": {
+      "@org/api-types": ["libs/api-types/src/index.ts"],
+      "@org/srs": ["libs/srs/src/index.ts"],
+      "@org/db": ["libs/db/src/index.ts"],
+      "@org/quran-data": ["libs/quran-data/src/index.ts"],
+      "@org/content": ["libs/content/src/index.ts"]
+    }
   }
 }

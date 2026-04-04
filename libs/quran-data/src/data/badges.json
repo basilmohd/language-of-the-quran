@@ -1,0 +1,72 @@
+[
+  {
+    "id": "badge-first-lesson",
+    "name": "First Step",
+    "description": "Complete your very first lesson.",
+    "iconSlug": "star",
+    "condition": { "type": "lessons_completed", "threshold": 1 }
+  },
+  {
+    "id": "badge-first-word",
+    "name": "Word Collector",
+    "description": "Learn your first word.",
+    "iconSlug": "book-open",
+    "condition": { "type": "words_learned", "threshold": 1 }
+  },
+  {
+    "id": "badge-10-words",
+    "name": "Rising Scholar",
+    "description": "Learn 10 Quranic words.",
+    "iconSlug": "book",
+    "condition": { "type": "words_learned", "threshold": 10 }
+  },
+  {
+    "id": "badge-50-words",
+    "name": "Vocabulary Builder",
+    "description": "Learn 50 Quranic words.",
+    "iconSlug": "library",
+    "condition": { "type": "words_learned", "threshold": 50 }
+  },
+  {
+    "id": "badge-100-words",
+    "name": "Language Explorer",
+    "description": "Learn 100 Quranic words.",
+    "iconSlug": "graduation-cap",
+    "condition": { "type": "words_learned", "threshold": 100 }
+  },
+  {
+    "id": "badge-streak-3",
+    "name": "3-Day Streak",
+    "description": "Study for 3 days in a row.",
+    "iconSlug": "flame",
+    "condition": { "type": "streak", "threshold": 3 }
+  },
+  {
+    "id": "badge-streak-7",
+    "name": "Week Warrior",
+    "description": "Study for 7 days in a row.",
+    "iconSlug": "zap",
+    "condition": { "type": "streak", "threshold": 7 }
+  },
+  {
+    "id": "badge-streak-30",
+    "name": "Steadfast Learner",
+    "description": "Study for 30 days in a row.",
+    "iconSlug": "trophy",
+    "condition": { "type": "streak", "threshold": 30 }
+  },
+  {
+    "id": "badge-level-1",
+    "name": "Ism Master",
+    "description": "Complete all lessons in Level 1: The Building Blocks.",
+    "iconSlug": "award",
+    "condition": { "type": "level_completed", "levelNumber": 1 }
+  },
+  {
+    "id": "badge-level-2",
+    "name": "Verb Conqueror",
+    "description": "Complete all lessons in Level 2: The Engine.",
+    "iconSlug": "medal",
+    "condition": { "type": "level_completed", "levelNumber": 2 }
+  }
+]

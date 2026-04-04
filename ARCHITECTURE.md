@@ -517,7 +517,7 @@ apps/web/src/
 
 ## MVP1 Build Phases
 
-### Phase 1 — NX Monorepo Scaffold
+### Phase 1 — NX Monorepo Scaffold ✅ COMPLETED
 1. `npx create-nx-workspace` with npm
 2. `nx generate @nx/react:app web` + `nx generate @nx/node:app api`
 3. `nx generate @nx/js:lib` for `api-types`, `srs`, `db`, `quran-data`, `content`
@@ -525,9 +525,11 @@ apps/web/src/
 5. Prisma in `apps/api`, Clerk SDK in both web and api
 6. Shared `tsconfig.base.json`
 
-### Phase 2 — Database & Seeding
+> **Implemented:** NX workspace initialized with `apps/web` (React + Vite) and `apps/api` (Node.js + Express). All five libraries scaffolded: `api-types`, `db`, `srs`, `quran-data`, `content`. Tailwind CSS and shadcn/ui wired into `apps/web`. Shared `tsconfig.base.json` in place.
+
+### Phase 2 — Database & Seeding ✅ COMPLETED
 1. Write full Prisma schema (all tables above)
-2. `prisma migrate dev` against local PostgreSQL
+2. `prisma migrate dev` against neondb.
 3. Seed scripts:
    - `libs/quran-data` → `QuranSurah`, `QuranVerse`, `Root`, `Word`, `VerseWord`
    - `libs/content` level-1 JSON → `Level`, `Unit`, `Lesson`
@@ -535,7 +537,9 @@ apps/web/src/
 4. Author 15–20 Level 1 lesson JSON files
 5. `prisma studio` to verify data integrity
 
-### Phase 3 — Backend API
+> **Implemented:** Full Prisma schema written covering all corpus, curriculum, user, gamification, SRS, and infrastructure tables. Initial migration applied (`20260404084931_init`). Seed script at `apps/api/src/scripts/seed.ts` covering roots, words, and badge definitions. 15 Level 1 lesson JSON files authored across 5 units in `libs/content/src/curriculum/level-1/`. Badge definitions seeded from `libs/quran-data/src/data/badges.json`.
+
+### Phase 3 — Backend API ✅ COMPLETED
 1. Clerk webhook handler → `AppUser` creation
 2. Auth middleware (Clerk JWT verification)
 3. Redis setup (Upstash) + rate limiter middleware
@@ -543,6 +547,8 @@ apps/web/src/
 5. Badge award service (runs post-lesson completion)
 6. Streak update service (uses user timezone for date calculation)
 7. Audio proxy endpoint
+
+> **Implemented:** Clerk webhook handler in `apps/api/src/routes/v1/auth.ts`. Auth middleware (`requireAuth.ts`) and global error handler (`errorHandler.ts`) in `apps/api/src/middleware/`. Redis client configured in `apps/api/src/lib/redis.ts` (Upstash). All seven route modules live in `apps/api/src/routes/v1/`: `auth`, `curriculum`, `corpus`, `reviews`, `users`, `audio`, `feedback`. Badge award logic in `apps/api/src/services/badgeService.ts`; timezone-aware streak updates in `streakService.ts`.
 
 ### Phase 4 — Web UI (Level 1 playable)
 1. Clerk sign-in/sign-up on `Home.tsx`
@@ -642,3 +648,5 @@ apps/web/src/
 | Soft deletes | `deleted_at` on all user tables | Never lose user progress; support data restore requests |
 | Timezone | Store as `DATE` in user's TZ for streak; `timestamptz` everywhere else | Prevents streak bugs across timezones |
 | Infra | Vercel + Railway + Neon + Upstash + Cloudflare R2 | ~$0/month for MVP1; migrate to AWS at 1k+ MAU |
+
+

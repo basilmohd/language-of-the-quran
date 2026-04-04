@@ -48,3 +48,14 @@ Thumbs.db
 .nx/polygraph
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
+
+# Environment files — never commit secrets
+.env
+.env.local
+.env.*.local
+apps/**/.env
+apps/**/.env.local
+
+# Prisma generated client (keep stub, ignore generated output)
+libs/db/src/generated/prisma/
+!libs/db/src/generated/prisma/index.ts

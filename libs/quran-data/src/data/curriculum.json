@@ -1,0 +1,187 @@
+{
+  "levels": [
+    {
+      "id": "level-1",
+      "number": 1,
+      "title": "The Building Blocks (Ism)",
+      "description": "Learn the foundation of Quranic Arabic — nouns (Ism). Master the 4 noun properties: gender, number, definiteness, and grammatical case. Learn ~65 high-frequency Quranic nouns.",
+      "units": [
+        {
+          "id": "unit-1-1",
+          "number": 1,
+          "title": "Your First Words",
+          "lessons": [
+            {
+              "id": "l1-u1-l1",
+              "number": 1,
+              "title": "What is an Ism?",
+              "xpReward": 10,
+              "contentHash": "lesson-1-v1"
+            },
+            {
+              "id": "l1-u1-l2",
+              "number": 2,
+              "title": "Names of Allah",
+              "xpReward": 10,
+              "contentHash": "lesson-2-v1"
+            },
+            {
+              "id": "l1-u1-l3",
+              "number": 3,
+              "title": "Sky, Earth & Creation",
+              "xpReward": 10,
+              "contentHash": "lesson-3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-1-2",
+          "number": 2,
+          "title": "Gender & Number",
+          "lessons": [
+            {
+              "id": "l1-u2-l1",
+              "number": 1,
+              "title": "Masculine and Feminine",
+              "xpReward": 10,
+              "contentHash": "lesson-4-v1"
+            },
+            {
+              "id": "l1-u2-l2",
+              "number": 2,
+              "title": "Singular, Dual, Plural",
+              "xpReward": 10,
+              "contentHash": "lesson-5-v1"
+            },
+            {
+              "id": "l1-u2-l3",
+              "number": 3,
+              "title": "Sound and Broken Plurals",
+              "xpReward": 15,
+              "contentHash": "lesson-6-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-1-3",
+          "number": 3,
+          "title": "Definiteness",
+          "lessons": [
+            {
+              "id": "l1-u3-l1",
+              "number": 1,
+              "title": "Al — The Definite Article",
+              "xpReward": 10,
+              "contentHash": "lesson-7-v1"
+            },
+            {
+              "id": "l1-u3-l2",
+              "number": 2,
+              "title": "Sun and Moon Letters",
+              "xpReward": 15,
+              "contentHash": "lesson-8-v1"
+            },
+            {
+              "id": "l1-u3-l3",
+              "number": 3,
+              "title": "Proper Nouns in the Quran",
+              "xpReward": 10,
+              "contentHash": "lesson-9-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-1-4",
+          "number": 4,
+          "title": "Grammatical Case",
+          "lessons": [
+            {
+              "id": "l1-u4-l1",
+              "number": 1,
+              "title": "The Three Cases",
+              "xpReward": 15,
+              "contentHash": "lesson-10-v1"
+            },
+            {
+              "id": "l1-u4-l2",
+              "number": 2,
+              "title": "Case Endings on Ism",
+              "xpReward": 15,
+              "contentHash": "lesson-11-v1"
+            },
+            {
+              "id": "l1-u4-l3",
+              "number": 3,
+              "title": "Reading Cases in Ayahs",
+              "xpReward": 15,
+              "contentHash": "lesson-12-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-1-5",
+          "number": 5,
+          "title": "Idhafah",
+          "lessons": [
+            {
+              "id": "l1-u5-l1",
+              "number": 1,
+              "title": "The Possessive Construction",
+              "xpReward": 15,
+              "contentHash": "lesson-13-v1"
+            },
+            {
+              "id": "l1-u5-l2",
+              "number": 2,
+              "title": "Idhafah in Al-Fatiha",
+              "xpReward": 20,
+              "contentHash": "lesson-14-v1"
+            },
+            {
+              "id": "l1-u5-l3",
+              "number": 3,
+              "title": "Level 1 Review",
+              "xpReward": 25,
+              "contentHash": "lesson-15-v1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "level-2",
+      "number": 2,
+      "title": "The Engine (Fi'l)",
+      "description": "Unlock the power of Arabic verbs. Learn past and present conjugation, attached pronouns, and ~55 high-frequency verb roots.",
+      "units": []
+    },
+    {
+      "id": "level-3",
+      "number": 3,
+      "title": "The Connectors (Harf)",
+      "description": "Master the particles that glue Arabic sentences together — prepositions, negation, and emphasis.",
+      "units": []
+    },
+    {
+      "id": "level-4",
+      "number": 4,
+      "title": "The Root System (Sarf)",
+      "description": "Discover how 10 verb patterns multiply your vocabulary. Knowing one root unlocks dozens of words.",
+      "units": []
+    },
+    {
+      "id": "level-5",
+      "number": 5,
+      "title": "Sentence Anatomy (Nahw)",
+      "description": "Learn how Arabic sentences are built — nominal vs verbal sentences, word order, and I'rab.",
+      "units": []
+    },
+    {
+      "id": "level-6",
+      "number": 6,
+      "title": "Contextual Reading",
+      "description": "Read and understand full Quranic passages. Discover the rhetorical beauty of the Quran.",
+      "units": []
+    }
+  ]
+}
