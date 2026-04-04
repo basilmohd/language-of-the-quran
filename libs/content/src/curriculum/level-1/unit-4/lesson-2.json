@@ -1,0 +1,126 @@
+{
+  "lessonId": "l1-u4-l2",
+  "version": 1,
+  "title": "Case Endings on Ism",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-ilm",
+      "arabic": "عِلْم",
+      "transliteration": "ʿilm",
+      "meaning": "knowledge",
+      "rootArabic": "ع ل م",
+      "rootMeaning": "knowledge, world, to know",
+      "frequencyInQuran": 105,
+      "specialNote": "عِلْمٌ (indefinite, marfu) → الْعِلْمُ (definite, marfu) → بِعِلْمِهِ (majroor with pronoun). Watch the ending shift — it is the same word in a different grammatical role.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 32,
+          "arabicText": "قَالُوا سُبْحَانَكَ لَا عِلْمَ لَنَا إِلَّا مَا عَلَّمْتَنَا",
+          "translation": "They said, 'Exalted are You; we have no knowledge except what You have taught us.'",
+          "highlightedWordArabic": "عِلْمَ"
+        },
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 255,
+          "arabicText": "وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ",
+          "translation": "And they encompass not a thing of His knowledge except for what He wills.",
+          "highlightedWordArabic": "عِلْمِهِ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-salam",
+      "arabic": "سَلَام",
+      "transliteration": "salām",
+      "meaning": "peace",
+      "rootArabic": "س ل م",
+      "rootMeaning": "peace, submission, safety",
+      "frequencyInQuran": 42,
+      "specialNote": "سَلَامٌ (marfu, indefinite) is used as a greeting and in Quranic declarations of peace. The root س-ل-م also gives us مُسْلِم (one who submits) and إِسْلَام.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Qadr",
+          "surahNumber": 97,
+          "ayahNumber": 5,
+          "arabicText": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+          "translation": "Peace it is until the emergence of dawn.",
+          "highlightedWordArabic": "سَلَامٌ"
+        },
+        {
+          "surahName": "Maryam",
+          "surahNumber": 19,
+          "ayahNumber": 33,
+          "arabicText": "وَالسَّلَامُ عَلَيَّ يَوْمَ وُلِدتُّ",
+          "translation": "And peace is upon me the day I was born.",
+          "highlightedWordArabic": "وَالسَّلَامُ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "عِلْم",
+      "transliteration": "ʿilm",
+      "choices": ["knowledge", "world", "sign / flag", "scholar"],
+      "correctIndex": 0,
+      "wordId": "word-ilm"
+    },
+    {
+      "id": "ex-2",
+      "type": "grammar_role",
+      "arabic": "عِلْمَ",
+      "transliteration": "ʿilma",
+      "question": "لَا عِلْمَ لَنَا — The word عِلْمَ ends in ـَ (fatha). Why?",
+      "choices": [
+        "Mansoob (accusative) — لَا makes the following word accusative",
+        "Majroor (genitive) — after a preposition",
+        "Marfu (nominative) — it is the subject",
+        "It is a verb form"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-ilm",
+      "explanation": "لَا (of negation/lā an-nafiya lil-jins) puts the following Ism into the Mansoob case — shown by the fatha ending ـَ. This is a specific grammatical construction."
+    },
+    {
+      "id": "ex-3",
+      "type": "word_translation",
+      "arabic": "سَلَام",
+      "transliteration": "salām",
+      "choices": ["peace", "submission", "safety", "greeting"],
+      "correctIndex": 0,
+      "wordId": "word-salam"
+    },
+    {
+      "id": "ex-4",
+      "type": "grammar_role",
+      "arabic": "عِلْمِهِ",
+      "transliteration": "ʿilmihi",
+      "question": "بِشَيْءٍ مِّنْ عِلْمِهِ — عِلْمِهِ ends in ـِ. What causes this?",
+      "choices": [
+        "Majroor — the preposition مِنْ governs it",
+        "Mansoob — it is the object of a verb",
+        "Marfu — it is the subject",
+        "The ـهِ suffix changes the case"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-ilm",
+      "explanation": "مِنْ is a preposition, and prepositions always assign the Majroor case (kasra ـِ) to the noun that follows. The ـهِ is a possessive suffix meaning 'his' — it does not change the case."
+    },
+    {
+      "id": "ex-5",
+      "type": "fill_blank",
+      "verseArabic": "___ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+      "verseTranslation": "___ it is until the emergence of dawn.",
+      "surahName": "Al-Qadr",
+      "verseRef": "97:5",
+      "choices": ["سَلَامٌ", "نُورٌ", "رَحْمَةٌ", "حَقٌّ"],
+      "correctIndex": 0,
+      "wordId": "word-salam"
+    }
+  ]
+}

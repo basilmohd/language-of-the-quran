@@ -1,0 +1,90 @@
+{
+  "lessonId": "l1-u2-l3",
+  "version": 1,
+  "title": "Sound and Broken Plurals",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-nabi",
+      "arabic": "نَبِيّ",
+      "transliteration": "nabī",
+      "meaning": "prophet",
+      "rootArabic": "ن ب أ",
+      "rootMeaning": "news, prophecy",
+      "frequencyInQuran": 75,
+      "specialNote": "نَبِيّ (singular) → أَنبِيَاء (plural, broken). This is a broken plural — the internal vowel pattern changes completely. Broken plurals are one of Arabic's most distinctive features.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 136,
+          "arabicText": "وَمَا أُنزِلَ إِلَى إِبْرَاهِيمَ وَإِسْمَاعِيلَ وَإِسْحَاقَ وَيَعْقُوبَ وَالْأَسْبَاطِ وَمَا أُوتِيَ مُوسَىٰ وَعِيسَىٰ وَمَا أُوتِيَ النَّبِيُّونَ",
+          "translation": "And what was revealed to Abraham, Ishmael, Isaac, Jacob…and what was given to Moses and Jesus, and what was given to the prophets.",
+          "highlightedWordArabic": "النَّبِيُّونَ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-rasul",
+      "arabic": "رَسُول",
+      "transliteration": "rasūl",
+      "meaning": "messenger / apostle",
+      "rootArabic": "ر س ل",
+      "rootMeaning": "to send, messenger",
+      "frequencyInQuran": 332,
+      "specialNote": "رَسُول (singular) → رُسُل (plural, broken). Notice how the vowels shift internally. رَسُول is one of the most frequent Isms in the Quran.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fath",
+          "surahNumber": 48,
+          "ayahNumber": 29,
+          "arabicText": "مُّحَمَّدٌ رَّسُولُ اللَّهِ",
+          "translation": "Muhammad is the Messenger of Allah.",
+          "highlightedWordArabic": "رَّسُولُ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "نَبِيّ",
+      "transliteration": "nabī",
+      "choices": ["prophet", "messenger", "believer", "servant"],
+      "correctIndex": 0,
+      "wordId": "word-nabi"
+    },
+    {
+      "id": "ex-2",
+      "type": "word_translation",
+      "arabic": "رَسُول",
+      "transliteration": "rasūl",
+      "meaning": "messenger",
+      "choices": ["messenger / apostle", "prophet", "book", "man"],
+      "correctIndex": 0,
+      "wordId": "word-rasul"
+    },
+    {
+      "id": "ex-3",
+      "type": "grammar_role",
+      "arabic": "مُسْلِمُونَ",
+      "transliteration": "muslimūna",
+      "question": "The ـُونَ ending on مُسْلِمُونَ indicates what?",
+      "choices": ["Sound masculine plural", "Broken plural", "Dual", "Feminine plural"],
+      "correctIndex": 0,
+      "wordId": "word-muslim",
+      "explanation": "ـُونَ (nominative) or ـِينَ (accusative/genitive) marks the sound masculine plural — the plural pattern where the base word stays intact and only the ending changes."
+    },
+    {
+      "id": "ex-4",
+      "type": "fill_blank",
+      "verseArabic": "مُّحَمَّدٌ ___ اللَّهِ",
+      "verseTranslation": "Muhammad is the ___ of Allah.",
+      "surahName": "Al-Fath",
+      "verseRef": "48:29",
+      "choices": ["رَسُولُ", "نَبِيُّ", "عَبْدُ", "وَلِيُّ"],
+      "correctIndex": 0,
+      "wordId": "word-rasul"
+    }
+  ]
+}

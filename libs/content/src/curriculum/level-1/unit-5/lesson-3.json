@@ -1,0 +1,112 @@
+{
+  "lessonId": "l1-u5-l3",
+  "version": 1,
+  "title": "Level 1 Review",
+  "steps": [
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "رَحْمَة",
+      "transliteration": "raḥma",
+      "choices": ["mercy / compassion", "praise", "peace", "light"],
+      "correctIndex": 0,
+      "wordId": "word-rahma"
+    },
+    {
+      "id": "ex-2",
+      "type": "word_translation",
+      "arabic": "عَالَم",
+      "transliteration": "ʿālam",
+      "choices": ["world / universe", "knowledge", "sign", "scholar"],
+      "correctIndex": 0,
+      "wordId": "word-alam"
+    },
+    {
+      "id": "ex-3",
+      "type": "fill_blank",
+      "verseArabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿٢﴾ الرَّحْمَٰنِ الرَّحِيمِ ﴿٣﴾ مَالِكِ ___ الدِّينِ",
+      "verseTranslation": "All praise is due to Allah, Lord of all worlds. The Most Gracious, the Most Merciful. Master of the ___ of Judgement.",
+      "surahName": "Al-Fatiha",
+      "verseRef": "1:2-4",
+      "choices": ["يَوْمِ", "رَبِّ", "حَقِّ", "نُورِ"],
+      "correctIndex": 0,
+      "wordId": "word-yawm"
+    },
+    {
+      "id": "ex-4",
+      "type": "grammar_role",
+      "arabic": "مُسْلِمَة",
+      "transliteration": "muslima",
+      "question": "What do the ة ending and the root س-ل-م tell us about مُسْلِمَة?",
+      "choices": [
+        "Feminine Ism meaning 'Muslim woman', from the root of peace/submission",
+        "Plural Ism meaning 'Muslim women', from the root of peace",
+        "Masculine Ism with an irregular root",
+        "A verb meaning 'she submitted'"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-muslima",
+      "explanation": "ة marks feminine gender; the root س-ل-م gives meaning (peace/submission); the مُفْعِل pattern indicates 'one who does the action'. Combining all three: 'a woman who submits'."
+    },
+    {
+      "id": "ex-5",
+      "type": "root_recognition",
+      "arabic": "رَسُول",
+      "transliteration": "rasūl",
+      "question": "What is the 3-letter root of رَسُول?",
+      "choices": ["ر س ل", "ر س و", "ر ص ل", "ر س م"],
+      "correctIndex": 0,
+      "wordId": "word-rasul"
+    },
+    {
+      "id": "ex-6",
+      "type": "word_translation",
+      "arabic": "نَفْس",
+      "transliteration": "nafs",
+      "choices": ["soul / self", "heart", "mind", "spirit"],
+      "correctIndex": 0,
+      "wordId": "word-nafs"
+    },
+    {
+      "id": "ex-7",
+      "type": "fill_blank",
+      "verseArabic": "سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا مِّنَ الْمَسْجِدِ الْ___",
+      "verseTranslation": "Exalted is He who took His servant by night from Al-Masjid Al-___.",
+      "surahName": "Al-Isra",
+      "verseRef": "17:1",
+      "choices": ["حَرَامِ", "كَبِيرِ", "قَدِيمِ", "عَظِيمِ"],
+      "correctIndex": 0,
+      "wordId": "word-abd"
+    },
+    {
+      "id": "ex-8",
+      "type": "word_translation",
+      "arabic": "حَقّ",
+      "transliteration": "ḥaqq",
+      "choices": ["truth / right", "mercy", "knowledge", "peace"],
+      "correctIndex": 0,
+      "wordId": "word-haqq"
+    },
+    {
+      "id": "ex-9",
+      "type": "root_recognition",
+      "arabic": "مُؤْمِن",
+      "transliteration": "muʾmin",
+      "question": "What is the 3-letter root of مُؤْمِن?",
+      "choices": ["أ م ن", "أ م م", "أ م ر", "م ن ع"],
+      "correctIndex": 0,
+      "wordId": "word-mumin"
+    },
+    {
+      "id": "ex-10",
+      "type": "fill_blank",
+      "verseArabic": "مُّحَمَّدٌ رَّسُولُ اللَّهِ ۚ وَالَّذِينَ مَعَهُ أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَمَاءُ بَيْنَهُمْ",
+      "verseTranslation": "Muhammad is the ___ of Allah; and those with him are forceful against the disbelievers, merciful among themselves.",
+      "surahName": "Al-Fath",
+      "verseRef": "48:29",
+      "choices": ["رَسُولُ", "نَبِيُّ", "عَبْدُ", "خَلِيفَةُ"],
+      "correctIndex": 0,
+      "wordId": "word-rasul"
+    }
+  ]
+}
