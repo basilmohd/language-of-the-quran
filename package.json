@@ -7,7 +7,7 @@
     "prisma:studio": "cd apps/api && npx prisma studio",
     "prisma:generate": "cd apps/api && npx prisma generate",
     "seed": "cd apps/api && npx tsx src/scripts/seed.ts",
-    "run:backend":"nx serve api",
+    "run:backend": "nx serve api",
     "run:app": "nx run-many --target=serve --projects=web,api"
   },
   "private": true,
@@ -66,6 +66,7 @@
     "pg": "^8.20.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.14.0",
     "svix": "^1.90.0",
     "tailwind-merge": "^3.5.0",
     "uuid": "^13.0.0"

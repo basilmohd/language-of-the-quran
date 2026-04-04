@@ -550,7 +550,7 @@ apps/web/src/
 
 > **Implemented:** Clerk webhook handler in `apps/api/src/routes/v1/auth.ts`. Auth middleware (`requireAuth.ts`) and global error handler (`errorHandler.ts`) in `apps/api/src/middleware/`. Redis client configured in `apps/api/src/lib/redis.ts` (Upstash). All seven route modules live in `apps/api/src/routes/v1/`: `auth`, `curriculum`, `corpus`, `reviews`, `users`, `audio`, `feedback`. Badge award logic in `apps/api/src/services/badgeService.ts`; timezone-aware streak updates in `streakService.ts`.
 
-### Phase 4 — Web UI (Level 1 playable)
+### Phase 4 — Web UI (Level 1 playable) ✅ COMPLETED
 1. Clerk sign-in/sign-up on `Home.tsx`
 2. `Dashboard.tsx` — level map with lock/unlock/complete node states
 3. `Lesson.tsx` — XState machine runner + `FeedbackBanner`
@@ -558,6 +558,8 @@ apps/web/src/
 5. `WordDrawer.tsx` — root tree visualization
 6. `XpBar` + `StreakBadge` in global header
 7. `BadgeCard` + lesson complete celebration screen
+
+> **Implemented:** Landing page at `apps/web/src/pages/Home.tsx` with hero section, features grid, full 6-level curriculum overview, and bottom CTA — Clerk sign-in buttons present but disabled (auth wired in Phase 5). Dashboard at `apps/web/src/pages/Dashboard.tsx` with inline XP bar (progress fill + star icon), streak badge (flame icon + count), words-learned counter, and a Duolingo-style level map: Level 1 fully expanded with 5 units × 3 lessons each, active lesson pulsing with play icon, locked lessons shown with lock icons, Levels 2–6 collapsed and locked. Routing via `react-router-dom` in `apps/web/src/app/app.tsx` (routes: `/` → Home, `/dashboard` → Dashboard). shadcn/ui components (`Button`, `Badge`, `Card`) and `lucide-react` icons used throughout. Mock user data in place; live API + Clerk wiring deferred to Phase 5.
 
 ### Phase 5 — Gamification + Word Bank
 1. Streak tracking (timezone-aware, stored as `DATE` not `TIMESTAMP`)
