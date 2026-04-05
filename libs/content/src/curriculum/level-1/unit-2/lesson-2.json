@@ -1,0 +1,106 @@
+{
+  "lessonId": "l1-u2-l2",
+  "version": 1,
+  "title": "Singular, Dual, Plural",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-rajul",
+      "arabic": "رَجُل",
+      "transliteration": "rajul",
+      "meaning": "man",
+      "rootArabic": "ر ج ل",
+      "rootMeaning": "man, foot",
+      "frequencyInQuran": 55,
+      "specialNote": "رَجُل is singular (one man). The dual is رَجُلَانِ (two men). The plural رِجَال (men) has a different pattern — called a broken plural.",
+      "ayahCards": [
+        {
+          "surahName": "Ya-Sin",
+          "surahNumber": 36,
+          "ayahNumber": 20,
+          "arabicText": "وَجَاءَ مِنْ أَقْصَى الْمَدِينَةِ رَجُلٌ يَسْعَىٰ",
+          "translation": "And a man came from the farthest end of the city, running.",
+          "highlightedWordArabic": "رَجُلٌ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-imraa",
+      "arabic": "اِمْرَأَة",
+      "transliteration": "imraʾa",
+      "meaning": "woman",
+      "frequencyInQuran": 26,
+      "specialNote": "اِمْرَأَة (woman) is the feminine counterpart of رَجُل (man). Notice it ends in ة — the feminine marker.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Imran",
+          "surahNumber": 3,
+          "ayahNumber": 35,
+          "arabicText": "إِذْ قَالَتِ امْرَأَتُ عِمْرَانَ رَبِّ إِنِّي نَذَرْتُ لَكَ مَا فِي بَطْنِي",
+          "translation": "When the wife of Imran said, 'My Lord, I have pledged to You what is in my womb.'",
+          "highlightedWordArabic": "امْرَأَتُ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "رَجُل",
+      "transliteration": "rajul",
+      "choices": ["man", "woman", "boy", "messenger"],
+      "correctIndex": 0,
+      "wordId": "word-rajul"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-walad",
+      "arabic": "وَلَد",
+      "transliteration": "walad",
+      "meaning": "child / son",
+      "rootArabic": "و ل د",
+      "rootMeaning": "to give birth, beget; child",
+      "frequencyInQuran": 44,
+      "specialNote": "وَلَد means child or son. The root و-ل-د appears in Surah Al-Ikhlas: لَمْ يَلِدْ وَلَمْ يُولَدْ — 'He neither begets nor was begotten.'",
+      "ayahCards": [
+        {
+          "surahName": "Al-Ikhlas",
+          "surahNumber": 112,
+          "ayahNumber": 3,
+          "arabicText": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+          "translation": "He neither begets nor was He begotten.",
+          "highlightedWordArabic": "يَلِدْ"
+        }
+      ]
+    },
+    {
+      "id": "ex-2",
+      "type": "word_translation",
+      "arabic": "اِمْرَأَة",
+      "transliteration": "imraʾa",
+      "choices": ["woman", "man", "girl", "daughter"],
+      "correctIndex": 0,
+      "wordId": "word-imraa"
+    },
+    {
+      "id": "ex-3",
+      "type": "word_translation",
+      "arabic": "وَلَد",
+      "transliteration": "walad",
+      "choices": ["child / son", "man", "prophet", "servant"],
+      "correctIndex": 0,
+      "wordId": "word-walad"
+    },
+    {
+      "id": "ex-4",
+      "type": "grammar_role",
+      "arabic": "رَجُلَانِ",
+      "transliteration": "rajulāni",
+      "question": "The ـَانِ ending on رَجُلَانِ indicates what number?",
+      "choices": ["Dual (two)", "Plural (three or more)", "Singular (one)", "Feminine"],
+      "correctIndex": 0,
+      "wordId": "word-rajul",
+      "explanation": "The ـَانِ (or ـَيْنِ in genitive) ending marks the dual — exactly two of something. Arabic has three numbers: singular (one), dual (two), and plural (three or more)."
+    }
+  ]
+}

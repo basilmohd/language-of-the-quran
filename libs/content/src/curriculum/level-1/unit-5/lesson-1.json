@@ -1,0 +1,122 @@
+{
+  "lessonId": "l1-u5-l1",
+  "version": 1,
+  "title": "The Possessive Construction",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-bayt",
+      "arabic": "بَيْت",
+      "transliteration": "bayt",
+      "meaning": "house / home",
+      "rootArabic": "ب ي ت",
+      "rootMeaning": "house, to spend the night",
+      "frequencyInQuran": 72,
+      "specialNote": "بَيْت اللّٰهِ (the House of Allah) — this is an Idhafah: بَيْت is the first word (mudaf), اللّٰهِ is the second (mudaf ilayhi). The first word loses tanwin and the second takes kasra.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 125,
+          "arabicText": "وَإِذْ جَعَلْنَا الْبَيْتَ مَثَابَةً لِّلنَّاسِ وَأَمْنًا",
+          "translation": "And when We made the House a place of return for the people and a place of security.",
+          "highlightedWordArabic": "الْبَيْتَ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-abd",
+      "arabic": "عَبْد",
+      "transliteration": "ʿabd",
+      "meaning": "servant / worshipper",
+      "rootArabic": "ع ب د",
+      "rootMeaning": "to worship, serve; servant",
+      "frequencyInQuran": 125,
+      "specialNote": "عَبْدُ اللّٰهِ = 'servant of Allah' — a classic Idhafah and the most honourable human title in Islam. The Prophet ﷺ is called عَبْدُهُ (His servant) in the Quran.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Isra",
+          "surahNumber": 17,
+          "ayahNumber": 1,
+          "arabicText": "سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا مِّنَ الْمَسْجِدِ الْحَرَامِ",
+          "translation": "Exalted is He who took His servant by night from Al-Masjid Al-Haram.",
+          "highlightedWordArabic": "بِعَبْدِهِ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "بَيْت",
+      "transliteration": "bayt",
+      "choices": ["house / home", "room", "family", "tent"],
+      "correctIndex": 0,
+      "wordId": "word-bayt"
+    },
+    {
+      "id": "ex-2",
+      "type": "word_translation",
+      "arabic": "عَبْد",
+      "transliteration": "ʿabd",
+      "choices": ["servant / worshipper", "prophet", "man", "slave"],
+      "correctIndex": 0,
+      "wordId": "word-abd"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-ahl",
+      "arabic": "أَهْل",
+      "transliteration": "ahl",
+      "meaning": "family / people / folk",
+      "frequencyInQuran": 127,
+      "specialNote": "أَهْلُ الْكِتَابِ (People of the Book) is a famous Idhafah in the Quran referring to Jews and Christians. أَهْل is often the first word of Idhafah constructions.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 105,
+          "arabicText": "مَا يَوَدُّ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ",
+          "translation": "Neither those who disbelieve from the People of the Book…",
+          "highlightedWordArabic": "أَهْلِ"
+        }
+      ]
+    },
+    {
+      "id": "ex-3",
+      "type": "word_translation",
+      "arabic": "أَهْل",
+      "transliteration": "ahl",
+      "choices": ["family / people / folk", "house", "tribe", "group"],
+      "correctIndex": 0,
+      "wordId": "word-ahl"
+    },
+    {
+      "id": "ex-4",
+      "type": "grammar_role",
+      "arabic": "عَبْدُ اللّٰهِ",
+      "transliteration": "ʿabdu Llāh",
+      "question": "In عَبْدُ اللّٰهِ, why does اللّٰهِ end in ـِ (kasra)?",
+      "choices": [
+        "It is the second word of an Idhafah — always majroor",
+        "It is after a preposition",
+        "It is the subject of the sentence",
+        "Allah's name always ends in kasra"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-abd",
+      "explanation": "In Idhafah (possessive construction), the second word (mudaf ilayhi) is always Majroor — shown by kasra ـِ. The first word (mudaf) loses tanwin and cannot take الـ."
+    },
+    {
+      "id": "ex-5",
+      "type": "fill_blank",
+      "verseArabic": "أَسْرَىٰ بِ___ لَيْلًا",
+      "verseTranslation": "Took His ___ by night.",
+      "surahName": "Al-Isra",
+      "verseRef": "17:1",
+      "choices": ["عَبْدِهِ", "نَبِيِّهِ", "رَسُولِهِ", "وَلِيِّهِ"],
+      "correctIndex": 0,
+      "wordId": "word-abd"
+    }
+  ]
+}

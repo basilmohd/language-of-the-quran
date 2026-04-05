@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "types": ["node"],
+    "rootDir": "src",
+    "resolveJsonModule": true,
+    "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/scripts/**"],
+  "references": [
+    {
+      "path": "../../libs/db/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/api-types/tsconfig.lib.json"
+    }
+  ]
+}

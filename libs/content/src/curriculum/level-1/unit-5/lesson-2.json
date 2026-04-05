@@ -1,0 +1,98 @@
+{
+  "lessonId": "l1-u5-l2",
+  "version": 1,
+  "title": "Idhafah in Al-Fatiha",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-qalb",
+      "arabic": "قَلْب",
+      "transliteration": "qalb",
+      "meaning": "heart",
+      "rootArabic": "ق ل ب",
+      "rootMeaning": "heart; to turn over",
+      "frequencyInQuran": 132,
+      "specialNote": "قَلْب derives from 'to turn over' — the heart is named for its constant turning. قَلْبٌ سَلِيمٌ (a sound/pure heart) is the goal of the believer according to the Quran.",
+      "ayahCards": [
+        {
+          "surahName": "Ash-Shu'ara",
+          "surahNumber": 26,
+          "ayahNumber": 89,
+          "arabicText": "إِلَّا مَنْ أَتَى اللَّهَ بِقَلْبٍ سَلِيمٍ",
+          "translation": "But only one who comes to Allah with a sound heart.",
+          "highlightedWordArabic": "بِقَلْبٍ"
+        },
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 10,
+          "arabicText": "فِي قُلُوبِهِم مَّرَضٌ فَزَادَهُمُ اللَّهُ مَرَضًا",
+          "translation": "In their hearts is disease, so Allah has increased their disease.",
+          "highlightedWordArabic": "قُلُوبِهِم"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "قَلْب",
+      "transliteration": "qalb",
+      "choices": ["heart", "soul", "mind", "chest"],
+      "correctIndex": 0,
+      "wordId": "word-qalb"
+    },
+    {
+      "id": "ex-2",
+      "type": "grammar_role",
+      "arabic": "رَبِّ الْعَالَمِينَ",
+      "transliteration": "rabbi l-ʿālamīn",
+      "question": "In رَبِّ الْعَالَمِينَ, what type of construction is this?",
+      "choices": [
+        "Idhafah — رَبِّ is mudaf, الْعَالَمِينَ is mudaf ilayhi",
+        "Adjective-noun phrase",
+        "Subject-predicate sentence",
+        "Verb-object construction"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-rabb",
+      "explanation": "Idhafah (possessive construction): رَبِّ = 'Lord of' (first word/mudaf — loses tanwin, takes kasra here because it follows a preposition), الْعَالَمِينَ = 'the worlds' (second word/mudaf ilayhi — always majroor)."
+    },
+    {
+      "id": "ex-3",
+      "type": "grammar_role",
+      "arabic": "مَالِكِ يَوْمِ الدِّينِ",
+      "transliteration": "māliki yawmi d-dīn",
+      "question": "مَالِكِ يَوْمِ الدِّينِ contains two Idhafah constructions. Which analysis is correct?",
+      "choices": [
+        "مَالِكِ يَوْمِ = first Idhafah; يَوْمِ الدِّينِ = second Idhafah (chained)",
+        "مَالِكِ يَوْمِ = verb-subject; الدِّينِ = object",
+        "All three words are in Idhafah with each other simultaneously",
+        "Only مَالِكِ الدِّينِ is Idhafah; يَوْمِ is separate"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-yawm",
+      "explanation": "Idhafah can be chained: مَالِكِ يَوْمِ الدِّينِ = 'Master of [the Day of Judgement]'. يَوْم is both the mudaf ilayhi of مَالِك AND the mudaf of الدِّين — a beautiful nested construction."
+    },
+    {
+      "id": "ex-4",
+      "type": "fill_blank",
+      "verseArabic": "إِلَّا مَنْ أَتَى اللَّهَ بِ___ سَلِيمٍ",
+      "verseTranslation": "But only one who comes to Allah with a sound ___.",
+      "surahName": "Ash-Shu'ara",
+      "verseRef": "26:89",
+      "choices": ["قَلْبٍ", "نَفْسٍ", "عِلْمٍ", "يَوْمٍ"],
+      "correctIndex": 0,
+      "wordId": "word-qalb"
+    },
+    {
+      "id": "ex-5",
+      "type": "root_recognition",
+      "arabic": "الْعَالَمِينَ",
+      "transliteration": "al-ʿālamīn",
+      "question": "What is the 3-letter root of الْعَالَمِينَ?",
+      "choices": ["ع ل م", "ع ل و", "أ ل م", "ع ل ن"],
+      "correctIndex": 0,
+      "wordId": "word-alam"
+    }
+  ]
+}

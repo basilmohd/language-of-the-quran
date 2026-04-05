@@ -7,7 +7,7 @@
   --color-background: oklch(1 0 0);
   --color-foreground: oklch(0.277 0.021 255.7);
 
-  --color-card: oklch(0.985 0.002 247.9);
+  --color-card: oklch(1 0 0);
   --color-card-foreground: oklch(0.277 0.021 255.7);
 
   --color-primary: oklch(0.527 0.117 183.7);
@@ -16,7 +16,7 @@
   --color-secondary: oklch(0.77 0.141 84.4);
   --color-secondary-foreground: oklch(0.277 0.021 255.7);
 
-  --color-muted: oklch(0.968 0.003 247.9);
+  --color-muted: oklch(0.985 0.003 75);
   --color-muted-foreground: oklch(0.554 0.018 255.7);
 
   --color-accent: oklch(0.968 0.003 247.9);

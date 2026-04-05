@@ -1,0 +1,160 @@
+{
+  "lessonId": "l1-u1-l1",
+  "version": 1,
+  "title": "What is an Ism?",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-kitab",
+      "arabic": "كِتَاب",
+      "transliteration": "kitāb",
+      "meaning": "book / scripture",
+      "rootArabic": "ك ت ب",
+      "rootMeaning": "to write",
+      "frequencyInQuran": 230,
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 2,
+          "arabicText": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ",
+          "translation": "That is the Book about which there is no doubt, a guidance for those conscious of Allah.",
+          "highlightedWordArabic": "ٱلْكِتَٰبُ"
+        },
+        {
+          "surahName": "Al-Imran",
+          "surahNumber": 3,
+          "ayahNumber": 3,
+          "arabicText": "نَزَّلَ عَلَيْكَ ٱلْكِتَٰبَ بِٱلْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ",
+          "translation": "He has sent down upon you the Book in truth, confirming what was before it.",
+          "highlightedWordArabic": "ٱلْكِتَٰبَ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-rabb",
+      "arabic": "رَبّ",
+      "transliteration": "rabb",
+      "meaning": "Lord / Sustainer",
+      "rootArabic": "ر ب ب",
+      "rootMeaning": "to nurture, raise, sustain",
+      "frequencyInQuran": 900,
+      "specialNote": "You say this in every rak'ah of every prayer — in Al-Fatiha.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 2,
+          "arabicText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+          "translation": "All praise is due to Allah, Lord of all worlds.",
+          "highlightedWordArabic": "رَبِّ"
+        },
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 131,
+          "arabicText": "إِذْ قَالَ لَهُۥ رَبُّهُۥٓ أَسْلِمْ ۖ قَالَ أَسْلَمْتُ لِرَبِّ ٱلْعَٰلَمِينَ",
+          "translation": "When his Lord said to him, 'Submit.' He said, 'I have submitted to the Lord of the worlds.'",
+          "highlightedWordArabic": "رَبُّهُۥٓ"
+        }
+      ]
+    },
+    {
+      "id": "ex-3",
+      "type": "word_translation",
+      "arabic": "كِتَاب",
+      "transliteration": "kitāb",
+      "choices": ["book / scripture", "light", "mercy", "path"],
+      "correctIndex": 0,
+      "wordId": "word-kitab"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-nur",
+      "arabic": "نُور",
+      "transliteration": "nūr",
+      "meaning": "light",
+      "rootArabic": "ن و ر",
+      "rootMeaning": "light, illumination",
+      "frequencyInQuran": 43,
+      "specialNote": "Surah An-Nur (Chapter 24) is named after this very word.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 17,
+          "arabicText": "ذَهَبَ ٱللَّهُ بِنُورِهِمْ وَتَرَكَهُمْ فِى ظُلُمَٰتٍ لَّا يُبْصِرُونَ",
+          "translation": "Allah took away their light and left them in darkness, unable to see.",
+          "highlightedWordArabic": "بِنُورِهِمْ"
+        },
+        {
+          "surahName": "An-Nur",
+          "surahNumber": 24,
+          "ayahNumber": 35,
+          "arabicText": "ٱللَّهُ نُورُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ",
+          "translation": "Allah is the Light of the heavens and the earth.",
+          "highlightedWordArabic": "نُورُ"
+        }
+      ]
+    },
+    {
+      "id": "ex-5",
+      "type": "word_translation",
+      "arabic": "رَبّ",
+      "transliteration": "rabb",
+      "choices": ["Lord / Sustainer", "book", "light", "prophet"],
+      "correctIndex": 0,
+      "wordId": "word-rabb"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-rahma",
+      "arabic": "رَحْمَة",
+      "transliteration": "raḥma",
+      "meaning": "mercy / compassion",
+      "rootArabic": "ر ح م",
+      "rootMeaning": "mercy, womb, compassion",
+      "frequencyInQuran": 79,
+      "specialNote": "رَحْمَٰن and رَحِيم — both Names of Allah in Al-Fatiha — come from this same root. You'll explore this in Level 4.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 3,
+          "arabicText": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+          "translation": "The Entirely Merciful, the Especially Merciful.",
+          "highlightedWordArabic": "ٱلرَّحْمَٰنِ"
+        },
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 105,
+          "arabicText": "وَٱللَّهُ يَخْتَصُّ بِرَحْمَتِهِۦ مَن يَشَآءُ",
+          "translation": "And Allah selects for His mercy whom He wills.",
+          "highlightedWordArabic": "بِرَحْمَتِهِۦ"
+        }
+      ]
+    },
+    {
+      "id": "ex-7",
+      "type": "fill_blank",
+      "verseArabic": "ٱللَّهُ ___ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ",
+      "verseTranslation": "Allah is the ___ of the heavens and the earth.",
+      "surahName": "An-Nur",
+      "verseRef": "24:35",
+      "choices": ["نُور", "كِتَاب", "رَحْمَة", "رَبّ"],
+      "correctIndex": 0,
+      "wordId": "word-nur"
+    },
+    {
+      "id": "ex-8",
+      "type": "word_translation",
+      "arabic": "رَحْمَة",
+      "transliteration": "raḥma",
+      "choices": ["mercy / compassion", "Lord", "light", "scripture"],
+      "correctIndex": 0,
+      "wordId": "word-rahma"
+    }
+  ]
+}

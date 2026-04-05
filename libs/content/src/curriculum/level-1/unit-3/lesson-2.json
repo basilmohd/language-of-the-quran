@@ -1,0 +1,103 @@
+{
+  "lessonId": "l1-u3-l2",
+  "version": 1,
+  "title": "Sun and Moon Letters",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-shams",
+      "arabic": "شَمْس",
+      "transliteration": "shams",
+      "meaning": "sun",
+      "rootArabic": "ش م س",
+      "rootMeaning": "sun",
+      "frequencyInQuran": 33,
+      "specialNote": "شَمْس is a sun letter — when الـ is added, the lam assimilates: الشَّمْسُ (ash-shams), not 'al-shams'. This is why we say 'ash-shams', not 'al-shams'.",
+      "ayahCards": [
+        {
+          "surahName": "Ash-Shams",
+          "surahNumber": 91,
+          "ayahNumber": 1,
+          "arabicText": "وَالشَّمْسِ وَضُحَاهَا",
+          "translation": "By the sun and its brightness.",
+          "highlightedWordArabic": "وَالشَّمْسِ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-qamar",
+      "arabic": "قَمَر",
+      "transliteration": "qamar",
+      "meaning": "moon",
+      "rootArabic": "ق م ر",
+      "rootMeaning": "moon, to be pale/luminous",
+      "frequencyInQuran": 27,
+      "specialNote": "قَمَر is a moon letter — when الـ is added, the lam stays clear: الْقَمَرُ (al-qamar). Surah Al-Qamar (54) is named after this word.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Qamar",
+          "surahNumber": 54,
+          "ayahNumber": 1,
+          "arabicText": "اقْتَرَبَتِ السَّاعَةُ وَانشَقَّ الْقَمَرُ",
+          "translation": "The Hour has drawn near, and the moon has split.",
+          "highlightedWordArabic": "الْقَمَرُ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "شَمْس",
+      "transliteration": "shams",
+      "choices": ["sun", "moon", "star", "light"],
+      "correctIndex": 0,
+      "wordId": "word-shams"
+    },
+    {
+      "id": "ex-2",
+      "type": "word_translation",
+      "arabic": "قَمَر",
+      "transliteration": "qamar",
+      "choices": ["moon", "sun", "sky", "night"],
+      "correctIndex": 0,
+      "wordId": "word-qamar"
+    },
+    {
+      "id": "ex-3",
+      "type": "grammar_role",
+      "arabic": "الشَّمْسُ",
+      "transliteration": "ash-shamsu",
+      "question": "Why is الشَّمْسُ pronounced 'ash-shams' (not 'al-shams')?",
+      "choices": [
+        "شَمْس is a sun letter — lam assimilates to the first letter",
+        "شَمْس is feminine so the rule changes",
+        "This is an exception with no rule",
+        "The ل is silent before all nouns"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-shams",
+      "explanation": "Arabic has 14 'sun letters' — when الـ is prefixed, the lam (ل) assimilates into the first letter of the word. This causes doubling (shadda) on that letter."
+    },
+    {
+      "id": "ex-4",
+      "type": "fill_blank",
+      "verseArabic": "اقْتَرَبَتِ السَّاعَةُ وَانشَقَّ الْ___",
+      "verseTranslation": "The Hour has drawn near, and the ___ has split.",
+      "surahName": "Al-Qamar",
+      "verseRef": "54:1",
+      "choices": ["قَمَرُ", "شَمْسُ", "نُورُ", "سَمَاءُ"],
+      "correctIndex": 0,
+      "wordId": "word-qamar"
+    },
+    {
+      "id": "ex-5",
+      "type": "word_translation",
+      "arabic": "اَلشَّمْسُ وَالْقَمَرُ",
+      "transliteration": "ash-shamsu wal-qamar",
+      "choices": ["the sun and the moon", "the day and the night", "the light and the fire", "the sky and the earth"],
+      "correctIndex": 0,
+      "wordId": "word-shams"
+    }
+  ]
+}

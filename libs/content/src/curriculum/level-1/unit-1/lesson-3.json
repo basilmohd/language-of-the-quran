@@ -1,0 +1,139 @@
+{
+  "lessonId": "l1-u1-l3",
+  "version": 1,
+  "title": "Sky, Earth & Creation",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-sama",
+      "arabic": "سَمَاء",
+      "transliteration": "samāʾ",
+      "meaning": "sky / heaven",
+      "rootArabic": "س م و",
+      "rootMeaning": "to be high, lofty",
+      "frequencyInQuran": 310,
+      "specialNote": "The plural سَمَوَات (heavens) appears in the famous phrase 'heavens and earth' — السَّمَوَاتِ وَالْأَرْضِ.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 22,
+          "arabicText": "وَالسَّمَاءَ بِنَاءً وَأَنزَلَ مِنَ السَّمَاءِ مَاءً",
+          "translation": "And [made] the sky a structure and sent down rain from the sky.",
+          "highlightedWordArabic": "السَّمَاءِ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-ard",
+      "arabic": "أَرْض",
+      "transliteration": "arḍ",
+      "meaning": "earth / land",
+      "rootArabic": "أ ر ض",
+      "rootMeaning": "earth, ground",
+      "frequencyInQuran": 461,
+      "specialNote": "أَرْض is feminine in Arabic — you'll see feminine grammar patterns applied to it. It pairs constantly with سَمَاء (sky).",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 22,
+          "arabicText": "الَّذِي جَعَلَ لَكُمُ الْأَرْضَ فِرَاشًا",
+          "translation": "He who made the earth a resting place for you.",
+          "highlightedWordArabic": "الْأَرْضَ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "سَمَاء",
+      "transliteration": "samāʾ",
+      "choices": ["sky / heaven", "earth / land", "water", "fire"],
+      "correctIndex": 0,
+      "wordId": "word-sama"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-maa",
+      "arabic": "مَاء",
+      "transliteration": "māʾ",
+      "meaning": "water",
+      "rootArabic": "م و ه",
+      "rootMeaning": "water, fluid",
+      "frequencyInQuran": 63,
+      "ayahCards": [
+        {
+          "surahName": "Al-Anbiya",
+          "surahNumber": 21,
+          "ayahNumber": 30,
+          "arabicText": "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ",
+          "translation": "And We made from water every living thing.",
+          "highlightedWordArabic": "الْمَاءِ"
+        }
+      ]
+    },
+    {
+      "id": "ex-2",
+      "type": "fill_blank",
+      "verseArabic": "اللَّهُ نُورُ السَّمَاوَاتِ وَالْ___",
+      "verseTranslation": "Allah is the Light of the heavens and the ___.",
+      "surahName": "An-Nur",
+      "verseRef": "24:35",
+      "choices": ["أَرْض", "مَاء", "نَار", "سَمَاء"],
+      "correctIndex": 0,
+      "wordId": "word-ard"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-nar",
+      "arabic": "نَار",
+      "transliteration": "nār",
+      "meaning": "fire",
+      "rootArabic": "ن و ر",
+      "rootMeaning": "light, illumination, fire",
+      "frequencyInQuran": 145,
+      "specialNote": "نَار shares a root with نُور (light) — both relate to brightness. نَار is feminine in Arabic.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 24,
+          "arabicText": "فَاتَّقُوا النَّارَ الَّتِي وَقُودُهَا النَّاسُ وَالْحِجَارَةُ",
+          "translation": "Then fear the Fire whose fuel is people and stones.",
+          "highlightedWordArabic": "النَّارَ"
+        }
+      ]
+    },
+    {
+      "id": "ex-3",
+      "type": "word_translation",
+      "arabic": "مَاء",
+      "transliteration": "māʾ",
+      "choices": ["water", "fire", "light", "sky"],
+      "correctIndex": 0,
+      "wordId": "word-maa"
+    },
+    {
+      "id": "ex-4",
+      "type": "word_translation",
+      "arabic": "نَار",
+      "transliteration": "nār",
+      "choices": ["fire", "light", "water", "earth"],
+      "correctIndex": 0,
+      "wordId": "word-nar"
+    },
+    {
+      "id": "ex-5",
+      "type": "grammar_role",
+      "arabic": "أَرْض",
+      "transliteration": "arḍ",
+      "question": "What type of word is أَرْض?",
+      "choices": ["Ism (Noun)", "Fi'l (Verb)", "Harf (Particle)"],
+      "correctIndex": 0,
+      "wordId": "word-ard",
+      "explanation": "أَرْض is an Ism (noun) — it names a thing (earth/land). All Isms can carry the definite article الـ: الْأَرْض = the earth."
+    }
+  ]
+}

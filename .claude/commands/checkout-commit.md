@@ -1,0 +1,1 @@
+checkout a new branch called $1. commit any changes to this new branch and provide a suitable commit message based on the code changes. then once commit is success push this new branch to github

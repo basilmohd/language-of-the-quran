@@ -19,6 +19,8 @@ export default defineConfig(() => ({
   resolve: {
     alias: {
       '@': resolve(import.meta.dirname, 'src'),
+      '@org/api-types': resolve(import.meta.dirname, '../../libs/api-types/src/index.ts'),
+      '@org/srs': resolve(import.meta.dirname, '../../libs/srs/src/index.ts'),
     },
   },
   // Uncomment this if you are using workers.

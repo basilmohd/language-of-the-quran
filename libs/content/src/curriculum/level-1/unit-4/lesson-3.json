@@ -1,0 +1,97 @@
+{
+  "lessonId": "l1-u4-l3",
+  "version": 1,
+  "title": "Reading Cases in Ayahs",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-nafs",
+      "arabic": "نَفْس",
+      "transliteration": "nafs",
+      "meaning": "soul / self",
+      "rootArabic": "ن ف س",
+      "rootMeaning": "soul, self, breath",
+      "frequencyInQuran": 295,
+      "specialNote": "نَفْس is feminine in Arabic. It appears in many forms: النَّفْسُ الْمُطْمَئِنَّةُ (the tranquil soul), لَا تَجْزِي نَفْسٌ عَن نَّفْسٍ (no soul will avail another soul).",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fajr",
+          "surahNumber": 89,
+          "ayahNumber": 27,
+          "arabicText": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
+          "translation": "O tranquil soul!",
+          "highlightedWordArabic": "النَّفْسُ"
+        },
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 48,
+          "arabicText": "وَاتَّقُوا يَوْمًا لَّا تَجْزِي نَفْسٌ عَن نَّفْسٍ شَيْئًا",
+          "translation": "And fear a Day when no soul will avail another soul at all.",
+          "highlightedWordArabic": "نَفْسٌ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "نَفْس",
+      "transliteration": "nafs",
+      "choices": ["soul / self", "heart", "mind", "spirit"],
+      "correctIndex": 0,
+      "wordId": "word-nafs"
+    },
+    {
+      "id": "ex-2",
+      "type": "grammar_role",
+      "arabic": "النَّفْسُ الْمُطْمَئِنَّةُ",
+      "transliteration": "an-nafsu l-muṭmaʾinna",
+      "question": "Both النَّفْسُ and الْمُطْمَئِنَّةُ end in ـُ. What rule is demonstrated here?",
+      "choices": [
+        "An adjective must match its noun in case, gender, number, and definiteness",
+        "All words in a sentence take the same case ending",
+        "Feminine words always end in damma",
+        "Definite nouns always take the nominative"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-nafs",
+      "explanation": "In Arabic, adjectives agree with their nouns in all four features: case (marfu/mansoob/majroor), gender (masc/fem), number (sing/dual/plural), and definiteness (definite/indefinite)."
+    },
+    {
+      "id": "ex-3",
+      "type": "grammar_role",
+      "arabic": "عَن نَّفْسٍ",
+      "transliteration": "ʿan nafsin",
+      "question": "نَفْسٍ in عَن نَّفْسٍ ends in ـٍ (double kasra/tanwin). What does this indicate?",
+      "choices": [
+        "Majroor (genitive) + indefinite — after the preposition عَن",
+        "Marfu (nominative) + indefinite",
+        "Mansoob (accusative) + indefinite",
+        "Definite majroor"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-nafs",
+      "explanation": "Tanwin (nunation — the doubled diacritics ـٌ ـً ـٍ) marks indefiniteness. ـٍ = indefinite + majroor. ـٌ = indefinite + marfu. ـً = indefinite + mansoob."
+    },
+    {
+      "id": "ex-4",
+      "type": "word_translation",
+      "arabic": "يَوْمًا",
+      "transliteration": "yawman",
+      "choices": ["a day (accusative, indefinite)", "the day (definite)", "days (plural)", "day of (genitive)"],
+      "correctIndex": 0,
+      "wordId": "word-yawm"
+    },
+    {
+      "id": "ex-5",
+      "type": "fill_blank",
+      "verseArabic": "يَا أَيَّتُهَا ___ الْمُطْمَئِنَّةُ",
+      "verseTranslation": "O ___ soul!",
+      "surahName": "Al-Fajr",
+      "verseRef": "89:27",
+      "choices": ["النَّفْسُ", "الرُّوحُ", "الْقَلْبُ", "الْعَقْلُ"],
+      "correctIndex": 0,
+      "wordId": "word-nafs"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "lessonId": "l1-u3-l3",
+  "version": 1,
+  "title": "Proper Nouns in the Quran",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-ibrahim",
+      "arabic": "إِبْرَاهِيم",
+      "transliteration": "Ibrāhīm",
+      "meaning": "Abraham (Prophet Ibrahim)",
+      "frequencyInQuran": 69,
+      "specialNote": "إِبْرَاهِيم is one of the most mentioned prophets in the Quran. He is the patriarch of monotheism, and the Kaaba was built by him and his son Ismail.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 124,
+          "arabicText": "وَإِذِ ابْتَلَىٰ إِبْرَاهِيمَ رَبُّهُ بِكَلِمَاتٍ فَأَتَمَّهُنَّ",
+          "translation": "And when his Lord tested Ibrahim with commands, and he fulfilled them.",
+          "highlightedWordArabic": "إِبْرَاهِيمَ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-maryam",
+      "arabic": "مَرْيَم",
+      "transliteration": "Maryam",
+      "meaning": "Mary / Maryam",
+      "frequencyInQuran": 34,
+      "specialNote": "مَرْيَم is the only woman mentioned by name in the Quran. She has an entire surah (19) named after her — Surah Maryam. She is described as the greatest of women.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Imran",
+          "surahNumber": 3,
+          "ayahNumber": 42,
+          "arabicText": "وَإِذْ قَالَتِ الْمَلَائِكَةُ يَا مَرْيَمُ إِنَّ اللَّهَ اصْطَفَاكِ وَطَهَّرَكِ",
+          "translation": "And when the angels said, 'O Mary, indeed Allah has chosen you and purified you.'",
+          "highlightedWordArabic": "يَا مَرْيَمُ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "إِبْرَاهِيم",
+      "transliteration": "Ibrāhīm",
+      "choices": ["Abraham (Prophet)", "Moses (Prophet)", "Jesus (Prophet)", "Muhammad (Prophet)"],
+      "correctIndex": 0,
+      "wordId": "word-ibrahim"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-musa",
+      "arabic": "مُوسَى",
+      "transliteration": "Mūsā",
+      "meaning": "Moses (Prophet Musa)",
+      "frequencyInQuran": 136,
+      "specialNote": "مُوسَى is the most mentioned prophet in the Quran — more than Muhammad himself. His story spans many surahs and contains profound lessons on patience and trust in Allah.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 60,
+          "arabicText": "وَإِذِ اسْتَسْقَىٰ مُوسَىٰ لِقَوْمِهِ",
+          "translation": "And when Moses prayed for water for his people.",
+          "highlightedWordArabic": "مُوسَىٰ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-muhammad",
+      "arabic": "مُحَمَّد",
+      "transliteration": "Muḥammad",
+      "meaning": "Muhammad (the Prophet)",
+      "rootArabic": "ح م د",
+      "rootMeaning": "praise, commendation",
+      "frequencyInQuran": 4,
+      "specialNote": "مُحَمَّد means 'the praised one' — from the root ح-م-د (praise). He is mentioned by name only 4 times in the Quran, yet his name appears in every adhan and every shalat.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fath",
+          "surahNumber": 48,
+          "ayahNumber": 29,
+          "arabicText": "مُّحَمَّدٌ رَّسُولُ اللَّهِ",
+          "translation": "Muhammad is the Messenger of Allah.",
+          "highlightedWordArabic": "مُّحَمَّدٌ"
+        }
+      ]
+    },
+    {
+      "id": "ex-2",
+      "type": "word_translation",
+      "arabic": "مُوسَى",
+      "transliteration": "Mūsā",
+      "choices": ["Moses (Prophet)", "Abraham (Prophet)", "Mary", "Muhammad (Prophet)"],
+      "correctIndex": 0,
+      "wordId": "word-musa"
+    },
+    {
+      "id": "ex-3",
+      "type": "word_translation",
+      "arabic": "مَرْيَم",
+      "transliteration": "Maryam",
+      "choices": ["Mary / Maryam", "a believing woman", "a righteous woman", "a woman of paradise"],
+      "correctIndex": 0,
+      "wordId": "word-maryam"
+    },
+    {
+      "id": "ex-4",
+      "type": "fill_blank",
+      "verseArabic": "___ رَّسُولُ اللَّهِ",
+      "verseTranslation": "___ is the Messenger of Allah.",
+      "surahName": "Al-Fath",
+      "verseRef": "48:29",
+      "choices": ["مُّحَمَّدٌ", "إِبْرَاهِيمُ", "مُوسَى", "عِيسَى"],
+      "correctIndex": 0,
+      "wordId": "word-muhammad"
+    }
+  ]
+}

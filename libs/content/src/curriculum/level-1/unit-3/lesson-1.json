@@ -1,0 +1,98 @@
+{
+  "lessonId": "l1-u3-l1",
+  "version": 1,
+  "title": "Al — The Definite Article",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-quran",
+      "arabic": "قُرْآن",
+      "transliteration": "Qurʾān",
+      "meaning": "the Quran / recitation",
+      "rootArabic": "ق ر أ",
+      "rootMeaning": "to read, recite, proclaim",
+      "frequencyInQuran": 70,
+      "specialNote": "قُرْآن literally means 'the recitation' — from the root ق-ر-أ (to read/recite). With الـ: الْقُرْآن = the Quran. Without: قُرْآنٌ = a recitation.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 185,
+          "arabicText": "شَهْرُ رَمَضَانَ الَّذِي أُنزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ",
+          "translation": "The month of Ramadan in which was revealed the Quran, a guidance for the people.",
+          "highlightedWordArabic": "الْقُرْآنُ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-alam",
+      "arabic": "عَالَم",
+      "transliteration": "ʿālam",
+      "meaning": "world / universe",
+      "rootArabic": "ع ل م",
+      "rootMeaning": "knowledge, world, to know",
+      "frequencyInQuran": 73,
+      "specialNote": "You've been saying الْعَالَمِينَ in every prayer. رَبِّ الْعَالَمِينَ = 'Lord of all worlds'. عَالَمِينَ is the plural of عَالَم.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 2,
+          "arabicText": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+          "translation": "All praise is due to Allah, Lord of all worlds.",
+          "highlightedWordArabic": "الْعَالَمِينَ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "قُرْآن",
+      "transliteration": "Qurʾān",
+      "choices": ["Quran / recitation", "book", "scripture", "revelation"],
+      "correctIndex": 0,
+      "wordId": "word-quran"
+    },
+    {
+      "id": "ex-2",
+      "type": "grammar_role",
+      "arabic": "الْقُرْآنُ",
+      "transliteration": "al-Qurʾānu",
+      "question": "What does الـ (al) at the beginning of الْقُرْآنُ indicate?",
+      "choices": ["Definite (the Quran)", "Plural (Qurans)", "Feminine gender", "Genitive case"],
+      "correctIndex": 0,
+      "wordId": "word-quran",
+      "explanation": "الـ is the definite article in Arabic — equivalent to 'the' in English. قُرْآنٌ = 'a recitation'; الْقُرْآنُ = 'the Quran' (specific, known)."
+    },
+    {
+      "id": "ex-3",
+      "type": "word_translation",
+      "arabic": "عَالَم",
+      "transliteration": "ʿālam",
+      "choices": ["world / universe", "knowledge", "flag / sign", "scholar"],
+      "correctIndex": 0,
+      "wordId": "word-alam"
+    },
+    {
+      "id": "ex-4",
+      "type": "fill_blank",
+      "verseArabic": "شَهْرُ رَمَضَانَ الَّذِي أُنزِلَ فِيهِ الْ___ هُدًى لِّلنَّاسِ",
+      "verseTranslation": "The month of Ramadan in which the ___ was revealed, a guidance for the people.",
+      "surahName": "Al-Baqarah",
+      "verseRef": "2:185",
+      "choices": ["قُرْآنُ", "كِتَابُ", "رَحْمَةُ", "نُورُ"],
+      "correctIndex": 0,
+      "wordId": "word-quran"
+    },
+    {
+      "id": "ex-5",
+      "type": "word_translation",
+      "arabic": "اَلْعَالَمِينَ",
+      "transliteration": "al-ʿālamīn",
+      "choices": ["all worlds / the universes", "the scholars", "the signs", "the knowledge"],
+      "correctIndex": 0,
+      "wordId": "word-alam"
+    }
+  ]
+}

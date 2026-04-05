@@ -1,0 +1,121 @@
+{
+  "lessonId": "l1-u4-l1",
+  "version": 1,
+  "title": "The Three Cases",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-haqq",
+      "arabic": "حَقّ",
+      "transliteration": "ḥaqq",
+      "meaning": "truth / right",
+      "rootArabic": "ح ق ق",
+      "rootMeaning": "truth, right, to be due",
+      "frequencyInQuran": 287,
+      "specialNote": "الْحَقُّ (marfu — subject/predicate) vs بِالْحَقِّ (majroor — after preposition). Watch how the ending changes based on the word's role in the sentence.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 147,
+          "arabicText": "الْحَقُّ مِن رَّبِّكَ فَلَا تَكُونَنَّ مِنَ الْمُمْتَرِينَ",
+          "translation": "The truth is from your Lord, so do not be among the doubters.",
+          "highlightedWordArabic": "الْحَقُّ"
+        },
+        {
+          "surahName": "Al-Imran",
+          "surahNumber": 3,
+          "ayahNumber": 3,
+          "arabicText": "نَزَّلَ عَلَيْكَ الْكِتَابَ بِالْحَقِّ",
+          "translation": "He has sent down upon you the Book in truth.",
+          "highlightedWordArabic": "بِالْحَقِّ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-yawm",
+      "arabic": "يَوْم",
+      "transliteration": "yawm",
+      "meaning": "day",
+      "rootArabic": "ي و م",
+      "rootMeaning": "day, time",
+      "frequencyInQuran": 405,
+      "specialNote": "يَوْمَ الدِّينِ (day of judgement) — يَوْم here is majroor (genitive) because it is the first word of an Idhafah. You say this in every prayer in Al-Fatiha.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 4,
+          "arabicText": "مَالِكِ يَوْمِ الدِّينِ",
+          "translation": "Master of the Day of Judgement.",
+          "highlightedWordArabic": "يَوْمِ"
+        },
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 8,
+          "arabicText": "وَمِنَ النَّاسِ مَن يَقُولُ آمَنَّا بِاللَّهِ وَبِالْيَوْمِ الْآخِرِ",
+          "translation": "And among the people are some who say, 'We believe in Allah and the Last Day.'",
+          "highlightedWordArabic": "بِالْيَوْمِ"
+        }
+      ]
+    },
+    {
+      "id": "ex-1",
+      "type": "word_translation",
+      "arabic": "حَقّ",
+      "transliteration": "ḥaqq",
+      "choices": ["truth / right", "knowledge", "mercy", "day"],
+      "correctIndex": 0,
+      "wordId": "word-haqq"
+    },
+    {
+      "id": "ex-2",
+      "type": "word_translation",
+      "arabic": "يَوْم",
+      "transliteration": "yawm",
+      "choices": ["day", "night", "time", "hour"],
+      "correctIndex": 0,
+      "wordId": "word-yawm"
+    },
+    {
+      "id": "ex-3",
+      "type": "grammar_role",
+      "arabic": "الْحَقُّ",
+      "transliteration": "al-ḥaqqu",
+      "question": "الْحَقُّ ends in ـُ (damma). What case is this?",
+      "choices": ["Marfu (nominative) — subject or predicate", "Mansoob (accusative) — object", "Majroor (genitive) — after preposition"],
+      "correctIndex": 0,
+      "wordId": "word-haqq",
+      "explanation": "The three cases: Marfu (ـُ) for subjects/predicates, Mansoob (ـَ) for objects, Majroor (ـِ) after prepositions or in Idhafah. Arabic grammar is expressed through these endings."
+    },
+    {
+      "id": "ex-4",
+      "type": "grammar_role",
+      "arabic": "بِالْحَقِّ",
+      "transliteration": "bil-ḥaqqi",
+      "question": "بِالْحَقِّ ends in ـِ (kasra). What case is this, and why?",
+      "choices": [
+        "Majroor (genitive) — the preposition بِ causes it",
+        "Marfu (nominative) — it is the subject",
+        "Mansoob (accusative) — it is the object",
+        "No case — it is a verb"
+      ],
+      "correctIndex": 0,
+      "wordId": "word-haqq",
+      "explanation": "Prepositions (like بِ, فِي, مِن, عَلَى) always put the noun after them into the Majroor case — shown by the kasra ending ـِ."
+    },
+    {
+      "id": "ex-5",
+      "type": "fill_blank",
+      "verseArabic": "مَالِكِ ___ الدِّينِ",
+      "verseTranslation": "Master of the ___ of Judgement.",
+      "surahName": "Al-Fatiha",
+      "verseRef": "1:4",
+      "choices": ["يَوْمِ", "رَبِّ", "حَقِّ", "كِتَابِ"],
+      "correctIndex": 0,
+      "wordId": "word-yawm"
+    }
+  ]
+}
