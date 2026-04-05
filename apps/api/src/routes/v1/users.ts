@@ -10,24 +10,24 @@ const router = Router();
 // GET /api/v1/users/me/stats
 router.get('/me/stats', requireAuth, async (req: Request, res: Response): Promise<void> => {
   const userId = req.appUser!.id;
-  const cacheKey = `user:${userId}:streak`;
+  const cacheKey = `user:${userId}:stats`;
 
   const cached = await cacheGet<UserStats>(cacheKey);
   if (cached) { ok(res, cached); return; }
 
-  const [streak, wordsLearned] = await Promise.all([
+  const [streak, wordsLearned, learnedTopRanks] = await Promise.all([
     prisma.userStreak.findUnique({ where: { userId } }),
     prisma.userWordReview.count({ where: { userId, repetitions: { gte: 2 } } }),
+    prisma.userWordReview.count({
+      where: {
+        userId,
+        repetitions: { gte: 2 },
+        word: { frequencyRank: { lte: 300, not: null } },
+      },
+    }),
   ]);
 
   // Quran coverage: % of top-300 frequency words the user has learned
-  const learnedFreqWords = await prisma.userWordReview.findMany({
-    where: { userId, repetitions: { gte: 2 } },
-    include: { word: { select: { frequencyRank: true } } },
-  });
-  const learnedTopRanks = learnedFreqWords.filter(
-    (r) => r.word.frequencyRank !== null && r.word.frequencyRank <= 300,
-  ).length;
   const quranCoverage = Math.round((learnedTopRanks / 300) * 100);
 
   const stats: UserStats = {

@@ -1,4 +1,4 @@
-import { SignInButton, SignUpButton, useAuth } from '@clerk/clerk-react';
+import { SignInButton, useAuth } from '@clerk/clerk-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -58,12 +58,12 @@ export function Home() {
       );
     }
     return (
-      <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
+      <SignInButton mode="modal" forceRedirectUrl="/dashboard">
         <Button size={size} className={className}>
-          Start Learning Free
+          Request Access
           <ArrowRight className="ml-1 h-4 w-4" />
         </Button>
-      </SignUpButton>
+      </SignInButton>
     );
   }
 
@@ -89,7 +89,7 @@ export function Home() {
           variant="outline"
           className="mb-6 text-sm font-medium bg-primary/10 text-primary border-primary/30 hover:bg-primary/10"
         >
-          Free to start · 6 levels · 350 words
+          Invite only · 6 levels · 350 words
         </Badge>
 
         <h1 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight mb-6">
@@ -183,7 +183,7 @@ export function Home() {
             Ready to understand the Quran?
           </h2>
           <p className="text-primary-foreground/80 mb-6 text-sm">
-            Free to start. No credit card required.
+            Currently invite only. Sign in if you have access.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-primary-foreground/80 text-xs mb-8">
             {['Grammar-first', 'No hearts/lives', 'Earn XP & badges', '350 core words'].map((item) => (

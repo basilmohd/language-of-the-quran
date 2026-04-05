@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import { prisma } from '@org/db';
 import { requireAuth } from '../../middleware/requireAuth.js';
 import { ok, fail } from '../../lib/respond.js';
+import { cacheGet, cacheSet, cacheDel } from '../../lib/redis.js';
 import type { LevelWithUnits } from '@org/api-types';
 
 const router = Router();
@@ -9,6 +10,10 @@ const router = Router();
 // GET /api/v1/levels — all levels + units + lock status
 router.get('/levels', requireAuth, async (req: Request, res: Response): Promise<void> => {
   const userId = req.appUser!.id;
+  const cacheKey = `user:${userId}:levels`;
+
+  const cached = await cacheGet<LevelWithUnits[]>(cacheKey);
+  if (cached) { ok(res, cached); return; }
 
   const [levels, completedLessons] = await Promise.all([
     prisma.level.findMany({
@@ -54,20 +59,24 @@ router.get('/levels', requireAuth, async (req: Request, res: Response): Promise<
       title: level.title,
       description: level.description,
       isUnlocked,
-      units: level.units.map((unit) => ({
+      units: level.units.map((unit, unitIdx) => {
+      const prevUnit = level.units[unitIdx - 1];
+      const prevUnitLastLesson = prevUnit?.lessons[prevUnit.lessons.length - 1];
+
+      return {
         id: unit.id,
         number: unit.number,
         title: unit.title,
         lessons: unit.lessons.map((lesson, lessonIdx) => {
-          const prevLessonInUnit = lessonIdx === 0
-            ? (unit.number === 1 && isUnlocked) // first lesson of first unit
-              ? true
-              : unit.lessons[lessonIdx - 1] !== undefined
-                ? completedSet.has(unit.lessons[lessonIdx - 1].id)
-                : false
-            : completedSet.has(unit.lessons[lessonIdx - 1].id);
-
-          const isLessonUnlocked = isUnlocked && (lessonIdx === 0 || prevLessonInUnit);
+          let isLessonUnlocked: boolean;
+          if (!isUnlocked) {
+            isLessonUnlocked = false;
+          } else if (lessonIdx === 0) {
+            // First lesson of a unit: unlocked if it's the first unit OR the previous unit's last lesson is completed
+            isLessonUnlocked = unitIdx === 0 || (prevUnitLastLesson != null && completedSet.has(prevUnitLastLesson.id));
+          } else {
+            isLessonUnlocked = completedSet.has(unit.lessons[lessonIdx - 1].id);
+          }
 
           return {
             id: lesson.id,
@@ -80,10 +89,12 @@ router.get('/levels', requireAuth, async (req: Request, res: Response): Promise<
             isUnlocked: isLessonUnlocked,
           };
         }),
-      })),
+      };
+    }),
     };
   });
 
+  await cacheSet(cacheKey, result, 5 * 60); // 5 min TTL
   ok(res, result);
 });
 
@@ -267,6 +278,12 @@ router.post(
       }
     }
 
+    // Invalidate caches so next load reflects the new completion status
+    await Promise.all([
+      cacheDel(`user:${userId}:levels`),
+      cacheDel(`user:${userId}:stats`),
+    ]);
+
     // Update streak
     const { updateStreak } = await import('../../services/streakService.js');
     const streakData = await updateStreak(userId, timezone, safeXp);
@@ -284,18 +301,40 @@ router.post(
       currentStreak: streakData.currentStreak,
     });
 
-    // Find next lesson in sequence
-    const completedUnit = await prisma.lesson.findUnique({
+    // Find next lesson in sequence (within unit, or first lesson of next unit)
+    const completedUnitData = await prisma.lesson.findUnique({
       where: { id: lessonId },
-      include: { unit: { include: { lessons: { orderBy: { number: 'asc' }, where: { isPublished: true } } } } },
+      include: {
+        unit: {
+          include: {
+            lessons: { orderBy: { number: 'asc' }, where: { isPublished: true } },
+            level: {
+              include: {
+                units: {
+                  orderBy: { number: 'asc' },
+                  include: { lessons: { orderBy: { number: 'asc' }, where: { isPublished: true } } },
+                },
+              },
+            },
+          },
+        },
+      },
     });
 
     let nextLessonId: string | undefined;
-    if (completedUnit) {
-      const lessonIdx = completedUnit.unit.lessons.findIndex((l) => l.id === lessonId);
-      const nextInUnit = completedUnit.unit.lessons[lessonIdx + 1];
+    if (completedUnitData) {
+      const lessonIdx = completedUnitData.unit.lessons.findIndex((l) => l.id === lessonId);
+      const nextInUnit = completedUnitData.unit.lessons[lessonIdx + 1];
       if (nextInUnit) {
         nextLessonId = nextInUnit.id;
+      } else {
+        // Last lesson in unit — find first lesson of next unit in same level
+        const units = completedUnitData.unit.level.units;
+        const unitIdx = units.findIndex((u) => u.id === completedUnitData.unit.id);
+        const nextUnit = units[unitIdx + 1];
+        if (nextUnit?.lessons[0]) {
+          nextLessonId = nextUnit.lessons[0].id;
+        }
       }
     }
 

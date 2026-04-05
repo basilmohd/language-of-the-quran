@@ -171,6 +171,7 @@ async function main() {
             title: lesson.title,
             xpReward: lesson.xpReward,
             exercises: content,
+            isPublished: lesson.id.startsWith('l1-'),
           },
           create: {
             id: lesson.id,
