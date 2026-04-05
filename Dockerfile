@@ -23,6 +23,9 @@ RUN echo "→ Starting npm install..." && npm i && echo "✓ Dependencies instal
 COPY . .
 RUN echo "✓ Source code copied"
 
+# Generate Prisma client before build
+RUN echo "→ Generating Prisma client..." && npm run prisma:generate && echo "✓ Prisma client generated"
+
 # Build the API for production
 RUN echo "→ Building API for production..." && npm exec nx run @org/api:build:production && echo "✓ API build completed"
 
