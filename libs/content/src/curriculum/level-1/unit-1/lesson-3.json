@@ -20,7 +20,8 @@
           "ayahNumber": 22,
           "arabicText": "وَالسَّمَاءَ بِنَاءً وَأَنزَلَ مِنَ السَّمَاءِ مَاءً",
           "translation": "And [made] the sky a structure and sent down rain from the sky.",
-          "highlightedWordArabic": "السَّمَاءِ"
+          "highlightedWordArabic": "السَّمَاءِ",
+          "audioUri": "audio://quran/default/2/22"
         }
       ]
     },
@@ -41,7 +42,8 @@
           "ayahNumber": 22,
           "arabicText": "الَّذِي جَعَلَ لَكُمُ الْأَرْضَ فِرَاشًا",
           "translation": "He who made the earth a resting place for you.",
-          "highlightedWordArabic": "الْأَرْضَ"
+          "highlightedWordArabic": "الْأَرْضَ",
+          "audioUri": "audio://quran/default/2/22"
         }
       ]
     },
@@ -50,7 +52,12 @@
       "type": "word_translation",
       "arabic": "سَمَاء",
       "transliteration": "samāʾ",
-      "choices": ["sky / heaven", "earth / land", "water", "fire"],
+      "choices": [
+        "sky / heaven",
+        "earth / land",
+        "water",
+        "fire"
+      ],
       "correctIndex": 0,
       "wordId": "word-sama"
     },
@@ -70,7 +77,8 @@
           "ayahNumber": 30,
           "arabicText": "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ",
           "translation": "And We made from water every living thing.",
-          "highlightedWordArabic": "الْمَاءِ"
+          "highlightedWordArabic": "الْمَاءِ",
+          "audioUri": "audio://quran/default/21/30"
         }
       ]
     },
@@ -81,7 +89,12 @@
       "verseTranslation": "Allah is the Light of the heavens and the ___.",
       "surahName": "An-Nur",
       "verseRef": "24:35",
-      "choices": ["أَرْض", "مَاء", "نَار", "سَمَاء"],
+      "choices": [
+        "أَرْض",
+        "مَاء",
+        "نَار",
+        "سَمَاء"
+      ],
       "correctIndex": 0,
       "wordId": "word-ard"
     },
@@ -102,7 +115,8 @@
           "ayahNumber": 24,
           "arabicText": "فَاتَّقُوا النَّارَ الَّتِي وَقُودُهَا النَّاسُ وَالْحِجَارَةُ",
           "translation": "Then fear the Fire whose fuel is people and stones.",
-          "highlightedWordArabic": "النَّارَ"
+          "highlightedWordArabic": "النَّارَ",
+          "audioUri": "audio://quran/default/2/24"
         }
       ]
     },
@@ -111,7 +125,12 @@
       "type": "word_translation",
       "arabic": "مَاء",
       "transliteration": "māʾ",
-      "choices": ["water", "fire", "light", "sky"],
+      "choices": [
+        "water",
+        "fire",
+        "light",
+        "sky"
+      ],
       "correctIndex": 0,
       "wordId": "word-maa"
     },
@@ -120,7 +139,12 @@
       "type": "word_translation",
       "arabic": "نَار",
       "transliteration": "nār",
-      "choices": ["fire", "light", "water", "earth"],
+      "choices": [
+        "fire",
+        "light",
+        "water",
+        "earth"
+      ],
       "correctIndex": 0,
       "wordId": "word-nar"
     },
@@ -130,7 +154,11 @@
       "arabic": "أَرْض",
       "transliteration": "arḍ",
       "question": "What type of word is أَرْض?",
-      "choices": ["Ism (Noun)", "Fi'l (Verb)", "Harf (Particle)"],
+      "choices": [
+        "Ism (Noun)",
+        "Fi'l (Verb)",
+        "Harf (Particle)"
+      ],
       "correctIndex": 0,
       "wordId": "word-ard",
       "explanation": "أَرْض is an Ism (noun) — it names a thing (earth/land). All Isms can carry the definite article الـ: الْأَرْض = the earth."

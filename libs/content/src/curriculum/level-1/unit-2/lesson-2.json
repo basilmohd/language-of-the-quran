@@ -20,7 +20,8 @@
           "ayahNumber": 20,
           "arabicText": "وَجَاءَ مِنْ أَقْصَى الْمَدِينَةِ رَجُلٌ يَسْعَىٰ",
           "translation": "And a man came from the farthest end of the city, running.",
-          "highlightedWordArabic": "رَجُلٌ"
+          "highlightedWordArabic": "رَجُلٌ",
+          "audioUri": "audio://quran/default/36/20"
         }
       ]
     },
@@ -39,7 +40,8 @@
           "ayahNumber": 35,
           "arabicText": "إِذْ قَالَتِ امْرَأَتُ عِمْرَانَ رَبِّ إِنِّي نَذَرْتُ لَكَ مَا فِي بَطْنِي",
           "translation": "When the wife of Imran said, 'My Lord, I have pledged to You what is in my womb.'",
-          "highlightedWordArabic": "امْرَأَتُ"
+          "highlightedWordArabic": "امْرَأَتُ",
+          "audioUri": "audio://quran/default/3/35"
         }
       ]
     },
@@ -48,7 +50,12 @@
       "type": "word_translation",
       "arabic": "رَجُل",
       "transliteration": "rajul",
-      "choices": ["man", "woman", "boy", "messenger"],
+      "choices": [
+        "man",
+        "woman",
+        "boy",
+        "messenger"
+      ],
       "correctIndex": 0,
       "wordId": "word-rajul"
     },
@@ -69,7 +76,8 @@
           "ayahNumber": 3,
           "arabicText": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
           "translation": "He neither begets nor was He begotten.",
-          "highlightedWordArabic": "يَلِدْ"
+          "highlightedWordArabic": "يَلِدْ",
+          "audioUri": "audio://quran/default/112/3"
         }
       ]
     },
@@ -78,7 +86,12 @@
       "type": "word_translation",
       "arabic": "اِمْرَأَة",
       "transliteration": "imraʾa",
-      "choices": ["woman", "man", "girl", "daughter"],
+      "choices": [
+        "woman",
+        "man",
+        "girl",
+        "daughter"
+      ],
       "correctIndex": 0,
       "wordId": "word-imraa"
     },
@@ -87,7 +100,12 @@
       "type": "word_translation",
       "arabic": "وَلَد",
       "transliteration": "walad",
-      "choices": ["child / son", "man", "prophet", "servant"],
+      "choices": [
+        "child / son",
+        "man",
+        "prophet",
+        "servant"
+      ],
       "correctIndex": 0,
       "wordId": "word-walad"
     },
@@ -97,7 +115,12 @@
       "arabic": "رَجُلَانِ",
       "transliteration": "rajulāni",
       "question": "The ـَانِ ending on رَجُلَانِ indicates what number?",
-      "choices": ["Dual (two)", "Plural (three or more)", "Singular (one)", "Feminine"],
+      "choices": [
+        "Dual (two)",
+        "Plural (three or more)",
+        "Singular (one)",
+        "Feminine"
+      ],
       "correctIndex": 0,
       "wordId": "word-rajul",
       "explanation": "The ـَانِ (or ـَيْنِ in genitive) ending marks the dual — exactly two of something. Arabic has three numbers: singular (one), dual (two), and plural (three or more)."

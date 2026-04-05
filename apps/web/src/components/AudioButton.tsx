@@ -16,8 +16,11 @@ export function AudioButton({ audioUri, size = 'md', className }: AudioButtonPro
   const { play, status, error } = useAudio(audioUri);
 
   if (!audioUri) {
+    console.warn('AudioButton rendered without audioUri');
     return null;
   }
+
+  console.log('[AudioButton] Rendered with audioUri:', audioUri);
 
   const iconSize = size === 'sm' ? 'h-3.5 w-3.5' : 'h-4 w-4';
 

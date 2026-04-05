@@ -20,7 +20,8 @@
           "ayahNumber": 132,
           "arabicText": "وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
           "translation": "And do not die except while you are Muslims.",
-          "highlightedWordArabic": "مُّسْلِمُونَ"
+          "highlightedWordArabic": "مُّسْلِمُونَ",
+          "audioUri": "audio://quran/default/2/132"
         }
       ]
     },
@@ -41,7 +42,8 @@
           "ayahNumber": 35,
           "arabicText": "إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
           "translation": "Indeed, the Muslim men and Muslim women, the believing men and believing women…",
-          "highlightedWordArabic": "وَالْمُسْلِمَاتِ"
+          "highlightedWordArabic": "وَالْمُسْلِمَاتِ",
+          "audioUri": "audio://quran/default/33/35"
         }
       ]
     },
@@ -50,7 +52,12 @@
       "type": "word_translation",
       "arabic": "مُسْلِم",
       "transliteration": "muslim",
-      "choices": ["Muslim man / one who submits", "Muslim woman", "believer (male)", "believer (female)"],
+      "choices": [
+        "Muslim man / one who submits",
+        "Muslim woman",
+        "believer (male)",
+        "believer (female)"
+      ],
       "correctIndex": 0,
       "wordId": "word-muslim"
     },
@@ -70,7 +77,8 @@
           "ayahNumber": 285,
           "arabicText": "آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ",
           "translation": "The Messenger has believed in what was revealed to him from his Lord, and so have the believers.",
-          "highlightedWordArabic": "وَالْمُؤْمِنُونَ"
+          "highlightedWordArabic": "وَالْمُؤْمِنُونَ",
+          "audioUri": "audio://quran/default/2/285"
         }
       ]
     },
@@ -90,7 +98,8 @@
           "ayahNumber": 35,
           "arabicText": "إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
           "translation": "Indeed, the Muslim men and Muslim women, the believing men and believing women…",
-          "highlightedWordArabic": "وَالْمُؤْمِنَاتِ"
+          "highlightedWordArabic": "وَالْمُؤْمِنَاتِ",
+          "audioUri": "audio://quran/default/33/35"
         }
       ]
     },
@@ -99,7 +108,12 @@
       "type": "word_translation",
       "arabic": "مُؤْمِنَة",
       "transliteration": "muʾmina",
-      "choices": ["believer (female)", "Muslim woman", "believer (male)", "righteous woman"],
+      "choices": [
+        "believer (female)",
+        "Muslim woman",
+        "believer (male)",
+        "righteous woman"
+      ],
       "correctIndex": 0,
       "wordId": "word-mumina"
     },
@@ -109,7 +123,12 @@
       "arabic": "مُسْلِمَة",
       "transliteration": "muslima",
       "question": "The ة ending on مُسْلِمَة marks what grammatical feature?",
-      "choices": ["Feminine gender", "Plural number", "Definite form", "Genitive case"],
+      "choices": [
+        "Feminine gender",
+        "Plural number",
+        "Definite form",
+        "Genitive case"
+      ],
       "correctIndex": 0,
       "wordId": "word-muslima",
       "explanation": "The ة (ta marbuta) is the primary feminine marker in Arabic. When you see it on an Ism, the word is grammatically feminine."
@@ -119,7 +138,12 @@
       "type": "word_translation",
       "arabic": "مُؤْمِن",
       "transliteration": "muʾmin",
-      "choices": ["believer (male)", "Muslim (male)", "prophet", "messenger"],
+      "choices": [
+        "believer (male)",
+        "Muslim (male)",
+        "prophet",
+        "messenger"
+      ],
       "correctIndex": 0,
       "wordId": "word-mumin"
     }

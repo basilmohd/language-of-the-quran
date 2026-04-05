@@ -9,6 +9,11 @@ const API_BASE = (import.meta.env['VITE_API_URL'] as string | undefined) ?? 'htt
 export function resolveAudioUri(audioUri: string | undefined | null): string | null {
   if (!audioUri) return null;
   const match = audioUri.match(/^audio:\/\/quran\/(.+)$/);
-  if (!match) return null;
-  return `${API_BASE}/api/v1/audio/${match[1]}`;
+  if (!match) {
+    console.warn('[resolveAudioUri] Invalid audioUri format:', audioUri);
+    return null;
+  }
+  const resolved = `${API_BASE}/api/v1/audio/${match[1]}`;
+  console.log('[resolveAudioUri]', audioUri, '→', resolved);
+  return resolved;
 }

@@ -19,7 +19,8 @@
           "ayahNumber": 2,
           "arabicText": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ",
           "translation": "That is the Book about which there is no doubt, a guidance for those conscious of Allah.",
-          "highlightedWordArabic": "ٱلْكِتَٰبُ"
+          "highlightedWordArabic": "ٱلْكِتَٰبُ",
+          "audioUri": "audio://quran/default/2/2"
         },
         {
           "surahName": "Al-Imran",
@@ -27,7 +28,8 @@
           "ayahNumber": 3,
           "arabicText": "نَزَّلَ عَلَيْكَ ٱلْكِتَٰبَ بِٱلْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ",
           "translation": "He has sent down upon you the Book in truth, confirming what was before it.",
-          "highlightedWordArabic": "ٱلْكِتَٰبَ"
+          "highlightedWordArabic": "ٱلْكِتَٰبَ",
+          "audioUri": "audio://quran/default/3/3"
         }
       ]
     },
@@ -48,7 +50,8 @@
           "ayahNumber": 2,
           "arabicText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
           "translation": "All praise is due to Allah, Lord of all worlds.",
-          "highlightedWordArabic": "رَبِّ"
+          "highlightedWordArabic": "رَبِّ",
+          "audioUri": "audio://quran/default/1/2"
         },
         {
           "surahName": "Al-Baqarah",
@@ -56,7 +59,8 @@
           "ayahNumber": 131,
           "arabicText": "إِذْ قَالَ لَهُۥ رَبُّهُۥٓ أَسْلِمْ ۖ قَالَ أَسْلَمْتُ لِرَبِّ ٱلْعَٰلَمِينَ",
           "translation": "When his Lord said to him, 'Submit.' He said, 'I have submitted to the Lord of the worlds.'",
-          "highlightedWordArabic": "رَبُّهُۥٓ"
+          "highlightedWordArabic": "رَبُّهُۥٓ",
+          "audioUri": "audio://quran/default/2/131"
         }
       ]
     },
@@ -65,7 +69,12 @@
       "type": "word_translation",
       "arabic": "كِتَاب",
       "transliteration": "kitāb",
-      "choices": ["book / scripture", "light", "mercy", "path"],
+      "choices": [
+        "book / scripture",
+        "light",
+        "mercy",
+        "path"
+      ],
       "correctIndex": 0,
       "wordId": "word-kitab"
     },
@@ -86,7 +95,8 @@
           "ayahNumber": 17,
           "arabicText": "ذَهَبَ ٱللَّهُ بِنُورِهِمْ وَتَرَكَهُمْ فِى ظُلُمَٰتٍ لَّا يُبْصِرُونَ",
           "translation": "Allah took away their light and left them in darkness, unable to see.",
-          "highlightedWordArabic": "بِنُورِهِمْ"
+          "highlightedWordArabic": "بِنُورِهِمْ",
+          "audioUri": "audio://quran/default/2/17"
         },
         {
           "surahName": "An-Nur",
@@ -94,7 +104,8 @@
           "ayahNumber": 35,
           "arabicText": "ٱللَّهُ نُورُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ",
           "translation": "Allah is the Light of the heavens and the earth.",
-          "highlightedWordArabic": "نُورُ"
+          "highlightedWordArabic": "نُورُ",
+          "audioUri": "audio://quran/default/24/35"
         }
       ]
     },
@@ -103,7 +114,12 @@
       "type": "word_translation",
       "arabic": "رَبّ",
       "transliteration": "rabb",
-      "choices": ["Lord / Sustainer", "book", "light", "prophet"],
+      "choices": [
+        "Lord / Sustainer",
+        "book",
+        "light",
+        "prophet"
+      ],
       "correctIndex": 0,
       "wordId": "word-rabb"
     },
@@ -124,7 +140,8 @@
           "ayahNumber": 3,
           "arabicText": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
           "translation": "The Entirely Merciful, the Especially Merciful.",
-          "highlightedWordArabic": "ٱلرَّحْمَٰنِ"
+          "highlightedWordArabic": "ٱلرَّحْمَٰنِ",
+          "audioUri": "audio://quran/default/1/3"
         },
         {
           "surahName": "Al-Baqarah",
@@ -132,7 +149,8 @@
           "ayahNumber": 105,
           "arabicText": "وَٱللَّهُ يَخْتَصُّ بِرَحْمَتِهِۦ مَن يَشَآءُ",
           "translation": "And Allah selects for His mercy whom He wills.",
-          "highlightedWordArabic": "بِرَحْمَتِهِۦ"
+          "highlightedWordArabic": "بِرَحْمَتِهِۦ",
+          "audioUri": "audio://quran/default/2/105"
         }
       ]
     },
@@ -143,7 +161,12 @@
       "verseTranslation": "Allah is the ___ of the heavens and the earth.",
       "surahName": "An-Nur",
       "verseRef": "24:35",
-      "choices": ["نُور", "كِتَاب", "رَحْمَة", "رَبّ"],
+      "choices": [
+        "نُور",
+        "كِتَاب",
+        "رَحْمَة",
+        "رَبّ"
+      ],
       "correctIndex": 0,
       "wordId": "word-nur"
     },
@@ -152,7 +175,12 @@
       "type": "word_translation",
       "arabic": "رَحْمَة",
       "transliteration": "raḥma",
-      "choices": ["mercy / compassion", "Lord", "light", "scripture"],
+      "choices": [
+        "mercy / compassion",
+        "Lord",
+        "light",
+        "scripture"
+      ],
       "correctIndex": 0,
       "wordId": "word-rahma"
     }
