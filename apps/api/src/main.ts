@@ -4,7 +4,7 @@ import { clerkMiddleware } from '@clerk/express';
 import v1Router from './routes/v1/index.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
-const host = process.env['HOST'] ?? 'localhost';
+const host = process.env['HOST'] ?? '0.0.0.0';
 const port = process.env['PORT'] ? Number(process.env['PORT']) : 3001;
 
 // Allowed origins: web app in dev and any configured prod origin
