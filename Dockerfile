@@ -2,6 +2,9 @@ FROM node:22.12.0-alpine
 
 WORKDIR /app
 
+# Install build dependencies required by Prisma
+RUN apk add --no-cache python3 make g++
+
 # Copy package manifests for all workspaces
 COPY package.json package-lock.json ./
 COPY apps/api/package.json ./apps/api/
