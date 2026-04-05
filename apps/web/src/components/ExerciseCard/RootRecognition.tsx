@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { RootRecognitionExercise } from '@org/api-types';
 import { Button } from '@/components/ui/button';
+import { AudioButton } from '@/components/AudioButton';
 import { cn } from '@/lib/utils';
 
 interface RootRecognitionProps {
@@ -18,14 +19,17 @@ export function RootRecognition({ exercise, onSubmit, disabled }: RootRecognitio
         <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
           Identify the root
         </p>
-        <p
-          dir="rtl"
-          lang="ar"
-          className="text-5xl font-bold text-foreground leading-normal"
-          style={{ fontFamily: 'var(--font-arabic)' }}
-        >
-          {exercise.arabic}
-        </p>
+        <div className="flex items-center justify-center gap-2">
+          <p
+            dir="rtl"
+            lang="ar"
+            className="text-5xl font-bold text-foreground leading-normal"
+            style={{ fontFamily: 'var(--font-arabic)' }}
+          >
+            {exercise.arabic}
+          </p>
+          <AudioButton audioUri={exercise.audioUri} size="md" />
+        </div>
         <p className="text-sm text-muted-foreground italic">{exercise.transliteration}</p>
         <p className="text-sm text-muted-foreground">What are the 3 root letters?</p>
       </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { GrammarRoleExercise } from '@org/api-types';
 import { Button } from '@/components/ui/button';
+import { AudioButton } from '@/components/AudioButton';
 import { cn } from '@/lib/utils';
 
 interface GrammarRoleProps {
@@ -34,14 +35,17 @@ export function GrammarRole({ exercise, onSubmit, disabled }: GrammarRoleProps) 
 
       {/* Target word */}
       <div className="text-center space-y-1">
-        <p
-          dir="rtl"
-          lang="ar"
-          className="text-4xl font-bold text-foreground"
-          style={{ fontFamily: 'var(--font-arabic)' }}
-        >
-          {exercise.arabic}
-        </p>
+        <div className="flex items-center justify-center gap-2">
+          <p
+            dir="rtl"
+            lang="ar"
+            className="text-4xl font-bold text-foreground"
+            style={{ fontFamily: 'var(--font-arabic)' }}
+          >
+            {exercise.arabic}
+          </p>
+          <AudioButton audioUri={exercise.audioUri} size="md" />
+        </div>
         <p className="text-sm text-foreground font-medium">{exercise.question}</p>
       </div>
 

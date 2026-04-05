@@ -1,5 +1,6 @@
 import type { LearnCard as LearnCardType } from '@org/api-types';
 import { AyahCard } from '@/components/AyahCard';
+import { AudioButton } from '@/components/AudioButton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ChevronRight, BookOpen, Sparkles } from 'lucide-react';
@@ -14,15 +15,18 @@ export function LearnCard({ card, onNext, onWordTap }: LearnCardProps) {
   return (
     <div className="space-y-5">
       {/* Word headline */}
-      <div className="text-center space-y-2 py-4">
-        <p
-          dir="rtl"
-          lang="ar"
-          className="text-5xl font-bold text-foreground leading-normal"
-          style={{ fontFamily: 'var(--font-arabic)' }}
-        >
-          {card.arabic}
-        </p>
+      <div className="text-center space-y-2 py-4 relative">
+        <div className="flex items-center justify-center gap-2">
+          <p
+            dir="rtl"
+            lang="ar"
+            className="text-5xl font-bold text-foreground leading-normal"
+            style={{ fontFamily: 'var(--font-arabic)' }}
+          >
+            {card.arabic}
+          </p>
+          <AudioButton audioUri={card.ayahCards[0]?.audioUri} size="md" />
+        </div>
         <p className="text-sm text-muted-foreground italic">{card.transliteration}</p>
         <p className="text-xl font-semibold text-foreground">{card.meaning}</p>
       </div>

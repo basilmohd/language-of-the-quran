@@ -16,6 +16,7 @@ import {
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { Button } from '@/components/ui/button';
+import { AudioButton } from '@/components/AudioButton';
 import { cn } from '@/lib/utils';
 
 interface WordReorderProps {
@@ -94,7 +95,8 @@ export function WordReorder({ exercise, onSubmit, disabled }: WordReorderProps) 
 
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <SortableContext items={items} strategy={horizontalListSortingStrategy}>
-          <div className="flex flex-wrap gap-2 justify-center min-h-[60px] p-4 rounded-xl border-2 border-dashed border-border bg-muted/30" dir="rtl">
+          <div className="flex flex-wrap gap-2 justify-center min-h-[60px] p-4 rounded-xl border-2 border-dashed border-border bg-muted/30 relative" dir="rtl">
+            <AudioButton audioUri={exercise.audioUri} size="md" className="absolute top-2 right-2" />
             {items.map((id) => (
               <SortableWord key={id} id={id} arabic={wordMap[id] ?? ''} disabled={disabled} />
             ))}
