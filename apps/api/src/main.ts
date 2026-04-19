@@ -1,8 +1,17 @@
-import 'dotenv/config';
+import { config as loadDotenv } from 'dotenv';
+// NX runs from workspace root; try both locations so local dev and direct runs both work
+loadDotenv({ path: 'apps/api/.env' });
+loadDotenv();
 import express from 'express';
 import { clerkMiddleware } from '@clerk/express';
 import v1Router from './routes/v1/index.js';
 import { errorHandler } from './middleware/errorHandler.js';
+
+// Prevent unhandled async rejections from crashing the process in Node 18+
+process.on('unhandledRejection', (reason) => {
+  console.error('[UnhandledRejection]', reason);
+});
+
 
 const host = process.env['HOST'] ?? '0.0.0.0';
 const port = process.env['PORT'] ? Number(process.env['PORT']) : 3001;

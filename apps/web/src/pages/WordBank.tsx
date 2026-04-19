@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { WordDrawer } from '@/components/WordDrawer';
 import { fetchWordBank } from '@/lib/api';
+import { ApiErrorBanner } from '@/components/ApiErrorBanner';
 import type { WordBankItem } from '@/lib/api';
 import { cn } from '@/lib/utils';
 
@@ -89,7 +90,7 @@ export function WordBank() {
           <UserButton afterSignOutUrl="/" />
         </div>
       </header>
-
+      <ApiErrorBanner />
       <main className="max-w-3xl mx-auto px-4 py-6 space-y-5">
         {/* Search */}
         <div className="relative">

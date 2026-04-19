@@ -1,18 +1,37 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '@org/db';
 import { requireAuth } from '../../middleware/requireAuth.js';
-import { ok, fail } from '../../lib/respond.js';
+import { ok, fail, asyncHandler } from '../../lib/respond.js';
 import { cacheGet, cacheSet, cacheDel } from '../../lib/redis.js';
-import type { LevelWithUnits } from '@org/api-types';
+import type {
+  LevelSummary,
+  LevelDetail,
+  UnitSummary,
+  XpTier,
+  UnitCompletedEvent,
+  LevelCompletedEvent,
+  LessonProgressSnapshot,
+} from '@org/api-types';
 
 const router = Router();
 
-// GET /api/v1/levels — all levels + units + lock status
-router.get('/levels', requireAuth, async (req: Request, res: Response): Promise<void> => {
-  const userId = req.appUser!.id;
-  const cacheKey = `user:${userId}:levels`;
+// ── Helpers ──────────────────────────────────────────────────────────────────
 
-  const cached = await cacheGet<LevelWithUnits[]>(cacheKey);
+/** Given a totalXp value and all XpTier rows (sorted by xpRequired asc), return current tier */
+function resolveXpTier(totalXp: number, tiers: XpTier[]): XpTier {
+  let current = tiers[0];
+  for (const tier of tiers) {
+    if (totalXp >= tier.xpRequired) current = tier;
+  }
+  return current;
+}
+
+// ── GET /api/v1/levels — level summaries (no unit/lesson detail) ─────────────
+router.get('/levels', requireAuth, asyncHandler(async (req: Request, res: Response): Promise<void> => {
+  const userId = req.appUser!.id;
+  const cacheKey = `user:${userId}:level-summaries`;
+
+  const cached = await cacheGet<LevelSummary[]>(cacheKey);
   if (cached) { ok(res, cached); return; }
 
   const [levels, completedLessons] = await Promise.all([
@@ -20,8 +39,7 @@ router.get('/levels', requireAuth, async (req: Request, res: Response): Promise<
       orderBy: { number: 'asc' },
       include: {
         units: {
-          orderBy: { number: 'asc' },
-          include: { lessons: { orderBy: { number: 'asc' }, where: { isPublished: true } } },
+          include: { lessons: { where: { isPublished: true }, select: { id: true } } },
         },
       },
     }),
@@ -33,7 +51,6 @@ router.get('/levels', requireAuth, async (req: Request, res: Response): Promise<
 
   const completedSet = new Set(completedLessons.map((p) => p.lessonId));
 
-  // Level 1 is always unlocked; level N+1 unlocks when all level N lessons are completed
   const completedByLevel: Record<number, number> = {};
   const totalByLevel: Record<number, number> = {};
 
@@ -50,56 +67,140 @@ router.get('/levels', requireAuth, async (req: Request, res: Response): Promise<
     totalByLevel[level.number] = total;
   }
 
-  const result: LevelWithUnits[] = levels.map((level, idx) => {
+  const result: LevelSummary[] = levels.map((level, idx) => {
     const isUnlocked = idx === 0 || completedByLevel[idx] === totalByLevel[idx];
+    const milestone = level.milestone as { badge: string; badgeIcon: string; message: string } | null;
 
     return {
       id: level.id,
       number: level.number,
       title: level.title,
+      tagline: level.tagline,
+      icon: level.icon,
       description: level.description,
       isUnlocked,
-      units: level.units.map((unit, unitIdx) => {
-      const prevUnit = level.units[unitIdx - 1];
-      const prevUnitLastLesson = prevUnit?.lessons[prevUnit.lessons.length - 1];
-
-      return {
-        id: unit.id,
-        number: unit.number,
-        title: unit.title,
-        lessons: unit.lessons.map((lesson, lessonIdx) => {
-          let isLessonUnlocked: boolean;
-          if (!isUnlocked) {
-            isLessonUnlocked = false;
-          } else if (lessonIdx === 0) {
-            // First lesson of a unit: unlocked if it's the first unit OR the previous unit's last lesson is completed
-            isLessonUnlocked = unitIdx === 0 || (prevUnitLastLesson != null && completedSet.has(prevUnitLastLesson.id));
-          } else {
-            isLessonUnlocked = completedSet.has(unit.lessons[lessonIdx - 1].id);
-          }
-
-          return {
-            id: lesson.id,
-            number: lesson.number,
-            title: lesson.title,
-            xpReward: lesson.xpReward,
-            status: completedSet.has(lesson.id)
-              ? 'COMPLETED'
-              : 'NOT_STARTED',
-            isUnlocked: isLessonUnlocked,
-          };
-        }),
-      };
-    }),
+      unitCount: level.units.length,
+      completedLessonCount: completedByLevel[level.number] ?? 0,
+      totalLessonCount: totalByLevel[level.number] ?? 0,
+      milestone: milestone ? { badge: milestone.badge, badgeIcon: milestone.badgeIcon, message: milestone.message } : null,
     };
   });
 
   await cacheSet(cacheKey, result, 5 * 60); // 5 min TTL
   ok(res, result);
-});
+}));
+
+// ── GET /api/v1/levels/:id — single level with units + lesson status ──────────
+router.get('/levels/:id', requireAuth, asyncHandler(async (req: Request, res: Response): Promise<void> => {
+  const userId = req.appUser!.id;
+  const levelId = req.params['id'];
+  const cacheKey = `user:${userId}:level:${levelId}`;
+
+  const cached = await cacheGet<LevelDetail>(cacheKey);
+  if (cached) { ok(res, cached); return; }
+
+  const [level, allLevels, completedLessons] = await Promise.all([
+    prisma.level.findUnique({
+      where: { id: levelId },
+      include: {
+        units: {
+          orderBy: { number: 'asc' },
+          include: { lessons: { orderBy: { number: 'asc' }, where: { isPublished: true } } },
+        },
+      },
+    }),
+    prisma.level.findMany({
+      orderBy: { number: 'asc' },
+      include: {
+        units: {
+          include: { lessons: { where: { isPublished: true }, select: { id: true } } },
+        },
+      },
+    }),
+    prisma.userLessonProgress.findMany({
+      where: { userId, status: 'COMPLETED' },
+      select: { lessonId: true },
+    }),
+  ]);
+
+  if (!level) { fail(res, 'NOT_FOUND', 'Level not found', 404); return; }
+
+  const completedSet = new Set(completedLessons.map((p) => p.lessonId));
+
+  // Determine if this level is unlocked
+  const levelIndex = allLevels.findIndex((l) => l.id === levelId);
+  let isUnlocked = levelIndex === 0;
+  if (levelIndex > 0) {
+    const prevLevel = allLevels[levelIndex - 1];
+    const prevTotal = prevLevel.units.reduce((sum, u) => sum + u.lessons.length, 0);
+    const prevDone = prevLevel.units.reduce(
+      (sum, u) => sum + u.lessons.filter((l) => completedSet.has(l.id)).length,
+      0
+    );
+    isUnlocked = prevDone === prevTotal;
+  }
+
+  const totalLessonCount = level.units.reduce((sum, u) => sum + u.lessons.length, 0);
+  const completedLessonCount = level.units.reduce(
+    (sum, u) => sum + u.lessons.filter((l) => completedSet.has(l.id)).length,
+    0
+  );
+  const milestone = level.milestone as { badge: string; badgeIcon: string; message: string } | null;
+
+  const units: UnitSummary[] = level.units.map((unit, unitIdx) => {
+    const prevUnit = level.units[unitIdx - 1];
+    const prevUnitLastLesson = prevUnit?.lessons[prevUnit.lessons.length - 1];
+
+    return {
+      id: unit.id,
+      number: unit.number,
+      title: unit.title,
+      tagline: unit.tagline,
+      xpBonus: unit.xpBonus,
+      badge: unit.badge as { title: string; icon: string } | undefined,
+      lessons: unit.lessons.map((lesson, lessonIdx) => {
+        let isLessonUnlocked: boolean;
+        if (!isUnlocked) {
+          isLessonUnlocked = false;
+        } else if (lessonIdx === 0) {
+          isLessonUnlocked = unitIdx === 0 || (prevUnitLastLesson != null && completedSet.has(prevUnitLastLesson.id));
+        } else {
+          isLessonUnlocked = completedSet.has(unit.lessons[lessonIdx - 1].id);
+        }
+
+        return {
+          id: lesson.id,
+          number: lesson.number,
+          title: lesson.title,
+          xpReward: lesson.xpReward,
+          status: completedSet.has(lesson.id) ? 'COMPLETED' : 'NOT_STARTED',
+          isUnlocked: isLessonUnlocked,
+        };
+      }),
+    };
+  });
+
+  const result: LevelDetail = {
+    id: level.id,
+    number: level.number,
+    title: level.title,
+    tagline: level.tagline,
+    icon: level.icon,
+    description: level.description,
+    isUnlocked,
+    unitCount: level.units.length,
+    completedLessonCount,
+    totalLessonCount,
+    milestone: milestone ? { badge: milestone.badge, badgeIcon: milestone.badgeIcon, message: milestone.message } : null,
+    units,
+  };
+
+  await cacheSet(cacheKey, result, 5 * 60);
+  ok(res, result);
+}));
 
 // GET /api/v1/units/:id/lessons — lessons in unit (paginated)
-router.get('/units/:id/lessons', requireAuth, async (req: Request, res: Response): Promise<void> => {
+router.get('/units/:id/lessons', requireAuth, asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const { id } = req.params;
   const limit = Math.min(Number(req.query['limit']) || 20, 50);
   const cursor = req.query['cursor'] as string | undefined;
@@ -118,10 +219,10 @@ router.get('/units/:id/lessons', requireAuth, async (req: Request, res: Response
     items: items.map((l) => ({ id: l.id, number: l.number, title: l.title, xpReward: l.xpReward })),
     nextCursor: hasMore ? items[items.length - 1].id : null,
   });
-});
+}));
 
 // GET /api/v1/lessons/:id — full lesson with exercises JSON
-router.get('/lessons/:id', requireAuth, async (req: Request, res: Response): Promise<void> => {
+router.get('/lessons/:id', requireAuth, asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const lesson = await prisma.lesson.findUnique({
     where: { id: req.params['id'] },
     include: { unit: { include: { level: true } } },
@@ -142,13 +243,13 @@ router.get('/lessons/:id', requireAuth, async (req: Request, res: Response): Pro
     unit: { id: lesson.unit.id, title: lesson.unit.title },
     level: { id: lesson.unit.level.id, number: lesson.unit.level.number, title: lesson.unit.level.title },
   });
-});
+}));
 
 // POST /api/v1/lessons/:id/complete — award XP, update streak, check badges
 router.post(
   '/lessons/:id/complete',
   requireAuth,
-  async (req: Request, res: Response): Promise<void> => {
+  asyncHandler(async (req: Request, res: Response): Promise<void> => {
     const userId = req.appUser!.id;
     const { timezone } = req.appUser!;
     const lessonId = req.params['id'];
@@ -280,13 +381,32 @@ router.post(
 
     // Invalidate caches so next load reflects the new completion status
     await Promise.all([
-      cacheDel(`user:${userId}:levels`),
+      cacheDel(`user:${userId}:level-summaries`),
       cacheDel(`user:${userId}:stats`),
     ]);
 
-    // Update streak
+    // Update streak and get XP totals before/after
     const { updateStreak } = await import('../../services/streakService.js');
+
+    // Get XP before this lesson (to compute levelUp)
+    const streakBefore = await prisma.userStreak.findUnique({ where: { userId } });
+    const xpBefore = streakBefore?.totalXp ?? 0;
+
     const streakData = await updateStreak(userId, timezone, safeXp);
+    const newTotalXp = streakData.totalXp ?? xpBefore + safeXp;
+
+    // Fetch all XP tiers for tier comparison
+    const allTiers = await prisma.xpTier.findMany({ orderBy: { xpRequired: 'asc' } });
+    const tiersAsXpTier: XpTier[] = allTiers.map((t) => ({ level: t.level, title: t.title, xpRequired: t.xpRequired }));
+
+    let levelUp: { from: XpTier; to: XpTier } | null = null;
+    if (tiersAsXpTier.length > 0) {
+      const tierBefore = resolveXpTier(xpBefore, tiersAsXpTier);
+      const tierAfter = resolveXpTier(newTotalXp, tiersAsXpTier);
+      if (tierBefore.level !== tierAfter.level) {
+        levelUp = { from: tierBefore, to: tierAfter };
+      }
+    }
 
     // Check badges
     const [lessonsCompleted, wordsLearned] = await Promise.all([
@@ -301,8 +421,8 @@ router.post(
       currentStreak: streakData.currentStreak,
     });
 
-    // Find next lesson in sequence (within unit, or first lesson of next unit)
-    const completedUnitData = await prisma.lesson.findUnique({
+    // Fetch lesson's unit + level structure for unlock computation
+    const completedLessonData = await prisma.lesson.findUnique({
       where: { id: lessonId },
       include: {
         unit: {
@@ -321,30 +441,130 @@ router.post(
       },
     });
 
-    let nextLessonId: string | undefined;
-    if (completedUnitData) {
-      const lessonIdx = completedUnitData.unit.lessons.findIndex((l) => l.id === lessonId);
-      const nextInUnit = completedUnitData.unit.lessons[lessonIdx + 1];
-      if (nextInUnit) {
-        nextLessonId = nextInUnit.id;
-      } else {
-        // Last lesson in unit — find first lesson of next unit in same level
-        const units = completedUnitData.unit.level.units;
-        const unitIdx = units.findIndex((u) => u.id === completedUnitData.unit.id);
+    // Fetch all completed lessons after this completion
+    const allCompleted = await prisma.userLessonProgress.findMany({
+      where: { userId, status: 'COMPLETED' },
+      select: { lessonId: true },
+    });
+    const completedSet = new Set(allCompleted.map((p) => p.lessonId));
+
+    // Compute newly unlocked lessons and units
+    const newlyUnlockedLessons: string[] = [];
+    const newlyUnlockedUnits: string[] = [];
+    const newlyUnlockedLevels: string[] = [];
+
+    let unitCompleted: UnitCompletedEvent | null = null;
+    let levelCompleted: LevelCompletedEvent | null = null;
+
+    if (completedLessonData) {
+      const currentUnit = completedLessonData.unit;
+      const currentLevel = currentUnit.level;
+      const units = currentLevel.units;
+
+      // Check if unit is now complete
+      const allUnitLessons = currentUnit.lessons;
+      const allUnitDone = allUnitLessons.every((l) => completedSet.has(l.id));
+
+      if (allUnitDone) {
+        const unitBadge = currentUnit.badge as { title: string; icon: string } | null;
+        const unitIdx = units.findIndex((u) => u.id === currentUnit.id);
         const nextUnit = units[unitIdx + 1];
-        if (nextUnit?.lessons[0]) {
-          nextLessonId = nextUnit.lessons[0].id;
+
+        unitCompleted = {
+          unitId: currentUnit.id,
+          badge: unitBadge,
+          xpBonus: currentUnit.xpBonus,
+          message: currentUnit.tagline,
+          newlyUnlockedUnit: nextUnit?.id ?? null,
+        };
+
+        // Award xpBonus for unit completion
+        if (currentUnit.xpBonus > 0) {
+          await updateStreak(userId, timezone, currentUnit.xpBonus);
+        }
+
+        if (nextUnit) {
+          newlyUnlockedUnits.push(nextUnit.id);
+          // First lesson of the next unit is now unlocked
+          if (nextUnit.lessons[0]) {
+            newlyUnlockedLessons.push(nextUnit.lessons[0].id);
+          }
+        }
+
+        // Check if entire level is complete
+        const allLevelLessons = units.flatMap((u) => u.lessons);
+        const allLevelDone = allLevelLessons.every((l) => completedSet.has(l.id));
+
+        if (allLevelDone) {
+          const milestone = currentLevel.milestone as {
+            badge: string; badgeIcon: string; message: string;
+            surahUnlock?: string; unlocksLevel: string | null;
+          } | null;
+
+          // Fetch all levels to find the next one
+          const allLevels = await prisma.level.findMany({ orderBy: { number: 'asc' } });
+          const levelIdx = allLevels.findIndex((l) => l.id === currentLevel.id);
+          const nextLevel = allLevels[levelIdx + 1];
+
+          levelCompleted = {
+            levelId: currentLevel.id,
+            badge: milestone ? { title: milestone.badge, icon: milestone.badgeIcon } : null,
+            message: milestone?.message ?? '',
+            surahUnlock: milestone?.surahUnlock ?? null,
+            newlyUnlockedLevel: nextLevel?.id ?? null,
+          };
+
+          if (nextLevel) {
+            newlyUnlockedLevels.push(nextLevel.id);
+          }
+        }
+      } else {
+        // Unit not complete — check if next lesson in unit is newly unlocked
+        const lessonIdx = allUnitLessons.findIndex((l) => l.id === lessonId);
+        const nextInUnit = allUnitLessons[lessonIdx + 1];
+        if (nextInUnit && !completedSet.has(nextInUnit.id)) {
+          newlyUnlockedLessons.push(nextInUnit.id);
         }
       }
+
+      // Invalidate level-detail cache for this level
+      await cacheDel(`user:${userId}:level:${currentLevel.id}`);
+    }
+
+    // Build updatedProgress snapshot for completed lesson + any newly unlocked
+    const updatedProgress: Record<string, LessonProgressSnapshot> = {};
+
+    updatedProgress[lessonId] = {
+      status: 'completed',
+      score: firstAttemptScore ?? null,
+      maxScore: lesson.xpReward,
+      completedAt: new Date().toISOString(),
+      xpEarned: safeXp,
+    };
+
+    for (const unlockedId of newlyUnlockedLessons) {
+      updatedProgress[unlockedId] = {
+        status: 'available',
+        score: null,
+        maxScore: null,
+        completedAt: null,
+        xpEarned: 0,
+      };
     }
 
     ok(res, {
-      xpEarned: safeXp,
+      lessonId,
+      xpAwarded: safeXp,
+      newTotalXp,
       newStreak: streakData.currentStreak,
+      levelUp,
+      newlyUnlocked: { lessons: newlyUnlockedLessons, units: newlyUnlockedUnits, levels: newlyUnlockedLevels },
+      unitCompleted,
+      levelCompleted,
       badgesEarned,
-      nextLessonId,
+      updatedProgress,
     });
-  },
+  }),
 );
 
 export default router;

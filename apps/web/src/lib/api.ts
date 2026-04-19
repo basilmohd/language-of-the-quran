@@ -1,12 +1,15 @@
 // Typed API client — all requests attach the Clerk JWT and unwrap the envelope
 import type {
   ApiResponse,
-  LevelWithUnits,
+  LevelSummary,
+  LevelDetail,
   UserStats,
   LessonSummary,
   BadgeSummary,
   WordDetail,
+  CompleteLessonResponse,
 } from '@org/api-types';
+import { apiErrorBus } from './apiErrorBus';
 
 const API_BASE = (import.meta.env['VITE_API_URL'] as string | undefined) ?? 'http://localhost:3001';
 
@@ -15,19 +18,36 @@ async function apiFetch<T>(
   token: string,
   options: RequestInit = {},
 ): Promise<T> {
-  const res = await fetch(`${API_BASE}${path}`, {
-    ...options,
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-      ...options.headers,
-    },
-  });
+  let res: Response;
 
-  const body = (await res.json()) as ApiResponse<T>;
+  try {
+    res = await fetch(`${API_BASE}${path}`, {
+      ...options,
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+        ...options.headers,
+      },
+    });
+  } catch {
+    const message = 'Unable to reach the server. Please check your connection.';
+    apiErrorBus.emit(message);
+    throw new Error(message);
+  }
 
-  if (body.error) {
-    throw new Error(body.error.message);
+  let body: ApiResponse<T>;
+  try {
+    body = (await res.json()) as ApiResponse<T>;
+  } catch {
+    const message = `Server error (${res.status})`;
+    apiErrorBus.emit(message);
+    throw new Error(message);
+  }
+
+  if (!res.ok || body.error) {
+    const message = body.error?.message ?? `Request failed (${res.status})`;
+    apiErrorBus.emit(message);
+    throw new Error(message);
   }
 
   return body.data as T;
@@ -35,8 +55,12 @@ async function apiFetch<T>(
 
 // ── Curriculum ────────────────────────────────────────────────────────────────
 
-export async function fetchLevels(token: string): Promise<LevelWithUnits[]> {
-  return apiFetch<LevelWithUnits[]>('/api/v1/levels', token);
+export async function fetchLevels(token: string): Promise<LevelSummary[]> {
+  return apiFetch<LevelSummary[]>('/api/v1/levels', token);
+}
+
+export async function fetchLevel(token: string, levelId: string): Promise<LevelDetail> {
+  return apiFetch<LevelDetail>(`/api/v1/levels/${encodeURIComponent(levelId)}`, token);
 }
 
 export interface LessonDetail {
@@ -62,19 +86,12 @@ export interface CompleteLessonPayload {
   reviewItems: Array<{ wordId: string; quality: number; responseTimeMs?: number }>;
 }
 
-export interface CompleteLessonResult {
-  xpEarned: number;
-  newStreak: number;
-  badgesEarned: BadgeSummary[];
-  nextLessonId?: string;
-}
-
 export async function completeLesson(
   token: string,
   lessonId: string,
   payload: CompleteLessonPayload,
-): Promise<CompleteLessonResult> {
-  return apiFetch<CompleteLessonResult>(`/api/v1/lessons/${encodeURIComponent(lessonId)}/complete`, token, {
+): Promise<CompleteLessonResponse> {
+  return apiFetch<CompleteLessonResponse>(`/api/v1/lessons/${encodeURIComponent(lessonId)}/complete`, token, {
     method: 'POST',
     body: JSON.stringify(payload),
   });
