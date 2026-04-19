@@ -224,45 +224,29 @@ export function Dashboard() {
             const detail = levelDetails[level.id];
             const isLoading = loadingLevel === level.id;
 
-            if (!level.isUnlocked) {
-              return (
-                <div
-                  key={level.id}
-                  className="flex items-center gap-3 p-4 rounded-xl border border-border bg-card opacity-50"
-                >
-                  <div className="w-8 h-8 rounded-full bg-muted text-muted-foreground text-sm font-bold flex items-center justify-center shrink-0 border border-border">
-                    {level.icon || level.number}
-                  </div>
-                  <div className="flex-1">
-                    <p className="font-semibold text-foreground text-sm">{level.title}</p>
-                    <p className="text-xs text-muted-foreground font-medium">{level.tagline || level.description}</p>
-                  </div>
-                  <Lock className="h-4 w-4 text-muted-foreground shrink-0" />
-                </div>
-              );
-            }
-
             return (
-              <div key={level.id} className="rounded-xl border border-border bg-card overflow-hidden">
-                {/* Level header — clickable to expand/collapse */}
+              <div key={level.id} className={`rounded-xl border border-border bg-card overflow-hidden ${!level.isUnlocked ? 'opacity-60' : ''}`}>
+                {/* Level header — always clickable to expand/collapse */}
                 <button
                   onClick={() => toggleLevel(level.id)}
                   className="w-full flex items-center gap-3 px-4 py-3 border-b border-border text-left hover:bg-muted/30 transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center shrink-0">
+                  <div className={`w-8 h-8 rounded-full text-sm font-bold flex items-center justify-center shrink-0 ${level.isUnlocked ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground border border-border'}`}>
                     {level.icon || level.number}
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-foreground text-sm">{level.title}</p>
-                    <p className="text-xs text-primary font-medium">{level.tagline}</p>
+                    <p className={`text-xs font-medium ${level.isUnlocked ? 'text-primary' : 'text-muted-foreground'}`}>{level.tagline || level.description}</p>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
                     <span className="text-xs text-muted-foreground">
                       {level.completedLessonCount}/{level.totalLessonCount}
                     </span>
-                    {isLoading
-                      ? <div className="w-3.5 h-3.5 rounded-full border-2 border-primary border-t-transparent animate-spin" />
-                      : <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                    {!level.isUnlocked && !isExpanded
+                      ? <Lock className="h-4 w-4 text-muted-foreground" />
+                      : isLoading
+                        ? <div className="w-3.5 h-3.5 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+                        : <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                     }
                   </div>
                 </button>

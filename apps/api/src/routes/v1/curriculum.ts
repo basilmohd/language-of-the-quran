@@ -67,8 +67,7 @@ router.get('/levels', requireAuth, asyncHandler(async (req: Request, res: Respon
     totalByLevel[level.number] = total;
   }
 
-  const result: LevelSummary[] = levels.map((level, idx) => {
-    const isUnlocked = idx === 0 || completedByLevel[idx] === totalByLevel[idx];
+  const result: LevelSummary[] = levels.map((level, _idx) => {
     const milestone = level.milestone as { badge: string; badgeIcon: string; message: string } | null;
 
     return {
@@ -78,7 +77,7 @@ router.get('/levels', requireAuth, asyncHandler(async (req: Request, res: Respon
       tagline: level.tagline,
       icon: level.icon,
       description: level.description,
-      isUnlocked,
+      isUnlocked: true,
       unitCount: level.units.length,
       completedLessonCount: completedByLevel[level.number] ?? 0,
       totalLessonCount: totalByLevel[level.number] ?? 0,
@@ -127,9 +126,9 @@ router.get('/levels/:id', requireAuth, asyncHandler(async (req: Request, res: Re
 
   const completedSet = new Set(completedLessons.map((p) => p.lessonId));
 
-  // Determine if this level is unlocked
+  // Determine real unlock state for lesson locking logic (not exposed in response)
   const levelIndex = allLevels.findIndex((l) => l.id === levelId);
-  let isUnlocked = levelIndex === 0;
+  let realIsUnlocked = levelIndex === 0;
   if (levelIndex > 0) {
     const prevLevel = allLevels[levelIndex - 1];
     const prevTotal = prevLevel.units.reduce((sum, u) => sum + u.lessons.length, 0);
@@ -137,7 +136,7 @@ router.get('/levels/:id', requireAuth, asyncHandler(async (req: Request, res: Re
       (sum, u) => sum + u.lessons.filter((l) => completedSet.has(l.id)).length,
       0
     );
-    isUnlocked = prevDone === prevTotal;
+    realIsUnlocked = prevDone === prevTotal;
   }
 
   const totalLessonCount = level.units.reduce((sum, u) => sum + u.lessons.length, 0);
@@ -160,7 +159,7 @@ router.get('/levels/:id', requireAuth, asyncHandler(async (req: Request, res: Re
       badge: unit.badge as { title: string; icon: string } | undefined,
       lessons: unit.lessons.map((lesson, lessonIdx) => {
         let isLessonUnlocked: boolean;
-        if (!isUnlocked) {
+        if (!realIsUnlocked) {
           isLessonUnlocked = false;
         } else if (lessonIdx === 0) {
           isLessonUnlocked = unitIdx === 0 || (prevUnitLastLesson != null && completedSet.has(prevUnitLastLesson.id));
@@ -187,7 +186,7 @@ router.get('/levels/:id', requireAuth, asyncHandler(async (req: Request, res: Re
     tagline: level.tagline,
     icon: level.icon,
     description: level.description,
-    isUnlocked,
+    isUnlocked: true,
     unitCount: level.units.length,
     completedLessonCount,
     totalLessonCount,
