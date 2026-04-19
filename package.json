@@ -7,9 +7,9 @@
     "prisma:studio": "cd apps/api && npx prisma studio",
     "prisma:generate": "cd apps/api && npx prisma generate",
     "seed": "cd apps/api && npx tsx src/scripts/seed.ts",
-    "run:backend": "nx serve api",
-    "run:FE": "nx serve web",
-    "run:app": "npm exec nx -- run-many -t serve -p web api --outputStyle=stream",
+    "backend": "nx serve api",
+    "FE": "nx serve web",
+    "app": "npm exec nx -- run-many -t serve -p web api --outputStyle=stream",
     "kill:ports":"npx kill-port 5173 3001"
   },
   "private": true,
