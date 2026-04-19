@@ -1,0 +1,180 @@
+{
+  "id": "level-6",
+  "number": 6,
+  "title": "Sentence Anatomy (Nahw)",
+  "tagline": "Parse the Quran's most complex constructions with full grammatical clarity.",
+  "icon": "🔬",
+  "description": "Master complex Arabic sentence structures — abnormal word order, full I'rab labeling, compound اسم with أنْ/أنَّ, conditional sentences, and full Quranic passage comprehension.",
+  "milestone": {
+    "badge": "Companion of the Book",
+    "badgeIcon": "📚",
+    "message": "You have completed the Language of the Quran. You are no longer a reciter — you are a reader.",
+    "unlocksLevel": null
+  },
+  "units": [
+    {
+      "id": "unit-6-1",
+      "number": 1,
+      "title": "Abnormal Sentence Structures",
+      "tagline": "When word order flips — the Quran inverts for emphasis",
+      "xpBonus": 20,
+      "badge": { "title": "Inversion Reader", "icon": "🔃" },
+      "unlockedBy": "level-5",
+      "lessons": [
+        {
+          "id": "l6-u1-l1",
+          "number": 1,
+          "title": "Fronted Predicate — خبر مقدم",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "level-5",
+          "contentHash": "l5-u1-l1-v1"
+        },
+        {
+          "id": "l6-u1-l2",
+          "number": 2,
+          "title": "Fronted Object — Verb-First Inversions",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l6-u1-l1",
+          "contentHash": "l5-u1-l2-v1"
+        },
+        {
+          "id": "l6-u1-l3",
+          "number": 3,
+          "title": "Distinguishing أسماء from أفعال",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l6-u1-l2",
+          "contentHash": "l5-u1-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-6-2",
+      "number": 2,
+      "title": "Full I'rab Labeling",
+      "tagline": "إعراب — the complete grammatical analysis of every word",
+      "xpBonus": 25,
+      "badge": { "title": "I'rab Expert", "icon": "🏷️" },
+      "unlockedBy": "unit-6-1",
+      "lessons": [
+        {
+          "id": "l6-u2-l1",
+          "number": 1,
+          "title": "إعراب الجملة الاسمية — Nominal Sentence",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-6-1",
+          "contentHash": "l5-u2-l1-v1"
+        },
+        {
+          "id": "l6-u2-l2",
+          "number": 2,
+          "title": "إعراب الجملة الفعلية — Verbal Sentence",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l6-u2-l1",
+          "contentHash": "l5-u2-l2-v1"
+        },
+        {
+          "id": "l6-u2-l3",
+          "number": 3,
+          "title": "Parsing Full Ayahs",
+          "type": "application",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l6-u2-l2",
+          "contentHash": "l5-u2-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-6-3",
+      "number": 3,
+      "title": "Compound اسم",
+      "tagline": "أنْ and أنَّ — when a whole sentence becomes a noun",
+      "xpBonus": 25,
+      "badge": { "title": "Clause Builder", "icon": "🧩" },
+      "unlockedBy": "unit-6-2",
+      "lessons": [
+        {
+          "id": "l6-u3-l1",
+          "number": 1,
+          "title": "أنْ — The Verbal Noun Maker",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-6-2",
+          "contentHash": "l5-u3-l1-v1"
+        },
+        {
+          "id": "l6-u3-l2",
+          "number": 2,
+          "title": "أنَّ — The Embedded Nominal Sentence",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l6-u3-l1",
+          "contentHash": "l5-u3-l2-v1"
+        },
+        {
+          "id": "l6-u3-l3",
+          "number": 3,
+          "title": "Other Tools Creating Compound مضاف إليه",
+          "type": "grammar",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l6-u3-l2",
+          "contentHash": "l5-u3-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-6-4",
+      "number": 4,
+      "title": "Complex Sentences",
+      "tagline": "Relative clauses, conditional sentences, and full passage reading",
+      "xpBonus": 35,
+      "badge": { "title": "Nahw Master", "icon": "🎓" },
+      "unlockedBy": "unit-6-3",
+      "lessons": [
+        {
+          "id": "l6-u4-l1",
+          "number": 1,
+          "title": "Relative Clauses — الجملة الوصفية",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-6-3",
+          "contentHash": "l5-u4-l1-v1"
+        },
+        {
+          "id": "l6-u4-l2",
+          "number": 2,
+          "title": "Conditional Sentences — إنْ، إذا، لو",
+          "type": "grammar",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l6-u4-l1",
+          "contentHash": "l5-u4-l2-v1"
+        },
+        {
+          "id": "l6-u4-l3",
+          "number": 3,
+          "title": "Level 6 Review",
+          "type": "review",
+          "xpReward": 25,
+          "estimatedMinutes": 20,
+          "unlockedBy": "l6-u4-l2",
+          "contentHash": "l5-u4-l3-v1"
+        }
+      ]
+    }
+  ]
+}

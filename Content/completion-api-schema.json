@@ -1,0 +1,77 @@
+{
+  "_comment": "POST /api/progress/:userId/lesson/:lessonId/complete",
+
+  "request": {
+    "score": 3,
+    "maxScore": 4,
+    "timeTakenSeconds": 480,
+    "completedAt": "2024-01-15T09:10:00Z"
+  },
+
+  "response": {
+    "lessonId": "lesson-2-2-1",
+    "xpAwarded": 20,
+    "newTotalXp": 75,
+
+    "levelUp": null,
+
+    "newlyUnlocked": {
+      "lessons": ["lesson-2-2-2"],
+      "units": [],
+      "worlds": []
+    },
+
+    "unitCompleted": null,
+
+    "worldCompleted": null,
+
+    "updatedProgress": {
+      "lessons": {
+        "lesson-2-2-1": {
+          "status": "completed",
+          "score": 3,
+          "maxScore": 4,
+          "completedAt": "2024-01-15T09:10:00Z",
+          "xpEarned": 20
+        },
+        "lesson-2-2-2": {
+          "status": "available",
+          "score": null,
+          "maxScore": 2,
+          "completedAt": null,
+          "xpEarned": 0
+        }
+      }
+    },
+
+    "_example_levelUp": {
+      "_note": "What the response looks like when a level is crossed",
+      "levelUp": {
+        "from": { "level": 1, "title": "Seeker" },
+        "to":   { "level": 2, "title": "Reader" }
+      }
+    },
+
+    "_example_unitCompleted": {
+      "_note": "What the response looks like when completing the last lesson in a unit",
+      "unitCompleted": {
+        "unitId": "unit-2-2",
+        "badge": { "title": "The/A Master", "icon": "⚖️" },
+        "xpBonus": 20,
+        "message": "Definiteness unlocked. You now understand why الحمد means ALL praise.",
+        "newlyUnlockedUnit": "unit-2-3"
+      }
+    },
+
+    "_example_worldCompleted": {
+      "_note": "What the response looks like when completing the last unit in a world",
+      "worldCompleted": {
+        "worldId": "world-2",
+        "badge": { "title": "The Fatiha Key", "icon": "🗝️" },
+        "message": "You can now parse every word of Al-Fatiha with full grammatical understanding.",
+        "surahUnlock": "al-fatiha",
+        "newlyUnlockedWorld": "world-3"
+      }
+    }
+  }
+}

@@ -121,6 +121,14 @@ export interface LessonContent {
   steps: LessonStep[];
 }
 
+// ─── XP Tier ────────────────────────────────────────────────────────────────
+
+export interface XpTier {
+  level: number;
+  title: string;
+  xpRequired: number;
+}
+
 // ─── API Response Shapes ─────────────────────────────────────────────────────
 
 export interface UserStats {
@@ -129,8 +137,31 @@ export interface UserStats {
   totalXp: number;
   wordsLearned: number;    // UserWordReview rows where repetitions >= 2
   quranCoverage: number;   // percentage (0–100) based on frequency ranks
+  xpTier: XpTier;          // current XP tier
+  nextXpTier: XpTier | null; // null if at max tier
 }
 
+/** Level summary returned by GET /api/v1/levels — no unit/lesson detail */
+export interface LevelSummary {
+  id: string;
+  number: number;
+  title: string;
+  tagline: string;
+  icon: string;
+  description: string;
+  isUnlocked: boolean;
+  unitCount: number;
+  completedLessonCount: number;
+  totalLessonCount: number;
+  milestone: { badge: string; badgeIcon: string; message: string } | null;
+}
+
+/** Full level returned by GET /api/v1/levels/:id — includes units */
+export interface LevelDetail extends LevelSummary {
+  units: UnitSummary[];
+}
+
+/** Kept for backward compat — used in existing GET /api/v1/levels references */
 export interface LevelWithUnits {
   id: string;
   number: number;
@@ -144,6 +175,9 @@ export interface UnitSummary {
   id: string;
   number: number;
   title: string;
+  tagline?: string;
+  xpBonus?: number;
+  badge?: { title: string; icon: string };
   lessons: LessonSummary[];
 }
 
@@ -171,11 +205,41 @@ export interface ReviewSubmitItem {
   responseTimeMs?: number;
 }
 
-export interface CompleteLessonResponse {
+export interface LessonProgressSnapshot {
+  status: 'completed' | 'available' | 'locked';
+  score: number | null;
+  maxScore: number | null;
+  completedAt: string | null;
   xpEarned: number;
+}
+
+export interface UnitCompletedEvent {
+  unitId: string;
+  badge: { title: string; icon: string } | null;
+  xpBonus: number;
+  message: string;
+  newlyUnlockedUnit: string | null;
+}
+
+export interface LevelCompletedEvent {
+  levelId: string;
+  badge: { title: string; icon: string } | null;
+  message: string;
+  surahUnlock: string | null;
+  newlyUnlockedLevel: string | null;
+}
+
+export interface CompleteLessonResponse {
+  lessonId: string;
+  xpAwarded: number;
+  newTotalXp: number;
   newStreak: number;
+  levelUp: { from: XpTier; to: XpTier } | null;
+  newlyUnlocked: { lessons: string[]; units: string[]; levels: string[] };
+  unitCompleted: UnitCompletedEvent | null;
+  levelCompleted: LevelCompletedEvent | null;
   badgesEarned: BadgeSummary[];
-  nextLessonId?: string;
+  updatedProgress: Record<string, LessonProgressSnapshot>;
 }
 
 export interface BadgeSummary {

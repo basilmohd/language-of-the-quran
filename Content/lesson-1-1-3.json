@@ -1,0 +1,128 @@
+{
+  "id": "lesson-1-1-3",
+  "unitId": "unit-1-1",
+  "worldId": "world-1",
+  "number": 3,
+  "title": "How to Read an Ayah Like a Detective",
+  "type": "application",
+  "xp": 15,
+  "estimatedMinutes": 12,
+  "hook": {
+    "ayah": {
+      "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "transliteration": "Alhamdu lillahi rabbil 'aalameen",
+      "meaning": "All praise belongs to Allah, Lord of the Worlds"
+    },
+    "question": "The opening of Al-Fatiha. Four words. By the end of World 2, you will parse every single one. For now — let's build the detective mindset."
+  },
+  "concept": {
+    "title": "The Detective Asks Three Questions",
+    "body": "When you encounter any word in the Quran, train yourself to ask three questions in order. You won't be able to answer all of them yet — but building the habit of asking IS the entire skill.",
+    "questions": [
+      {
+        "number": 1,
+        "question": "What FAMILY is this word? (Ism / Fi'l / Harf)",
+        "why": "This tells you the type of role the word plays. Is it a thing, an action, or a connector?"
+      },
+      {
+        "number": 2,
+        "question": "What is the ROOT? (The 3 core letters)",
+        "why": "This tells you the core meaning. Even if you don't know the exact word, the root gives you a strong clue."
+      },
+      {
+        "number": 3,
+        "question": "What ROLE does it play in the sentence?",
+        "why": "Is it the subject? The object? A description? The ending often signals this — we'll master it in World 5."
+      }
+    ]
+  },
+  "examples": [
+    {
+      "ayah": {
+        "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "transliteration": "Alhamdu lillahi rabbil 'aalameen"
+      },
+      "wordBreakdown": [
+        {
+          "arabic": "الْحَمْدُ",
+          "transliteration": "Al-Hamdu",
+          "family": "Ism",
+          "root": "ح - م - د",
+          "rootMeaning": "Praise",
+          "role": "Subject of the sentence — 'THE praise'",
+          "detectiveNote": "The ال at the start is a clue → always Ism. The Dammah (u) ending tells us it's the subject."
+        },
+        {
+          "arabic": "لِ",
+          "transliteration": "Li",
+          "family": "Harf",
+          "root": null,
+          "role": "Preposition: belongs to / for",
+          "detectiveNote": "Single letter, connects words → Harf. No root — Harf never have roots."
+        },
+        {
+          "arabic": "اللَّهِ",
+          "transliteration": "Allahi",
+          "family": "Ism",
+          "root": null,
+          "role": "Object of the preposition لِ",
+          "detectiveNote": "Proper name of God → always Ism. The Kasrah (i) ending is from the preposition before it."
+        },
+        {
+          "arabic": "رَبِّ",
+          "transliteration": "Rabbi",
+          "family": "Ism",
+          "root": "ر - ب - ب",
+          "rootMeaning": "Nurturing, lordship",
+          "role": "Describes Allah — 'Lord of'",
+          "detectiveNote": "A title/quality → Ism. Connected to العالمين in a possessive relationship."
+        },
+        {
+          "arabic": "الْعَالَمِينَ",
+          "transliteration": "Al-'Aalameen",
+          "family": "Ism",
+          "root": "ع - ل - م",
+          "rootMeaning": "Knowledge / world / sign",
+          "role": "The possessed — 'of the worlds'",
+          "detectiveNote": "Same root as عِلْم (knowledge)! The worlds = realms that carry signs of God's knowledge."
+        }
+      ],
+      "insight": "Alhamdu lillahi rabbil 'aalameen: 'The praise belongs to Allah, Lord of the Worlds.' Five words. One Harf, four Isms. And the root ع-ل-م in 'aalameen is the same root as 'ilm (knowledge) — the worlds are literally 'the realms that carry signs of God.'"
+    }
+  ],
+  "unlock": {
+    "message": "You just did your first real Quranic analysis. You are no longer just reciting — you are reading. This detective skill will grow with every lesson in this course.",
+    "reminder": "You don't need to do this consciously mid-salah yet. The goal is that over months, as you learn more, the meanings emerge naturally while you recite. Your salah is your practice ground — 17 rakat a day, 17 repetitions of Al-Fatiha."
+  },
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "question": "The first detective question to ask about any Arabic word is:",
+      "options": [
+        "What does it mean in English?",
+        "What family is it — Ism, Fi'l, or Harf?",
+        "What tense is it in?",
+        "How many letters does it have?"
+      ],
+      "correctIndex": 1,
+      "explanation": "Family first. Knowing if a word is a noun, verb, or particle immediately tells you its grammatical role in the sentence."
+    },
+    {
+      "id": "q2",
+      "type": "classify",
+      "question": "In الحمد لله, what family is لِ (the small letter before الله)?",
+      "options": ["Ism", "Fi'l", "Harf"],
+      "correctIndex": 2,
+      "explanation": "لِ means 'belongs to / for'. It's a preposition — a connector with no standalone meaning → Harf. Harf never have 3-letter roots."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "question": "The root of الْعَالَمِينَ (the worlds) is ع-ل-م, which relates to:",
+      "options": ["Creation", "Knowledge and signs", "Mercy", "Worship"],
+      "correctIndex": 1,
+      "explanation": "ع-ل-م is the root of 'ilm (knowledge). The worlds — 'aalameen — are the realms that carry signs and knowledge of their Creator."
+    }
+  ]
+}

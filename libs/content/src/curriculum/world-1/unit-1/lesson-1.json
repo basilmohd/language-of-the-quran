@@ -1,0 +1,100 @@
+{
+  "lessonId": "l1-u1-l1",
+  "version": 1,
+  "title": "Arabic Has Only Three Word Types",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-allah",
+      "arabic": "اَللّٰه",
+      "transliteration": "Allāh",
+      "meaning": "Allah (God)",
+      "rootArabic": "أ ل ه",
+      "rootMeaning": "deity, to worship",
+      "frequencyInQuran": 2699,
+      "specialNote": "The most frequent word in the Quran. It is an Ism — a name, the ultimate name. Every noun, name, or quality belongs to the Ism family.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 2,
+          "arabicText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+          "translation": "All praise belongs to Allah, Lord of the Worlds.",
+          "highlightedWordArabic": "لِلَّهِ"
+        }
+      ]
+    },
+    {
+      "type": "learn",
+      "wordId": "word-rabb",
+      "arabic": "رَبّ",
+      "transliteration": "rabb",
+      "meaning": "Lord / Sustainer",
+      "rootArabic": "ر ب ب",
+      "rootMeaning": "to nurture, raise, sustain",
+      "frequencyInQuran": 900,
+      "specialNote": "رَبّ is an Ism — a title describing a quality. Can you put 'the' in front of it? 'The Lord' — yes. That test always reveals an Ism.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 2,
+          "arabicText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+          "translation": "All praise belongs to Allah, Lord of the Worlds.",
+          "highlightedWordArabic": "رَبِّ"
+        }
+      ]
+    },
+    {
+      "id": "l1-u1-l1-ex1",
+      "type": "grammar_role",
+      "arabic": "اَللّٰه",
+      "verseContext": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "question": "What word family does اَللّٰه (Allah) belong to?",
+      "choices": ["Ism (Noun)", "Fi'l (Verb)", "Harf (Particle)"],
+      "correctIndex": 0,
+      "wordId": "word-allah"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-rahma",
+      "arabic": "رَحْمَة",
+      "transliteration": "raḥma",
+      "meaning": "mercy / compassion",
+      "rootArabic": "ر ح م",
+      "rootMeaning": "mercy, womb, compassion",
+      "frequencyInQuran": 79,
+      "specialNote": "رَحْمَة is an Ism — it names a quality. Every concept, quality, or idea is an Ism. About 50% of the Quran is Ism.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 105,
+          "arabicText": "وَٱللَّهُ يَخْتَصُّ بِرَحْمَتِهِۦ مَن يَشَآءُ",
+          "translation": "And Allah selects for His mercy whom He wills.",
+          "highlightedWordArabic": "بِرَحْمَتِهِۦ"
+        }
+      ]
+    },
+    {
+      "id": "l1-u1-l1-ex2",
+      "type": "grammar_role",
+      "arabic": "رَبّ",
+      "verseContext": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "question": "What word family does رَبّ (Lord) belong to?",
+      "choices": ["Ism (Noun)", "Fi'l (Verb)", "Harf (Particle)"],
+      "correctIndex": 0,
+      "wordId": "word-rabb"
+    },
+    {
+      "id": "l1-u1-l1-ex3",
+      "type": "grammar_role",
+      "arabic": "رَحْمَة",
+      "verseContext": "وَٱللَّهُ يَخْتَصُّ بِرَحْمَتِهِۦ مَن يَشَآءُ",
+      "question": "What word family does رَحْمَة (mercy) belong to?",
+      "choices": ["Ism (Noun)", "Fi'l (Verb)", "Harf (Particle)"],
+      "correctIndex": 0,
+      "wordId": "word-rahma"
+    }
+  ]
+}

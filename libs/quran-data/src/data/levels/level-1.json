@@ -1,0 +1,57 @@
+{
+  "id": "level-1",
+  "number": 1,
+  "title": "The Three Families",
+  "tagline": "Every word in the Quran belongs to one of three families. Learn to see them.",
+  "icon": "🌱",
+  "description": "Before learning Arabic grammar, learn the map. Every single word in the Quran is one of three types — Ism, Fi'l, or Harf. Master the 3-letter root system and the detective mindset that unlocks everything else.",
+  "milestone": {
+    "badge": "The Detective",
+    "badgeIcon": "🔍",
+    "message": "You now see what most people miss their entire lives. Every word has a family. Every word has a role.",
+    "unlocksLevel": "level-2"
+  },
+  "units": [
+    {
+      "id": "unit-1-1",
+      "number": 1,
+      "title": "The Map of Arabic",
+      "tagline": "Three types. Every word. Forever.",
+      "xpBonus": 25,
+      "badge": { "title": "Map Reader", "icon": "🗺️" },
+      "unlockedBy": null,
+      "lessons": [
+        {
+          "id": "l1-u1-l1",
+          "number": 1,
+          "title": "Arabic Has Only Three Word Types",
+          "type": "concept",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": null,
+          "contentHash": "w1-u1-l1-v1"
+        },
+        {
+          "id": "l1-u1-l2",
+          "number": 2,
+          "title": "The 3-Letter Root System",
+          "type": "concept",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l1-u1-l1",
+          "contentHash": "w1-u1-l2-v1"
+        },
+        {
+          "id": "l1-u1-l3",
+          "number": 3,
+          "title": "How to Read an Ayah Like a Detective",
+          "type": "application",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l1-u1-l2",
+          "contentHash": "w1-u1-l3-v1"
+        }
+      ]
+    }
+  ]
+}

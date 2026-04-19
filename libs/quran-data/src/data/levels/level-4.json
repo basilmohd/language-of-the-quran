@@ -1,0 +1,242 @@
+{
+  "id": "level-4",
+  "number": 4,
+  "title": "The Engine (Fi'l)",
+  "tagline": "The verb is where the Quran comes alive.",
+  "icon": "⚙️",
+  "description": "Unlock the power of Arabic verbs. Learn past and present conjugation, commands, passive voice, and كان & sisters — ~55 high-frequency Quranic verb roots.",
+  "milestone": {
+    "badge": "The Verb Engine",
+    "badgeIcon": "⚙️",
+    "message": "You can now read verbal sentences in the Quran. Every command, every past action, every ongoing reality — you see them.",
+    "unlocksLevel": "level-5"
+  },
+  "units": [
+    {
+      "id": "unit-4-1",
+      "number": 1,
+      "title": "Past Tense Verb",
+      "tagline": "The Quran tells stories — past tense is how it begins them",
+      "xpBonus": 15,
+      "badge": { "title": "Past Master", "icon": "⏮️" },
+      "unlockedBy": "level-3",
+      "lessons": [
+        {
+          "id": "l4-u1-l1",
+          "number": 1,
+          "title": "Introducing the Past Tense",
+          "type": "grammar",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "level-3",
+          "contentHash": "l3-u1-l1-v1"
+        },
+        {
+          "id": "l4-u1-l2",
+          "number": 2,
+          "title": "The Doer — الفاعل",
+          "type": "grammar",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "l4-u1-l1",
+          "contentHash": "l3-u1-l2-v1"
+        },
+        {
+          "id": "l4-u1-l3",
+          "number": 3,
+          "title": "The Object — المفعول به",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l4-u1-l2",
+          "contentHash": "l3-u1-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-4-2",
+      "number": 2,
+      "title": "Present Tense Verb",
+      "tagline": "Ongoing actions, ongoing realities — the present in the Quran is eternal",
+      "xpBonus": 20,
+      "badge": { "title": "Present Aware", "icon": "▶️" },
+      "unlockedBy": "unit-4-1",
+      "lessons": [
+        {
+          "id": "l4-u2-l1",
+          "number": 1,
+          "title": "Present and Future Conjugation",
+          "type": "grammar",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "unit-4-1",
+          "contentHash": "l3-u2-l1-v1"
+        },
+        {
+          "id": "l4-u2-l2",
+          "number": 2,
+          "title": "الفعل المضارع with حروف",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l4-u2-l1",
+          "contentHash": "l3-u2-l2-v1"
+        },
+        {
+          "id": "l4-u2-l3",
+          "number": 3,
+          "title": "نون التوكيد — The Emphatic Nun",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l4-u2-l2",
+          "contentHash": "l3-u2-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-4-3",
+      "number": 3,
+      "title": "Commands & Prohibition",
+      "tagline": "The Quran commands and forbids — now you'll hear it",
+      "xpBonus": 15,
+      "badge": { "title": "Command Heard", "icon": "📢" },
+      "unlockedBy": "unit-4-2",
+      "lessons": [
+        {
+          "id": "l4-u3-l1",
+          "number": 1,
+          "title": "The Command — الأمر",
+          "type": "grammar",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "unit-4-2",
+          "contentHash": "l3-u3-l1-v1"
+        },
+        {
+          "id": "l4-u3-l2",
+          "number": 2,
+          "title": "Prohibition — النهي",
+          "type": "grammar",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "l4-u3-l1",
+          "contentHash": "l3-u3-l2-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-4-4",
+      "number": 4,
+      "title": "Passive Voice",
+      "tagline": "When the doer is hidden — the Quran's rhetorical power",
+      "xpBonus": 25,
+      "badge": { "title": "Passive Reader", "icon": "🔄" },
+      "unlockedBy": "unit-4-3",
+      "lessons": [
+        {
+          "id": "l4-u4-l1",
+          "number": 1,
+          "title": "Passive Voice Introduction",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-4-3",
+          "contentHash": "l3-u4-l1-v1"
+        },
+        {
+          "id": "l4-u4-l2",
+          "number": 2,
+          "title": "Passive Sentence Structure — نائب الفاعل",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l4-u4-l1",
+          "contentHash": "l3-u4-l2-v1"
+        },
+        {
+          "id": "l4-u4-l3",
+          "number": 3,
+          "title": "Rhetorical Use of Passive in the Quran",
+          "type": "application",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l4-u4-l2",
+          "contentHash": "l3-u4-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-4-5",
+      "number": 5,
+      "title": "كان and Sisters",
+      "tagline": "كان changes the sentence — it changes time itself",
+      "xpBonus": 25,
+      "badge": { "title": "Time Traveler", "icon": "🕰️" },
+      "unlockedBy": "unit-4-4",
+      "lessons": [
+        {
+          "id": "l4-u5-l1",
+          "number": 1,
+          "title": "كان — Sentence Structure",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-4-4",
+          "contentHash": "l3-u5-l1-v1"
+        },
+        {
+          "id": "l4-u5-l2",
+          "number": 2,
+          "title": "Sisters of كان — أصبح، صار، ليس",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l4-u5-l1",
+          "contentHash": "l3-u5-l2-v1"
+        },
+        {
+          "id": "l4-u5-l3",
+          "number": 3,
+          "title": "Negating and Translating كان Sentences",
+          "type": "grammar",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l4-u5-l2",
+          "contentHash": "l3-u5-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-4-6",
+      "number": 6,
+      "title": "Verbal Sentences Come Alive",
+      "tagline": "الجملة الفعلية — the sentence structure of stories and commands",
+      "xpBonus": 30,
+      "badge": { "title": "Verb Scholar", "icon": "🏅" },
+      "unlockedBy": "unit-4-5",
+      "lessons": [
+        {
+          "id": "l4-u6-l1",
+          "number": 1,
+          "title": "الجملة الفعلية — Full Verbal Sentence",
+          "type": "grammar",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "unit-4-5",
+          "contentHash": "l3-u6-l1-v1"
+        },
+        {
+          "id": "l4-u6-l2",
+          "number": 2,
+          "title": "Level 4 Review",
+          "type": "review",
+          "xpReward": 25,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l4-u6-l1",
+          "contentHash": "l3-u6-l2-v1"
+        }
+      ]
+    }
+  ]
+}

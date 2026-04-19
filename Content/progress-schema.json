@@ -1,0 +1,109 @@
+{
+  "_comment": "GET /api/progress/:userId — Example response for a user mid-way through World 1",
+
+  "userId": "user-abc-123",
+  "courseId": "quranic-arabic-v1",
+  "lastUpdated": "2024-01-15T08:30:00Z",
+
+  "xp": {
+    "total": 55,
+    "currentLevel": 1,
+    "currentLevelTitle": "Seeker",
+    "xpToNextLevel": 45,
+    "nextLevelTitle": "Reader"
+  },
+
+  "streak": {
+    "currentDays": 4,
+    "longestDays": 4,
+    "lastActivityDate": "2024-01-15"
+  },
+
+  "badges": [
+    {
+      "id": "badge-map-reader",
+      "title": "Map Reader",
+      "icon": "🗺️",
+      "earnedAt": "2024-01-14T10:20:00Z"
+    }
+  ],
+
+  "worlds": {
+    "world-1": {
+      "status": "completed",
+      "completedAt": "2024-01-14T10:20:00Z",
+      "xpEarned": 90
+    },
+    "world-2": {
+      "status": "active",
+      "xpEarned": 15
+    },
+    "world-3": { "status": "locked" },
+    "world-4": { "status": "locked" },
+    "world-5": { "status": "locked" },
+    "world-6": { "status": "locked" }
+  },
+
+  "units": {
+    "unit-1-1": { "status": "completed", "xpEarned": 65 },
+    "unit-2-1": { "status": "completed", "xpEarned": 30 },
+    "unit-2-2": { "status": "active",    "xpEarned": 0  },
+    "unit-2-3": { "status": "locked"                     },
+    "unit-2-4": { "status": "locked"                     },
+    "unit-2-5": { "status": "locked"                     },
+    "unit-2-6": { "status": "locked"                     },
+    "unit-2-7": { "status": "locked"                     },
+    "unit-2-8": { "status": "locked"                     },
+    "unit-2-9": { "status": "locked"                     },
+    "unit-2-10": { "status": "locked"                    },
+    "unit-2-11": { "status": "locked"                    }
+  },
+
+  "lessons": {
+    "lesson-1-1-1": {
+      "status": "completed",
+      "score": 4,
+      "maxScore": 4,
+      "completedAt": "2024-01-12T09:00:00Z",
+      "xpEarned": 10
+    },
+    "lesson-1-1-2": {
+      "status": "completed",
+      "score": 3,
+      "maxScore": 3,
+      "completedAt": "2024-01-13T08:45:00Z",
+      "xpEarned": 15
+    },
+    "lesson-1-1-3": {
+      "status": "completed",
+      "score": 3,
+      "maxScore": 3,
+      "completedAt": "2024-01-14T10:10:00Z",
+      "xpEarned": 15
+    },
+    "lesson-2-1-1": {
+      "status": "completed",
+      "score": 4,
+      "maxScore": 4,
+      "completedAt": "2024-01-15T08:20:00Z",
+      "xpEarned": 15
+    },
+    "lesson-2-2-1": {
+      "status": "available",
+      "score": null,
+      "maxScore": 4,
+      "completedAt": null,
+      "xpEarned": 0
+    },
+    "lesson-2-2-2": { "status": "locked" },
+    "lesson-2-3-1": { "status": "locked" },
+    "lesson-2-4-1": { "status": "locked" },
+    "lesson-2-5-1": { "status": "locked" },
+    "lesson-2-6-1": { "status": "locked" },
+    "lesson-2-7-1": { "status": "locked" },
+    "lesson-2-8-1": { "status": "locked" },
+    "lesson-2-9-1": { "status": "locked" },
+    "lesson-2-10-1": { "status": "locked" },
+    "lesson-2-11-1": { "status": "locked" }
+  }
+}
