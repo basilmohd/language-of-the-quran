@@ -124,37 +124,56 @@ model Level {
   number      Int     @unique
   title       String
   description String
+  tagline     String  @default("")
+  icon        String  @default("")
+  milestone   Json?   // { badge, badgeIcon, message, surahUnlock?, unlocksLevel }
   units       Unit[]
 
   @@map("levels")
 }
 
 model Unit {
-  id      String   @id @default(uuid())
-  level   Level    @relation(fields: [levelId], references: [id])
-  levelId String
-  number  Int
-  title   String
-  lessons Lesson[]
+  id         String   @id @default(uuid())
+  level      Level    @relation(fields: [levelId], references: [id])
+  levelId    String
+  number     Int
+  title      String
+  tagline    String   @default("")
+  xpBonus    Int      @default(0)
+  badge      Json?    // { title, icon }
+  unlockedBy String?  // unit ID or "level-N" string
+  lessons    Lesson[]
 
   @@map("units")
 }
 
 model Lesson {
-  id          String               @id @default(uuid())
-  unit        Unit                 @relation(fields: [unitId], references: [id])
-  unitId      String
-  number      Int
-  title       String
-  xpReward    Int                  @default(10)
-  contentHash String
-  exercises   Json
-  version     Int                  @default(1)
-  isPublished Boolean              @default(false)
-  progress    UserLessonProgress[]
-  deletedAt   DateTime?
+  id               String               @id @default(uuid())
+  unit             Unit                 @relation(fields: [unitId], references: [id])
+  unitId           String
+  number           Int
+  title            String
+  xpReward         Int                  @default(10)
+  contentHash      String
+  exercises        Json
+  version          Int                  @default(1)
+  isPublished      Boolean              @default(false)
+  lessonType       String               @default("concept") // concept|grammar|vocabulary|application|review
+  estimatedMinutes Int                  @default(10)
+  unlockedBy       String?              // lesson ID or unit ID string
+  progress         UserLessonProgress[]
+  deletedAt        DateTime?
 
   @@map("lessons")
+}
+
+model XpTier {
+  id         String @id @default(uuid())
+  level      Int    @unique // 1–6
+  title      String         // "Seeker", "Reader", etc.
+  xpRequired Int            // XP threshold to reach this tier
+
+  @@map("xp_tiers")
 }
 
 // ─── User Tables ─────────────────────────────────────────────────────────────
