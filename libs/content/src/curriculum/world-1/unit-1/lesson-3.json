@@ -1,0 +1,100 @@
+{
+  "lessonId": "l1-u1-l3",
+  "version": 1,
+  "title": "How to Read an Ayah Like a Detective",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-hamd",
+      "arabic": "حَمْد",
+      "transliteration": "ḥamd",
+      "meaning": "praise / gratitude",
+      "rootArabic": "ح م د",
+      "rootMeaning": "praise, commendation, gratitude",
+      "frequencyInQuran": 65,
+      "specialNote": "الْحَمْدُ = 'The praise'. The ال prefix makes it definite — 'THE praise'. It's an Ism. The Dammah (ُ) ending signals it's the subject of the sentence.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 2,
+          "arabicText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+          "translation": "All praise belongs to Allah, Lord of the Worlds.",
+          "highlightedWordArabic": "ٱلْحَمْدُ"
+        }
+      ]
+    },
+    {
+      "id": "l1-u1-l3-ex1",
+      "type": "grammar_role",
+      "arabic": "حَمْد",
+      "verseContext": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "question": "In ٱلْحَمْدُ لِلَّهِ, what word family is حَمْد (praise)?",
+      "choices": ["Ism (Noun)", "Fi'l (Verb)", "Harf (Particle)"],
+      "correctIndex": 0,
+      "wordId": "word-hamd"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-allah",
+      "arabic": "اَللّٰه",
+      "transliteration": "Allāh",
+      "meaning": "Allah (God)",
+      "rootArabic": "أ ل ه",
+      "rootMeaning": "deity, to worship",
+      "frequencyInQuran": 2699,
+      "specialNote": "لِلَّهِ = 'to/for Allah'. لِ is a Harf (particle/preposition) attached to اللَّهِ (Ism). The Kasrah (ِ) ending on Allah is caused by the lam particle before it.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 2,
+          "arabicText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+          "translation": "All praise belongs to Allah, Lord of the Worlds.",
+          "highlightedWordArabic": "لِلَّهِ"
+        }
+      ]
+    },
+    {
+      "id": "l1-u1-l3-ex2",
+      "type": "grammar_role",
+      "arabic": "اَللّٰه",
+      "verseContext": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "question": "In لِلَّهِ, what word family is اللَّه (Allah)?",
+      "choices": ["Ism (Noun)", "Fi'l (Verb)", "Harf (Particle)"],
+      "correctIndex": 0,
+      "wordId": "word-allah"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-alam",
+      "arabic": "عَالَم",
+      "transliteration": "ʿālam",
+      "meaning": "world / universe",
+      "rootArabic": "ع ل م",
+      "rootMeaning": "knowledge, world, to know",
+      "frequencyInQuran": 73,
+      "specialNote": "ٱلْعَٰلَمِينَ = 'the Worlds' (plural). Root ع-ل-م = knowledge. The worlds are the realms that carry signs of God. Three detective questions: Family? → Ism. Root? → ع-ل-م. Role? → possessed (مضاف إليه).",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 2,
+          "arabicText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+          "translation": "All praise belongs to Allah, Lord of the Worlds.",
+          "highlightedWordArabic": "ٱلْعَٰلَمِينَ"
+        }
+      ]
+    },
+    {
+      "id": "l1-u1-l3-ex3",
+      "type": "grammar_role",
+      "arabic": "عَالَم",
+      "verseContext": "رَبِّ ٱلْعَٰلَمِينَ",
+      "question": "What word family does عَالَم (world) belong to?",
+      "choices": ["Ism (Noun)", "Fi'l (Verb)", "Harf (Particle)"],
+      "correctIndex": 0,
+      "wordId": "word-alam"
+    }
+  ]
+}

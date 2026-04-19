@@ -8,6 +8,7 @@ import { Progress } from '@/components/ui/progress';
 import { FeedbackBanner } from '@/components/FeedbackBanner';
 import { WordTranslation } from '@/components/ExerciseCard/WordTranslation';
 import { fetchReviewQueue, submitReviews } from '@/lib/api';
+import { ApiErrorBanner } from '@/components/ApiErrorBanner';
 import type { ReviewQueueItem } from '@/lib/api';
 import type { WordTranslationExercise } from '@org/api-types';
 import { validateAnswer } from '@org/srs';
@@ -237,7 +238,7 @@ export function Review() {
           <UserButton afterSignOutUrl="/" />
         </div>
       </header>
-
+      <ApiErrorBanner />
       <div className="flex-1 max-w-xl mx-auto w-full px-4 py-8">
         <p className="text-xs text-muted-foreground text-center mb-6 uppercase tracking-wide font-medium">
           Daily Review

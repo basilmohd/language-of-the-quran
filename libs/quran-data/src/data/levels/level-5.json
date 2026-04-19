@@ -1,0 +1,384 @@
+{
+  "id": "level-5",
+  "number": 5,
+  "title": "The Root System (Sarf)",
+  "tagline": "One root. Dozens of words. The skeleton key of Arabic.",
+  "icon": "🌳",
+  "description": "Discover how 10 verb patterns multiply your vocabulary. Knowing one root unlocks dozens of words — the Quran's ~350 high-frequency words become far more reachable.",
+  "milestone": {
+    "badge": "The Root Reader",
+    "badgeIcon": "🌳",
+    "message": "You can now recognize word families across the Quran. One root — a whole universe of meaning.",
+    "unlocksLevel": "level-6"
+  },
+  "units": [
+    {
+      "id": "unit-5-1",
+      "number": 1,
+      "title": "What is Sarf?",
+      "tagline": "Every Quranic word is a root in disguise.",
+      "xpBonus": 20,
+      "badge": { "title": "Root Hunter", "icon": "🌿" },
+      "unlockedBy": "level-4",
+      "lessons": [
+        {
+          "id": "l5-u1-l1",
+          "number": 1,
+          "title": "Sarf — The Science of Word Shape",
+          "type": "concept",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "level-4",
+          "contentHash": "l5-u1-l1-v1"
+        },
+        {
+          "id": "l5-u1-l2",
+          "number": 2,
+          "title": "One Root, Many Words — كَتَبَ in the Quran",
+          "type": "concept",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u1-l1",
+          "contentHash": "l5-u1-l2-v1"
+        },
+        {
+          "id": "l5-u1-l3",
+          "number": 3,
+          "title": "Spotting Root Families in Ayahs",
+          "type": "application",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u1-l2",
+          "contentHash": "l5-u1-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-5-2",
+      "number": 2,
+      "title": "The Bare Trilateral — ثلاثي مجرد",
+      "tagline": "The base form. Everything else is built on this.",
+      "xpBonus": 25,
+      "badge": { "title": "Base Former", "icon": "⚖️" },
+      "unlockedBy": "unit-5-1",
+      "lessons": [
+        {
+          "id": "l5-u2-l1",
+          "number": 1,
+          "title": "The 6 Verb Scales — الأوزان الستة",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-5-1",
+          "contentHash": "l5-u2-l1-v1"
+        },
+        {
+          "id": "l5-u2-l2",
+          "number": 2,
+          "title": "Past, Present & Verbal Noun Patterns",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u2-l1",
+          "contentHash": "l5-u2-l2-v1"
+        },
+        {
+          "id": "l5-u2-l3",
+          "number": 3,
+          "title": "High-Frequency ثلاثي مجرد Roots in the Quran",
+          "type": "vocabulary",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u2-l2",
+          "contentHash": "l5-u2-l3-v1"
+        },
+        {
+          "id": "l5-u2-l4",
+          "number": 4,
+          "title": "Reading Bare Trilateral Words in Ayahs",
+          "type": "application",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l5-u2-l3",
+          "contentHash": "l5-u2-l4-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-5-3",
+      "number": 3,
+      "title": "The Augmented Trilateral — ثلاثي مزيد فيه",
+      "tagline": "Add a letter. Change the meaning. Multiply your vocabulary.",
+      "xpBonus": 30,
+      "badge": { "title": "Pattern Master", "icon": "🔢" },
+      "unlockedBy": "unit-5-2",
+      "lessons": [
+        {
+          "id": "l5-u3-l1",
+          "number": 1,
+          "title": "How Augmentation Changes Meaning",
+          "type": "concept",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "unit-5-2",
+          "contentHash": "l5-u3-l1-v1"
+        },
+        {
+          "id": "l5-u3-l2",
+          "number": 2,
+          "title": "Forms II–IV — فَعَّلَ، فَاعَلَ، أَفْعَلَ",
+          "type": "grammar",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l5-u3-l1",
+          "contentHash": "l5-u3-l2-v1"
+        },
+        {
+          "id": "l5-u3-l3",
+          "number": 3,
+          "title": "Forms V–X — تَفَعَّلَ to اسْتَفْعَلَ",
+          "type": "grammar",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l5-u3-l2",
+          "contentHash": "l5-u3-l3-v1"
+        },
+        {
+          "id": "l5-u3-l4",
+          "number": 4,
+          "title": "Augmented Verb Families in the Quran",
+          "type": "application",
+          "xpReward": 25,
+          "estimatedMinutes": 18,
+          "unlockedBy": "l5-u3-l3",
+          "contentHash": "l5-u3-l4-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-5-4",
+      "number": 4,
+      "title": "مهموز & مثال — Hamzated & Initial Weak",
+      "tagline": "When the root itself is fragile — Hamza and Waw.",
+      "xpBonus": 25,
+      "badge": { "title": "Hamza Handler", "icon": "🔤" },
+      "unlockedBy": "unit-5-3",
+      "lessons": [
+        {
+          "id": "l5-u4-l1",
+          "number": 1,
+          "title": "Why Some Verbs Are Irregular",
+          "type": "concept",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "unit-5-3",
+          "contentHash": "l5-u4-l1-v1"
+        },
+        {
+          "id": "l5-u4-l2",
+          "number": 2,
+          "title": "مهموز — Verbs with Hamza as a Root Letter",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u4-l1",
+          "contentHash": "l5-u4-l2-v1"
+        },
+        {
+          "id": "l5-u4-l3",
+          "number": 3,
+          "title": "مثال — When the First Letter is Weak",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u4-l2",
+          "contentHash": "l5-u4-l3-v1"
+        },
+        {
+          "id": "l5-u4-l4",
+          "number": 4,
+          "title": "مهموز & مثال in Quranic Ayahs",
+          "type": "application",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l5-u4-l3",
+          "contentHash": "l5-u4-l4-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-5-5",
+      "number": 5,
+      "title": "مضاعف & أجوف — Doubled & Hollow",
+      "tagline": "The middle matters — contraction and elision.",
+      "xpBonus": 25,
+      "badge": { "title": "Hollow Reader", "icon": "🕳️" },
+      "unlockedBy": "unit-5-4",
+      "lessons": [
+        {
+          "id": "l5-u5-l1",
+          "number": 1,
+          "title": "مضاعف — The Doubled Root Letter",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-5-4",
+          "contentHash": "l5-u5-l1-v1"
+        },
+        {
+          "id": "l5-u5-l2",
+          "number": 2,
+          "title": "أجوف — The Hollow Verb",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u5-l1",
+          "contentHash": "l5-u5-l2-v1"
+        },
+        {
+          "id": "l5-u5-l3",
+          "number": 3,
+          "title": "Doubled & Hollow Verbs Across the Quran",
+          "type": "application",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l5-u5-l2",
+          "contentHash": "l5-u5-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-5-6",
+      "number": 6,
+      "title": "ناقص & لفيف — Deficient & Doubly Weak",
+      "tagline": "When the ending changes everything.",
+      "xpBonus": 25,
+      "badge": { "title": "Weak Ender", "icon": "🍂" },
+      "unlockedBy": "unit-5-5",
+      "lessons": [
+        {
+          "id": "l5-u6-l1",
+          "number": 1,
+          "title": "ناقص — Verbs with a Weak Final Letter",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-5-5",
+          "contentHash": "l5-u6-l1-v1"
+        },
+        {
+          "id": "l5-u6-l2",
+          "number": 2,
+          "title": "لفيف — Doubly Weak Verbs",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u6-l1",
+          "contentHash": "l5-u6-l2-v1"
+        },
+        {
+          "id": "l5-u6-l3",
+          "number": 3,
+          "title": "Weak Verb Endings in Recitation",
+          "type": "application",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l5-u6-l2",
+          "contentHash": "l5-u6-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-5-7",
+      "number": 7,
+      "title": "Sarf Word Families & الرباعي",
+      "tagline": "Beyond verbs — the full word family from one root.",
+      "xpBonus": 30,
+      "badge": { "title": "Word Family", "icon": "🌳" },
+      "unlockedBy": "unit-5-6",
+      "lessons": [
+        {
+          "id": "l5-u7-l1",
+          "number": 1,
+          "title": "الفعل الرباعي — Four-Letter Roots",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-5-6",
+          "contentHash": "l5-u7-l1-v1"
+        },
+        {
+          "id": "l5-u7-l2",
+          "number": 2,
+          "title": "المصدر — Verbal Nouns",
+          "type": "grammar",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l5-u7-l1",
+          "contentHash": "l5-u7-l2-v1"
+        },
+        {
+          "id": "l5-u7-l3",
+          "number": 3,
+          "title": "اسم الفاعل & اسم المفعول — Participles",
+          "type": "grammar",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l5-u7-l2",
+          "contentHash": "l5-u7-l3-v1"
+        },
+        {
+          "id": "l5-u7-l4",
+          "number": 4,
+          "title": "Sarf Word Families in the Quran",
+          "type": "application",
+          "xpReward": 25,
+          "estimatedMinutes": 18,
+          "unlockedBy": "l5-u7-l3",
+          "contentHash": "l5-u7-l4-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-5-8",
+      "number": 8,
+      "title": "Plural Patterns & Capstone",
+      "tagline": "Broken plurals are Sarf patterns in disguise.",
+      "xpBonus": 35,
+      "badge": { "title": "Sarf Scholar", "icon": "🏅" },
+      "unlockedBy": "unit-5-7",
+      "lessons": [
+        {
+          "id": "l5-u8-l1",
+          "number": 1,
+          "title": "Broken Plural Patterns — أوزان الجمع",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-5-7",
+          "contentHash": "l5-u8-l1-v1"
+        },
+        {
+          "id": "l5-u8-l2",
+          "number": 2,
+          "title": "The 10 Most Common Plural Patterns in the Quran",
+          "type": "vocabulary",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l5-u8-l1",
+          "contentHash": "l5-u8-l2-v1"
+        },
+        {
+          "id": "l5-u8-l3",
+          "number": 3,
+          "title": "Level 5 Capstone Review",
+          "type": "review",
+          "xpReward": 30,
+          "estimatedMinutes": 20,
+          "unlockedBy": "l5-u8-l2",
+          "contentHash": "l5-u8-l3-v1"
+        }
+      ]
+    }
+  ]
+}

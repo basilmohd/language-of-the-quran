@@ -8,19 +8,19 @@ Development has started. The NX monorepo is initialized in the `language-of-the-
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Monorepo | NX + npm workspaces |
-| Web | React + Vite + TypeScript + Tailwind CSS + shadcn/ui |
-| Mobile (MVP2) | React Native + Expo |
-| API | Node.js + Express + TypeScript |
-| ORM | Prisma |
-| Database | PostgreSQL (Neon) |
-| Cache | Redis via Upstash |
-| CDN | Cloudflare R2 (curriculum bundles + audio proxy) |
-| Auth | Clerk (JWT, Expo SDK support) |
+| Layer         | Technology                                           |
+| ------------- | ---------------------------------------------------- |
+| Monorepo      | NX + npm workspaces                                  |
+| Web           | React + Vite + TypeScript + Tailwind CSS + shadcn/ui |
+| Mobile (MVP2) | React Native + Expo                                  |
+| API           | Node.js + Express + TypeScript                       |
+| ORM           | Prisma                                               |
+| Database      | PostgreSQL (Neon)                                    |
+| Cache         | Redis via Upstash                                    |
+| CDN           | Cloudflare R2 (curriculum bundles + audio proxy)     |
+| Auth          | Clerk (JWT, Expo SDK support)                        |
 | State machine | XState v5 (lesson flow, shared between web + mobile) |
-| Drag-and-drop | @dnd-kit/sortable |
+| Drag-and-drop | @dnd-kit/sortable                                    |
 
 ## Commands
 
@@ -80,38 +80,47 @@ libs/
 ## Architecture Patterns
 
 ### Content: Two Separate Layers
+
 - **Corpus** (Quranic text, morphology, translations): Write-once, seeded into PostgreSQL from `libs/quran-data/`. Enables relational queries like "all verses with root ك-ت-ب".
 - **Curriculum** (lesson/exercise JSON): Lives in `libs/content/`, version-controlled in git, published to Cloudflare R2. PostgreSQL stores only a `ContentVersion` manifest (hash, CDN URL). Clients compare hashes and download only deltas.
 
 ### Shared Libraries
+
 `libs/srs/` (SM-2 algorithm) and `libs/api-types/` (exercise types) are zero-dependency TypeScript — they run identically on web, mobile (offline), and API. Don't add external dependencies to these libs.
 
 ### Lesson State Machine
+
 XState v5 machine lives in `libs/srs/src/lessonMachine.ts`. Manages: `idle → loading → presenting_exercise → answered → show_feedback → [next|retry] → completed → award_xp → check_badges → update_streak`.
 
 ### API Conventions
+
 - All routes: `/api/v1/`
 - Uniform response envelope: `{ data: T | null, meta: { version, requestId }, error: { code, message } | null }`
 - All list endpoints: cursor pagination
 - Mobile clients send `X-App-Version` header (logged for deprecation planning)
 
 ### Audio
+
 Content JSON references audio as `audio://quran/{reciter}/{surah}/{ayah}`. The API proxy at `GET /api/v1/audio/:reciter/:surah/:ayah` resolves these to CDN URLs. MVP1 proxies to quran.com/alquran.cloud. Changing the proxy endpoint is the only change needed to swap audio providers.
 
 ### Database Conventions
+
 - UUID PKs everywhere
 - `timestamptz` (never bare `timestamp`) on all datetime columns
 - `deleted_at` soft-delete on all user-data tables
 - Streak dates stored as `DATE` (not timestamptz) in user's local timezone to prevent midnight-crossing bugs
 
 ### Gamification Rules (no exceptions)
+
 - **No lives/hearts**: unlimited attempts per exercise
 - **Wrong answer**: amber feedback + correct answer + explanation → retry (never block progress)
 - **XP**: 10 on first-attempt correct, 5 on retry correct — never 0
 - **Streaks**: one calendar day of activity in user's timezone counts
 
 ## Curriculum Scope
+
 ~350 high-frequency words across 6 levels:
+
 1. Nouns (Ism) — 4 properties, definiteness, gender, number, Idhafah
 2. Verbs (Fi'l) — conjugation, pronouns
 3. Particles (Harf) — prepositions, negation
@@ -122,13 +131,14 @@ Content JSON references audio as `audio://quran/{reciter}/{surah}/{ayah}`. The A
 Target: 80–85% reading comprehension of the Quran.
 
 ## Key Design Documents
+
 - `language-of-the-quran/ARCHITECTURE.md` — Full technical reference: schema, API specs, frontend component tree, infrastructure, decision log
 - `language-of-the-quran/WORKFLOW.md` — UX flows, lesson 1 content plan, exercise sequences, curriculum structure
 
 <!-- nx configuration start-->
 <!-- Leave the start & end comments to automatically receive updates. -->
 
-# General Guidelines for working with Nx
+## General Guidelines for working with Nx
 
 - For navigating/exploring the workspace, invoke the `nx-workspace` skill first - it has patterns for querying projects, targets, and dependencies
 - When running tasks (for example build, lint, test, e2e, etc.), always prefer running the task through `nx` (i.e. `nx run`, `nx run-many`, `nx affected`) instead of using the underlying tooling directly

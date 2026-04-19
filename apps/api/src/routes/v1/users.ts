@@ -1,21 +1,21 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '@org/db';
 import { requireAuth } from '../../middleware/requireAuth.js';
-import { ok } from '../../lib/respond.js';
+import { ok, asyncHandler } from '../../lib/respond.js';
 import { cacheGet, cacheSet } from '../../lib/redis.js';
 import type { UserStats } from '@org/api-types';
 
 const router = Router();
 
 // GET /api/v1/users/me/stats
-router.get('/me/stats', requireAuth, async (req: Request, res: Response): Promise<void> => {
+router.get('/me/stats', requireAuth, asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const userId = req.appUser!.id;
   const cacheKey = `user:${userId}:stats`;
 
   const cached = await cacheGet<UserStats>(cacheKey);
   if (cached) { ok(res, cached); return; }
 
-  const [streak, wordsLearned, learnedTopRanks] = await Promise.all([
+  const [streak, wordsLearned, learnedTopRanks, allTiers] = await Promise.all([
     prisma.userStreak.findUnique({ where: { userId } }),
     prisma.userWordReview.count({ where: { userId, repetitions: { gte: 2 } } }),
     prisma.userWordReview.count({
@@ -25,35 +25,50 @@ router.get('/me/stats', requireAuth, async (req: Request, res: Response): Promis
         word: { frequencyRank: { lte: 300, not: null } },
       },
     }),
+    prisma.xpTier.findMany({ orderBy: { xpRequired: 'asc' } }),
   ]);
 
   // Quran coverage: % of top-300 frequency words the user has learned
   const quranCoverage = Math.round((learnedTopRanks / 300) * 100);
 
+  const totalXp = streak?.totalXp ?? 0;
+
+  // Resolve current and next XP tier
+  let currentTier = allTiers[0] ?? { level: 1, title: 'Seeker', xpRequired: 0 };
+  let nextTier: typeof currentTier | null = null;
+  for (let i = 0; i < allTiers.length; i++) {
+    if (totalXp >= allTiers[i].xpRequired) {
+      currentTier = allTiers[i];
+      nextTier = allTiers[i + 1] ?? null;
+    }
+  }
+
   const stats: UserStats = {
     currentStreak: streak?.currentStreak ?? 0,
     longestStreak: streak?.longestStreak ?? 0,
-    totalXp: streak?.totalXp ?? 0,
+    totalXp,
     wordsLearned,
     quranCoverage,
+    xpTier: { level: currentTier.level, title: currentTier.title, xpRequired: currentTier.xpRequired },
+    nextXpTier: nextTier ? { level: nextTier.level, title: nextTier.title, xpRequired: nextTier.xpRequired } : null,
   };
 
   await cacheSet(cacheKey, stats, 24 * 3600);
   ok(res, stats);
-});
+}));
 
 // GET /api/v1/users/me/progress — completed lessons map
-router.get('/me/progress', requireAuth, async (req: Request, res: Response): Promise<void> => {
+router.get('/me/progress', requireAuth, asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const userId = req.appUser!.id;
   const progress = await prisma.userLessonProgress.findMany({
     where: { userId },
     select: { lessonId: true, status: true, xpEarned: true, completedAt: true },
   });
   ok(res, progress);
-});
+}));
 
 // GET /api/v1/users/me/badges — earned badges
-router.get('/me/badges', requireAuth, async (req: Request, res: Response): Promise<void> => {
+router.get('/me/badges', requireAuth, asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const userId = req.appUser!.id;
   const badges = await prisma.userBadge.findMany({
     where: { userId },
@@ -67,10 +82,10 @@ router.get('/me/badges', requireAuth, async (req: Request, res: Response): Promi
     iconSlug: ub.badge.iconSlug,
     earnedAt: ub.earnedAt.toISOString(),
   })));
-});
+}));
 
 // GET /api/v1/users/me/word-bank — learned words (paginated)
-router.get('/me/word-bank', requireAuth, async (req: Request, res: Response): Promise<void> => {
+router.get('/me/word-bank', requireAuth, asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const userId = req.appUser!.id;
   const limit = Math.min(Number(req.query['limit']) || 20, 50);
   const cursor = req.query['cursor'] as string | undefined;
@@ -102,6 +117,6 @@ router.get('/me/word-bank', requireAuth, async (req: Request, res: Response): Pr
     })),
     nextCursor: hasMore ? items[items.length - 1].id : null,
   });
-});
+}));
 
 export default router;

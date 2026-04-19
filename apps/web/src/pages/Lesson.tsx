@@ -15,9 +15,10 @@ import { GrammarRole } from '@/components/ExerciseCard/GrammarRole';
 import { RootRecognition } from '@/components/ExerciseCard/RootRecognition';
 import { WordReorder } from '@/components/ExerciseCard/WordReorder';
 import { fetchLesson, completeLesson } from '@/lib/api';
+import { ApiErrorBanner } from '@/components/ApiErrorBanner';
 import type { LessonDetail } from '@/lib/api';
 import { validateAnswer } from '@org/srs';
-import type { LessonStep, ExerciseDefinition, BadgeSummary } from '@org/api-types';
+import type { LessonStep, ExerciseDefinition, BadgeSummary, CompleteLessonResponse } from '@org/api-types';
 
 // ── State machine ─────────────────────────────────────────────────────────────
 
@@ -41,10 +42,14 @@ type Phase =
   | {
       tag: 'complete';
       xpEarned: number;
+      newTotalXp: number;
       newStreak: number;
       badgesEarned: BadgeSummary[];
       nextLessonId?: string;
       wordsLearned: string[]; // arabic words covered
+      levelUp: CompleteLessonResponse['levelUp'];
+      unitCompleted: CompleteLessonResponse['unitCompleted'];
+      levelCompleted: CompleteLessonResponse['levelCompleted'];
     };
 
 type Action =
@@ -53,7 +58,7 @@ type Action =
   | { type: 'BEGIN' }
   | { type: 'SUBMIT_ANSWER'; answer: unknown; responseTimeMs: number }
   | { type: 'CONTINUE' }
-  | { type: 'COMPLETE_DONE'; result: { xpEarned: number; newStreak: number; badgesEarned: BadgeSummary[]; nextLessonId?: string } };
+  | { type: 'COMPLETE_DONE'; result: CompleteLessonResponse };
 
 function getExerciseSteps(steps: LessonStep[]): ExerciseDefinition[] {
   return steps.filter((s): s is ExerciseDefinition => s.type !== 'learn');
@@ -162,13 +167,21 @@ function reducer(state: Phase, action: Action): Phase {
         .filter((s) => s.type === 'learn')
         .map((s) => (s as { arabic: string }).arabic);
 
+      const r = action.result;
+      // Derive nextLessonId from newly unlocked lessons
+      const nextLessonId = r.newlyUnlocked.lessons[0];
+
       return {
         tag: 'complete',
-        xpEarned: action.result.xpEarned,
-        newStreak: action.result.newStreak,
-        badgesEarned: action.result.badgesEarned,
-        nextLessonId: action.result.nextLessonId,
+        xpEarned: r.xpAwarded,
+        newTotalXp: r.newTotalXp,
+        newStreak: r.newStreak,
+        badgesEarned: r.badgesEarned,
+        nextLessonId,
         wordsLearned,
+        levelUp: r.levelUp,
+        unitCompleted: r.unitCompleted,
+        levelCompleted: r.levelCompleted,
       };
     }
 
@@ -254,7 +267,18 @@ export function Lesson() {
         if (!cancelled) {
           dispatch({
             type: 'COMPLETE_DONE',
-            result: { xpEarned: 5, newStreak: 0, badgesEarned: [], nextLessonId: undefined },
+            result: {
+              lessonId: id ?? '',
+              xpAwarded: 5,
+              newTotalXp: 0,
+              newStreak: 0,
+              badgesEarned: [],
+              levelUp: null,
+              newlyUnlocked: { lessons: [], units: [], levels: [] },
+              unitCompleted: null,
+              levelCompleted: null,
+              updatedProgress: {},
+            },
           });
         }
       }
@@ -412,7 +436,55 @@ export function Lesson() {
           <div className="flex items-center justify-center gap-2 py-2">
             <Star className="h-6 w-6 text-amber-500 fill-amber-500" />
             <span className="text-3xl font-bold text-amber-600">+{state.xpEarned} XP</span>
+            <span className="text-sm text-muted-foreground">({state.newTotalXp} total)</span>
           </div>
+
+          {/* XP level-up banner */}
+          {state.levelUp && (
+            <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-purple-50 border border-purple-200">
+              <span className="text-2xl">⬆️</span>
+              <div className="text-left">
+                <p className="text-sm font-semibold text-purple-800">
+                  Level Up! {state.levelUp.from.title} → {state.levelUp.to.title}
+                </p>
+                <p className="text-xs text-purple-600">You've reached a new rank</p>
+              </div>
+            </div>
+          )}
+
+          {/* Unit completed banner */}
+          {state.unitCompleted && (
+            <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 border border-blue-200">
+              <span className="text-2xl">{state.unitCompleted.badge?.icon ?? '🏆'}</span>
+              <div className="text-left">
+                <p className="text-sm font-semibold text-blue-800">
+                  Unit Complete! {state.unitCompleted.badge?.title ?? ''}
+                </p>
+                <p className="text-xs text-blue-600">{state.unitCompleted.message}</p>
+                {state.unitCompleted.xpBonus > 0 && (
+                  <p className="text-xs text-blue-500 font-semibold">+{state.unitCompleted.xpBonus} bonus XP</p>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Level completed banner */}
+          {state.levelCompleted && (
+            <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-amber-50 border border-amber-200">
+              <span className="text-2xl">{state.levelCompleted.badge?.icon ?? '🌟'}</span>
+              <div className="text-left">
+                <p className="text-sm font-semibold text-amber-800">
+                  {state.levelCompleted.badge?.title ?? 'Level Complete!'}
+                </p>
+                <p className="text-xs text-amber-600">{state.levelCompleted.message}</p>
+                {state.levelCompleted.surahUnlock && (
+                  <p className="text-xs text-amber-500 font-semibold mt-0.5">
+                    Unlocked: {state.levelCompleted.surahUnlock}
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Words learned */}
           {state.wordsLearned.length > 0 && (
@@ -488,7 +560,7 @@ export function Lesson() {
             <UserButton afterSignOutUrl="/" />
           </div>
         </header>
-
+        <ApiErrorBanner />
         <main className="max-w-sm mx-auto px-4 py-12 space-y-8 text-center">
           <div className="space-y-2">
             <Badge variant="outline" className="text-xs">
@@ -562,7 +634,7 @@ export function Lesson() {
           <UserButton afterSignOutUrl="/" />
         </div>
       </header>
-
+      <ApiErrorBanner />
       {/* Content */}
       <main className="flex-1 max-w-xl mx-auto w-full px-4 py-8">
         {currentStep && renderStep(currentStep)}

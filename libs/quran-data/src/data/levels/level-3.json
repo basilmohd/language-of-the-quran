@@ -1,0 +1,170 @@
+{
+  "id": "level-3",
+  "number": 3,
+  "title": "The Connectors (Harf)",
+  "tagline": "The small words that hold the Quran together.",
+  "icon": "🔩",
+  "description": "Master the particles that glue Quranic Arabic together — prepositions, negation, and accusative particles. These small words carry enormous meaning.",
+  "milestone": {
+    "badge": "The Particle Hunter",
+    "badgeIcon": "🎯",
+    "message": "You can now read and parse every particle in the Quran. The small words no longer slip past you.",
+    "unlocksLevel": "level-4"
+  },
+  "units": [
+    {
+      "id": "unit-3-1",
+      "number": 1,
+      "title": "Prepositions",
+      "tagline": "في، على، من، إلى — position and direction in the Quran",
+      "xpBonus": 20,
+      "badge": { "title": "Preposition Pro", "icon": "📍" },
+      "unlockedBy": "level-2",
+      "lessons": [
+        {
+          "id": "l3-u1-l1",
+          "number": 1,
+          "title": "The Preposition Family — في، على، من، إلى، عن",
+          "type": "grammar",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "level-2",
+          "contentHash": "l2-u1-l1-v1"
+        },
+        {
+          "id": "l3-u1-l2",
+          "number": 2,
+          "title": "ب، ل، ك — The Attached Prepositions",
+          "type": "grammar",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "l3-u1-l1",
+          "contentHash": "l2-u1-l2-v1"
+        },
+        {
+          "id": "l3-u1-l3",
+          "number": 3,
+          "title": "الجار والمجرور in Quranic Context",
+          "type": "application",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l3-u1-l2",
+          "contentHash": "l2-u1-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-3-2",
+      "number": 2,
+      "title": "Negation",
+      "tagline": "لا، ما، لم، لن — four words, four shades of 'no'",
+      "xpBonus": 20,
+      "badge": { "title": "The Negator", "icon": "🚫" },
+      "unlockedBy": "unit-3-1",
+      "lessons": [
+        {
+          "id": "l3-u2-l1",
+          "number": 1,
+          "title": "Negating with لا and ما",
+          "type": "grammar",
+          "xpReward": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "unit-3-1",
+          "contentHash": "l2-u2-l1-v1"
+        },
+        {
+          "id": "l3-u2-l2",
+          "number": 2,
+          "title": "Negating with لم and لن",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l3-u2-l1",
+          "contentHash": "l2-u2-l2-v1"
+        },
+        {
+          "id": "l3-u2-l3",
+          "number": 3,
+          "title": "Negation in Al-Fatiha and Short Surahs",
+          "type": "application",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l3-u2-l2",
+          "contentHash": "l2-u2-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-3-3",
+      "number": 3,
+      "title": "Accusative Particles",
+      "tagline": "إنَّ and sisters — words that change the shape of the sentence",
+      "xpBonus": 25,
+      "badge": { "title": "Particle Master", "icon": "⚗️" },
+      "unlockedBy": "unit-3-2",
+      "lessons": [
+        {
+          "id": "l3-u3-l1",
+          "number": 1,
+          "title": "إنَّ and أنَّ — Emphasis and Embedded Clauses",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-3-2",
+          "contentHash": "l2-u3-l1-v1"
+        },
+        {
+          "id": "l3-u3-l2",
+          "number": 2,
+          "title": "كأنَّ، لكنَّ، ليت، لعلَّ",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "l3-u3-l1",
+          "contentHash": "l2-u3-l2-v1"
+        },
+        {
+          "id": "l3-u3-l3",
+          "number": 3,
+          "title": "Reading Accusative Particles in Ayahs",
+          "type": "application",
+          "xpReward": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l3-u3-l2",
+          "contentHash": "l2-u3-l3-v1"
+        }
+      ]
+    },
+    {
+      "id": "unit-3-4",
+      "number": 4,
+      "title": "Emphasis & Review",
+      "tagline": "إنَّ at the start of a sentence — the Quran's way of saying 'Listen closely'",
+      "xpBonus": 25,
+      "badge": { "title": "Harf Scholar", "icon": "🏅" },
+      "unlockedBy": "unit-3-3",
+      "lessons": [
+        {
+          "id": "l3-u4-l1",
+          "number": 1,
+          "title": "Emphasis Particles — إنَّ at the Start",
+          "type": "grammar",
+          "xpReward": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-3-3",
+          "contentHash": "l2-u4-l1-v1"
+        },
+        {
+          "id": "l3-u4-l2",
+          "number": 2,
+          "title": "Level 3 Review",
+          "type": "review",
+          "xpReward": 25,
+          "estimatedMinutes": 15,
+          "unlockedBy": "l3-u4-l1",
+          "contentHash": "l2-u4-l2-v1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "id": "world-2",
+  "levelId": "level-2",
+  "number": 2,
+  "title": "The World of Ism",
+  "tagline": "Half the Quran lives here. Master the noun and you master the foundation.",
+  "icon": "🏛️",
+  "unlockedBy": "world-1",
+  "totalXP": 380,
+  "milestone": {
+    "badge": "The Fatiha Key",
+    "badgeIcon": "🗝️",
+    "message": "You can now parse every word of Al-Fatiha with full grammatical understanding.",
+    "surahUnlock": "al-fatiha",
+    "unlocksWorld": "world-3"
+  },
+  "units": [
+    {
+      "id": "unit-2-1",
+      "levelUnitId": "unit-2-1",
+      "number": 1,
+      "title": "What is an Ism?",
+      "tagline": "Recognizing the noun — the first half of the Quran",
+      "unlockedBy": "world-1",
+      "xpBonus": 15,
+      "badge": { "title": "Noun Spotter", "icon": "👁️" },
+      "lessons": [
+        {
+          "id": "lesson-2-1-1",
+          "lessonId": "l2-u1-l1",
+          "number": 1,
+          "title": "What is an Ism?",
+          "type": "concept",
+          "xp": 10,
+          "estimatedMinutes": 12,
+          "unlockedBy": "world-1"
+        },
+        {
+          "id": "lesson-2-1-2",
+          "lessonId": "l2-u1-l2",
+          "number": 2,
+          "title": "Names of Allah",
+          "type": "vocabulary",
+          "xp": 10,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-1-1"
+        },
+        {
+          "id": "lesson-2-1-3",
+          "lessonId": "l2-u1-l3",
+          "number": 3,
+          "title": "Sky, Earth & Creation",
+          "type": "vocabulary",
+          "xp": 10,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-1-2"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-2",
+      "levelUnitId": "unit-2-2",
+      "number": 2,
+      "title": "Definite & Indefinite",
+      "tagline": "The difference between 'a' and 'the' — and why it matters in the Quran",
+      "unlockedBy": "unit-2-1",
+      "xpBonus": 20,
+      "badge": { "title": "The/A Master", "icon": "⚖️" },
+      "lessons": [
+        {
+          "id": "lesson-2-2-1",
+          "lessonId": "l2-u2-l1",
+          "number": 1,
+          "title": "Al — The Definite Article",
+          "type": "grammar",
+          "xp": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "unit-2-1"
+        },
+        {
+          "id": "lesson-2-2-2",
+          "lessonId": "l2-u2-l2",
+          "number": 2,
+          "title": "Sun and Moon Letters",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-2-1"
+        },
+        {
+          "id": "lesson-2-2-3",
+          "lessonId": "l2-u2-l3",
+          "number": 3,
+          "title": "Proper Nouns in the Quran",
+          "type": "application",
+          "xp": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "lesson-2-2-2"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-3",
+      "levelUnitId": "unit-2-3",
+      "number": 3,
+      "title": "Masculine & Feminine",
+      "tagline": "Arabic nouns have gender — and the Quran uses it with precision",
+      "unlockedBy": "unit-2-2",
+      "xpBonus": 15,
+      "badge": { "title": "Gender Aware", "icon": "🔡" },
+      "lessons": [
+        {
+          "id": "lesson-2-3-1",
+          "lessonId": "l2-u3-l1",
+          "number": 1,
+          "title": "Masculine and Feminine",
+          "type": "grammar",
+          "xp": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "unit-2-2"
+        },
+        {
+          "id": "lesson-2-3-2",
+          "lessonId": "l2-u3-l2",
+          "number": 2,
+          "title": "The Ta Marbuta — Feminine Marker",
+          "type": "grammar",
+          "xp": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "lesson-2-3-1"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-4",
+      "levelUnitId": "unit-2-4",
+      "number": 4,
+      "title": "Singular, Dual & Plural",
+      "tagline": "Arabic has three quantities — and the Quran uses each for a reason",
+      "unlockedBy": "unit-2-3",
+      "xpBonus": 20,
+      "badge": { "title": "Counter", "icon": "🔢" },
+      "lessons": [
+        {
+          "id": "lesson-2-4-1",
+          "lessonId": "l2-u4-l1",
+          "number": 1,
+          "title": "The Three Numbers: Mufrad, Muthanna, Jama'",
+          "type": "grammar",
+          "xp": 10,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-2-3"
+        },
+        {
+          "id": "lesson-2-4-2",
+          "lessonId": "l2-u4-l2",
+          "number": 2,
+          "title": "Sound and Broken Plurals",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-4-1"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-5",
+      "levelUnitId": "unit-2-5",
+      "number": 5,
+      "title": "Grammatical Case",
+      "tagline": "The endings change the meaning — case is how Arabic shows a word's role",
+      "unlockedBy": "unit-2-4",
+      "xpBonus": 25,
+      "badge": { "title": "Case Reader", "icon": "🏷️" },
+      "lessons": [
+        {
+          "id": "lesson-2-5-1",
+          "lessonId": "l2-u5-l1",
+          "number": 1,
+          "title": "The Three Cases",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-2-4"
+        },
+        {
+          "id": "lesson-2-5-2",
+          "lessonId": "l2-u5-l2",
+          "number": 2,
+          "title": "Case Endings on Ism",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-5-1"
+        },
+        {
+          "id": "lesson-2-5-3",
+          "lessonId": "l2-u5-l3",
+          "number": 3,
+          "title": "Reading Cases in Ayahs",
+          "type": "application",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-5-2"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-6",
+      "levelUnitId": "unit-2-6",
+      "number": 6,
+      "title": "Idaafa — The Possessive Construction",
+      "tagline": "The possessive — one of the most common patterns in the Quran",
+      "unlockedBy": "unit-2-5",
+      "xpBonus": 25,
+      "badge": { "title": "Possessive", "icon": "🔗" },
+      "lessons": [
+        {
+          "id": "lesson-2-6-1",
+          "lessonId": "l2-u6-l1",
+          "number": 1,
+          "title": "Idaafa — Two Nouns, One Relationship",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-2-5"
+        },
+        {
+          "id": "lesson-2-6-2",
+          "lessonId": "l2-u6-l2",
+          "number": 2,
+          "title": "Idhafah in Al-Fatiha",
+          "type": "application",
+          "xp": 20,
+          "estimatedMinutes": 15,
+          "unlockedBy": "lesson-2-6-1"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-7",
+      "levelUnitId": "unit-2-7",
+      "number": 7,
+      "title": "Na't — Adjective-Noun Agreement",
+      "tagline": "Descriptions always follow the noun — and must match it exactly",
+      "unlockedBy": "unit-2-6",
+      "xpBonus": 25,
+      "badge": { "title": "The Describer", "icon": "🎨" },
+      "lessons": [
+        {
+          "id": "lesson-2-7-1",
+          "lessonId": "l2-u7-l1",
+          "number": 1,
+          "title": "The Adjective That Follows and Agrees",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-2-6"
+        },
+        {
+          "id": "lesson-2-7-2",
+          "lessonId": "l2-u7-l2",
+          "number": 2,
+          "title": "Reading Na't in Quranic Ayahs",
+          "type": "application",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-7-1"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-8",
+      "levelUnitId": "unit-2-8",
+      "number": 8,
+      "title": "Mubtada & Khabar — The Verbless Sentence",
+      "tagline": "An Arabic sentence needs no verb. Subject + Predicate = complete.",
+      "unlockedBy": "unit-2-7",
+      "xpBonus": 25,
+      "badge": { "title": "Sentence Builder", "icon": "🏗️" },
+      "lessons": [
+        {
+          "id": "lesson-2-8-1",
+          "lessonId": "l2-u8-l1",
+          "number": 1,
+          "title": "The Verbless Sentence",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-2-7"
+        },
+        {
+          "id": "lesson-2-8-2",
+          "lessonId": "l2-u8-l2",
+          "number": 2,
+          "title": "\"HE HAS\" and \"THERE IS\"",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-8-1"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-9",
+      "levelUnitId": "unit-2-9",
+      "number": 9,
+      "title": "Connector Letters",
+      "tagline": "و، ف، ثم، أو — the small letters that chain meaning across the Quran",
+      "unlockedBy": "unit-2-8",
+      "xpBonus": 20,
+      "badge": { "title": "Chain Reader", "icon": "⛓️" },
+      "lessons": [
+        {
+          "id": "lesson-2-9-1",
+          "lessonId": "l2-u9-l1",
+          "number": 1,
+          "title": "و، ف، ثم، أو — Meanings and Usage",
+          "type": "grammar",
+          "xp": 10,
+          "estimatedMinutes": 10,
+          "unlockedBy": "unit-2-8"
+        },
+        {
+          "id": "lesson-2-9-2",
+          "lessonId": "l2-u9-l2",
+          "number": 2,
+          "title": "Reading Connector Chains in Ayahs",
+          "type": "application",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-9-1"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-10",
+      "levelUnitId": "unit-2-10",
+      "number": 10,
+      "title": "Pronouns — Detached",
+      "tagline": "هو، هي، أنا، نحن — the words that point",
+      "unlockedBy": "unit-2-9",
+      "xpBonus": 20,
+      "badge": { "title": "The Pointer", "icon": "👆" },
+      "lessons": [
+        {
+          "id": "lesson-2-10-1",
+          "lessonId": "l2-u10-l1",
+          "number": 1,
+          "title": "The Detached Pronouns",
+          "type": "grammar",
+          "xp": 20,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-2-9"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-11",
+      "levelUnitId": "unit-2-11",
+      "number": 11,
+      "title": "Pronouns — Attached",
+      "tagline": "ـه ـك ـنا — tiny suffixes that transform meaning",
+      "unlockedBy": "unit-2-10",
+      "xpBonus": 25,
+      "badge": { "title": "Attached", "icon": "🧲" },
+      "lessons": [
+        {
+          "id": "lesson-2-11-1",
+          "lessonId": "l2-u11-l1",
+          "number": 1,
+          "title": "Pronouns as Suffixes on Nouns",
+          "type": "grammar",
+          "xp": 25,
+          "estimatedMinutes": 15,
+          "unlockedBy": "unit-2-10"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-12",
+      "levelUnitId": "unit-2-12",
+      "number": 12,
+      "title": "Ism Ishara — Demonstratives",
+      "tagline": "This and That — but in Arabic, with theological weight",
+      "unlockedBy": "unit-2-11",
+      "xpBonus": 20,
+      "badge": { "title": "Pointer of Reverence", "icon": "☝️" },
+      "lessons": [
+        {
+          "id": "lesson-2-12-1",
+          "lessonId": "l2-u12-l1",
+          "number": 1,
+          "title": "هذا and ذلك — This and That",
+          "type": "grammar",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "unit-2-11"
+        },
+        {
+          "id": "lesson-2-12-2",
+          "lessonId": "l2-u12-l2",
+          "number": 2,
+          "title": "Pointing in the Quran",
+          "type": "application",
+          "xp": 15,
+          "estimatedMinutes": 12,
+          "unlockedBy": "lesson-2-12-1"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-13",
+      "levelUnitId": "unit-2-13",
+      "number": 13,
+      "title": "Ism Mawsool — Relative Pronouns",
+      "tagline": "الذي and التي — the words that connect clauses",
+      "unlockedBy": "unit-2-12",
+      "xpBonus": 30,
+      "badge": { "title": "The Connector", "icon": "🔀" },
+      "lessons": [
+        {
+          "id": "lesson-2-13-1",
+          "lessonId": "l2-u13-l1",
+          "number": 1,
+          "title": "الذي — Who / Which / That",
+          "type": "grammar",
+          "xp": 25,
+          "estimatedMinutes": 15,
+          "unlockedBy": "unit-2-12"
+        }
+      ]
+    },
+    {
+      "id": "unit-2-14",
+      "levelUnitId": "unit-2-14",
+      "number": 14,
+      "title": "World 2 Review",
+      "tagline": "Parse Al-Fatiha. You've earned it.",
+      "unlockedBy": "unit-2-13",
+      "xpBonus": 30,
+      "badge": { "title": "Fatiha Scholar", "icon": "📖" },
+      "lessons": [
+        {
+          "id": "lesson-2-14-1",
+          "lessonId": "l2-u14-l1",
+          "number": 1,
+          "title": "Level 2 Review",
+          "type": "review",
+          "xp": 25,
+          "estimatedMinutes": 15,
+          "unlockedBy": "unit-2-13"
+        }
+      ]
+    }
+  ]
+}

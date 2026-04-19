@@ -1,6 +1,6 @@
 import type { AyahCard as AyahCardType } from '@org/api-types';
-import { Volume2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { AudioButton } from '@/components/AudioButton';
 
 interface AyahCardProps {
   card: AyahCardType;
@@ -49,11 +49,8 @@ export function AyahCard({ card, onWordTap, className }: AyahCardProps) {
         "{card.translation}"
       </p>
 
-      {/* Audio stub */}
-      <div className="flex items-center gap-1.5 text-xs text-muted-foreground/50 select-none">
-        <Volume2 className="h-3.5 w-3.5" />
-        <span>Audio coming soon</span>
-      </div>
+      {/* Audio button */}
+      <AudioButton audioUri={card.audioUri} size="sm" />
     </div>
   );
 }

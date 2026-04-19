@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { FillBlankExercise } from '@org/api-types';
 import { Button } from '@/components/ui/button';
+import { AudioButton } from '@/components/AudioButton';
 import { cn } from '@/lib/utils';
 
 interface FillBlankProps {
@@ -32,7 +33,8 @@ export function FillBlank({ exercise, onSubmit, disabled }: FillBlankProps) {
       </p>
 
       {/* Arabic verse with blank */}
-      <div className="rounded-xl border border-border bg-card px-4 py-5 text-center">
+      <div className="rounded-xl border border-border bg-card px-4 py-5 text-center space-y-2 relative">
+        <AudioButton audioUri={exercise.audioUri} size="md" className="absolute top-2 right-2" />
         <p
           dir="rtl"
           lang="ar"
@@ -41,7 +43,7 @@ export function FillBlank({ exercise, onSubmit, disabled }: FillBlankProps) {
         >
           {exercise.verseArabic.replace('___', selectedWord ? `[${selectedWord}]` : '___')}
         </p>
-        <p className="text-sm text-muted-foreground mt-3 italic">
+        <p className="text-sm text-muted-foreground italic">
           {exercise.verseTranslation.replace('___', selectedWord ? `"${selectedWord}"` : '___')}
         </p>
       </div>

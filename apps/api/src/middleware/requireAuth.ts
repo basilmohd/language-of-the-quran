@@ -50,15 +50,19 @@ export const requireAuth = [
       return;
     }
 
-    const user = await prisma.appUser.upsert({
-      where: { clerkId },
-      create: { clerkId },
-      update: {},
-      select: { id: true, clerkId: true, timezone: true },
-    });
+    try {
+      const user = await prisma.appUser.upsert({
+        where: { clerkId },
+        create: { clerkId },
+        update: {},
+        select: { id: true, clerkId: true, timezone: true },
+      });
 
-    setCachedUser(clerkId, user);
-    req.appUser = user;
-    next();
+      setCachedUser(clerkId, user);
+      req.appUser = user;
+      next();
+    } catch (err) {
+      next(err);
+    }
   },
 ];

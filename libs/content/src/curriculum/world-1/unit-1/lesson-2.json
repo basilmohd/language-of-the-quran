@@ -1,0 +1,100 @@
+{
+  "lessonId": "l1-u1-l2",
+  "version": 1,
+  "title": "The 3-Letter Root System",
+  "steps": [
+    {
+      "type": "learn",
+      "wordId": "word-kitab",
+      "arabic": "كِتَاب",
+      "transliteration": "kitāb",
+      "meaning": "book / scripture",
+      "rootArabic": "ك ت ب",
+      "rootMeaning": "to write",
+      "frequencyInQuran": 230,
+      "specialNote": "Root: ك-ت-ب (k-t-b) = writing. From these 3 letters: كِتَاب (book), كَاتِب (writer), مَكْتُوب (written letter). Same root, different word patterns.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Baqarah",
+          "surahNumber": 2,
+          "ayahNumber": 2,
+          "arabicText": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ",
+          "translation": "That is the Book about which there is no doubt, a guidance for those conscious of Allah.",
+          "highlightedWordArabic": "ٱلْكِتَٰبُ"
+        }
+      ]
+    },
+    {
+      "id": "l1-u1-l2-ex1",
+      "type": "root_recognition",
+      "arabic": "كِتَاب",
+      "transliteration": "kitāb",
+      "choices": ["ك ت ب", "ر ح م", "ع ل م", "ن و ر"],
+      "correctIndex": 0,
+      "wordId": "word-kitab",
+      "rootId": "root-ktb"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-alam",
+      "arabic": "عَالَم",
+      "transliteration": "ʿālam",
+      "meaning": "world / universe",
+      "rootArabic": "ع ل م",
+      "rootMeaning": "knowledge, world, to know",
+      "frequencyInQuran": 73,
+      "specialNote": "Root: ع-ل-م (ʿ-l-m) = knowledge. عَالَم (world), عِلْم (knowledge), عَالِم (scholar), عَلِيم (All-Knowing). The worlds are literally the realms that carry signs of their Creator's knowledge.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 2,
+          "arabicText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+          "translation": "All praise belongs to Allah, Lord of the Worlds.",
+          "highlightedWordArabic": "ٱلْعَٰلَمِينَ"
+        }
+      ]
+    },
+    {
+      "id": "l1-u1-l2-ex2",
+      "type": "root_recognition",
+      "arabic": "عَالَم",
+      "transliteration": "ʿālam",
+      "choices": ["ع ل م", "ك ت ب", "ر ب ب", "ح م د"],
+      "correctIndex": 0,
+      "wordId": "word-alam",
+      "rootId": "root-alm"
+    },
+    {
+      "type": "learn",
+      "wordId": "word-rahma",
+      "arabic": "رَحْمَة",
+      "transliteration": "raḥma",
+      "meaning": "mercy / compassion",
+      "rootArabic": "ر ح م",
+      "rootMeaning": "mercy, womb, compassion",
+      "frequencyInQuran": 79,
+      "specialNote": "Root: ر-ح-م (r-h-m) = mercy. رَحْمَة (mercy), رَحْمَٰن (overwhelmingly merciful), رَحِيم (continuously merciful). Two names of Allah in Bismillah — both from the same root.",
+      "ayahCards": [
+        {
+          "surahName": "Al-Fatiha",
+          "surahNumber": 1,
+          "ayahNumber": 3,
+          "arabicText": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+          "translation": "The Entirely Merciful, the Especially Merciful.",
+          "highlightedWordArabic": "ٱلرَّحْمَٰنِ"
+        }
+      ]
+    },
+    {
+      "id": "l1-u1-l2-ex3",
+      "type": "root_recognition",
+      "arabic": "رَحْمَة",
+      "transliteration": "raḥma",
+      "choices": ["ر ح م", "ع ل م", "ك ت ب", "ح م د"],
+      "correctIndex": 0,
+      "wordId": "word-rahma",
+      "rootId": "root-rhm"
+    }
+  ]
+}

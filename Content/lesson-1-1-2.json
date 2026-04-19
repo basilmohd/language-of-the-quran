@@ -1,0 +1,85 @@
+{
+  "id": "lesson-1-1-2",
+  "unitId": "unit-1-1",
+  "worldId": "world-1",
+  "number": 2,
+  "title": "The 3-Letter Root System",
+  "type": "concept",
+  "xp": 15,
+  "estimatedMinutes": 12,
+  "hook": {
+    "question": "What do كِتَاب (book), كَاتِب (writer), مَكْتَبَة (library), and كَتَبَ (he wrote) all have in common?",
+    "answer": "They all come from the same 3 letters: ك - ت - ب. This is the root system — the skeleton key of Arabic."
+  },
+  "concept": {
+    "title": "Every Arabic Word Has a 3-Letter Root (Jidhr)",
+    "arabicTerm": "جِذْر",
+    "arabicTermTranslit": "Jidhr",
+    "body": "Almost every Arabic word is built from a root of exactly 3 consonants. These 3 letters carry a core meaning. Different patterns wrap around that root to create nouns, verbs, and adjectives — all related in meaning. Once you know a root, you can guess the meaning of dozens of words you've never seen."
+  },
+  "examples": [
+    {
+      "root": "ك - ت - ب",
+      "rootMeaning": "Writing",
+      "words": [
+        { "arabic": "كَتَبَ",   "transliteration": "Kataba",   "meaning": "He wrote (verb)"       },
+        { "arabic": "كِتَاب",  "transliteration": "Kitaab",   "meaning": "Book (noun)"            },
+        { "arabic": "كَاتِب",  "transliteration": "Kaatib",   "meaning": "Writer (noun)"          },
+        { "arabic": "مَكْتُوب", "transliteration": "Maktoob",  "meaning": "Written / letter (noun)"}
+      ]
+    },
+    {
+      "root": "ع - ل - م",
+      "rootMeaning": "Knowledge",
+      "words": [
+        { "arabic": "عَلِمَ",  "transliteration": "'Alima",  "meaning": "He knew (verb)"             },
+        { "arabic": "عِلْم",   "transliteration": "'Ilm",    "meaning": "Knowledge (noun)"           },
+        { "arabic": "عَالِم",  "transliteration": "'Aalim",  "meaning": "Scholar (noun)"             },
+        { "arabic": "عَلِيم",  "transliteration": "'Aleem",  "meaning": "All-Knowing (name of Allah)"}
+      ]
+    },
+    {
+      "root": "ر - ح - م",
+      "rootMeaning": "Mercy",
+      "words": [
+        { "arabic": "رَحِمَ",   "transliteration": "Rahima",  "meaning": "He had mercy (verb)"           },
+        { "arabic": "رَحْمَة",  "transliteration": "Rahma",   "meaning": "Mercy (noun)"                  },
+        { "arabic": "رَحْمَٰن", "transliteration": "Rahman",  "meaning": "The Most Merciful (vast mercy)" },
+        { "arabic": "رَحِيم",   "transliteration": "Raheem",  "meaning": "The Ever Merciful (ongoing)"    }
+      ]
+    }
+  ],
+  "unlock": {
+    "ayah": {
+      "arabic": "الرَّحْمَٰنِ الرَّحِيمِ",
+      "transliteration": "Ar-Rahmani Ar-Raheem"
+    },
+    "insight": "Rahman and Raheem in Bismillah are both from root ر-ح-م. But different patterns. Rahman = overwhelmingly, universally merciful (like a downpour). Raheem = continuously, personally merciful (like a flowing stream). Same root. Different patterns. Different shades of mercy. You just understood a theological distinction you've been reciting daily."
+  },
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "question": "How many consonants does a typical Arabic root have?",
+      "options": ["2", "3", "4", "5"],
+      "correctIndex": 1,
+      "explanation": "Three consonants form the root. Patterns of vowels and extra letters wrap around them to make different words."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "question": "كِتَاب (book) and كَتَبَ (he wrote) share which root?",
+      "options": ["ب - ت - ك", "ك - ب - ت", "ك - ت - ب", "ت - ك - ب"],
+      "correctIndex": 2,
+      "explanation": "The root is ك-ت-ب, relating to writing. The three letters appear in the same order in every word built from this root."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "question": "Rahman and Raheem both come from root ر-ح-م. What does this root relate to?",
+      "options": ["Power", "Knowledge", "Mercy", "Creation"],
+      "correctIndex": 2,
+      "explanation": "ر-ح-م is the root of mercy. Both names of Allah in Bismillah — Rahman and Raheem — are built from this one root."
+    }
+  ]
+}

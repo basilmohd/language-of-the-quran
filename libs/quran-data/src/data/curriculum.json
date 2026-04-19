@@ -3,146 +3,55 @@
     {
       "id": "level-1",
       "number": 1,
-      "title": "The Building Blocks (Ism)",
-      "description": "Learn the foundation of Quranic Arabic — nouns (Ism). Master the 4 noun properties: gender, number, definiteness, and grammatical case. Learn ~65 high-frequency Quranic nouns.",
+      "title": "The Three Families",
+      "tagline": "Every word in the Quran belongs to one of three families. Learn to see them.",
+      "icon": "🌱",
+      "description": "Before learning Arabic grammar, learn the map. Every single word in the Quran is one of three types — Ism, Fi'l, or Harf. Master the 3-letter root system and the detective mindset that unlocks everything else.",
+      "milestone": {
+        "badge": "The Detective",
+        "badgeIcon": "🔍",
+        "message": "You now see what most people miss their entire lives. Every word has a family. Every word has a role.",
+        "unlocksLevel": "level-2"
+      },
       "units": [
         {
           "id": "unit-1-1",
           "number": 1,
-          "title": "Your First Words",
+          "title": "The Map of Arabic",
+          "tagline": "Three types. Every word. Forever.",
+          "xpBonus": 25,
+          "badge": { "title": "Map Reader", "icon": "🗺️" },
+          "unlockedBy": null,
           "lessons": [
             {
               "id": "l1-u1-l1",
               "number": 1,
-              "title": "What is an Ism?",
+              "title": "Arabic Has Only Three Word Types",
+              "type": "concept",
               "xpReward": 10,
-              "contentHash": "lesson-1-v1"
+              "estimatedMinutes": 10,
+              "unlockedBy": null,
+              "contentHash": "w1-u1-l1-v1"
             },
             {
               "id": "l1-u1-l2",
               "number": 2,
-              "title": "Names of Allah",
-              "xpReward": 10,
-              "contentHash": "lesson-2-v1"
+              "title": "The 3-Letter Root System",
+              "type": "concept",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l1-u1-l1",
+              "contentHash": "w1-u1-l2-v1"
             },
             {
               "id": "l1-u1-l3",
               "number": 3,
-              "title": "Sky, Earth & Creation",
-              "xpReward": 10,
-              "contentHash": "lesson-3-v1"
-            }
-          ]
-        },
-        {
-          "id": "unit-1-2",
-          "number": 2,
-          "title": "Gender & Number",
-          "lessons": [
-            {
-              "id": "l1-u2-l1",
-              "number": 1,
-              "title": "Masculine and Feminine",
-              "xpReward": 10,
-              "contentHash": "lesson-4-v1"
-            },
-            {
-              "id": "l1-u2-l2",
-              "number": 2,
-              "title": "Singular, Dual, Plural",
-              "xpReward": 10,
-              "contentHash": "lesson-5-v1"
-            },
-            {
-              "id": "l1-u2-l3",
-              "number": 3,
-              "title": "Sound and Broken Plurals",
+              "title": "How to Read an Ayah Like a Detective",
+              "type": "application",
               "xpReward": 15,
-              "contentHash": "lesson-6-v1"
-            }
-          ]
-        },
-        {
-          "id": "unit-1-3",
-          "number": 3,
-          "title": "Definiteness",
-          "lessons": [
-            {
-              "id": "l1-u3-l1",
-              "number": 1,
-              "title": "Al — The Definite Article",
-              "xpReward": 10,
-              "contentHash": "lesson-7-v1"
-            },
-            {
-              "id": "l1-u3-l2",
-              "number": 2,
-              "title": "Sun and Moon Letters",
-              "xpReward": 15,
-              "contentHash": "lesson-8-v1"
-            },
-            {
-              "id": "l1-u3-l3",
-              "number": 3,
-              "title": "Proper Nouns in the Quran",
-              "xpReward": 10,
-              "contentHash": "lesson-9-v1"
-            }
-          ]
-        },
-        {
-          "id": "unit-1-4",
-          "number": 4,
-          "title": "Grammatical Case",
-          "lessons": [
-            {
-              "id": "l1-u4-l1",
-              "number": 1,
-              "title": "The Three Cases",
-              "xpReward": 15,
-              "contentHash": "lesson-10-v1"
-            },
-            {
-              "id": "l1-u4-l2",
-              "number": 2,
-              "title": "Case Endings on Ism",
-              "xpReward": 15,
-              "contentHash": "lesson-11-v1"
-            },
-            {
-              "id": "l1-u4-l3",
-              "number": 3,
-              "title": "Reading Cases in Ayahs",
-              "xpReward": 15,
-              "contentHash": "lesson-12-v1"
-            }
-          ]
-        },
-        {
-          "id": "unit-1-5",
-          "number": 5,
-          "title": "Idhafah",
-          "lessons": [
-            {
-              "id": "l1-u5-l1",
-              "number": 1,
-              "title": "The Possessive Construction",
-              "xpReward": 15,
-              "contentHash": "lesson-13-v1"
-            },
-            {
-              "id": "l1-u5-l2",
-              "number": 2,
-              "title": "Idhafah in Al-Fatiha",
-              "xpReward": 20,
-              "contentHash": "lesson-14-v1"
-            },
-            {
-              "id": "l1-u5-l3",
-              "number": 3,
-              "title": "Level 1 Review",
-              "xpReward": 25,
-              "contentHash": "lesson-15-v1"
+              "estimatedMinutes": 12,
+              "unlockedBy": "l1-u1-l2",
+              "contentHash": "w1-u1-l3-v1"
             }
           ]
         }
@@ -151,37 +60,1419 @@
     {
       "id": "level-2",
       "number": 2,
-      "title": "The Engine (Fi'l)",
-      "description": "Unlock the power of Arabic verbs. Learn past and present conjugation, attached pronouns, and ~55 high-frequency verb roots.",
-      "units": []
+      "title": "The World of Ism",
+      "tagline": "Half the Quran lives here. Master the noun and you master the foundation.",
+      "icon": "🏛️",
+      "description": "Learn the foundation of Quranic Arabic — nouns (Ism). Master gender, number, definiteness, grammatical case, and Idhafah. Describe nouns, connect them with pronouns, and read your first full sentences from Al-Fatiha.",
+      "milestone": {
+        "badge": "The Fatiha Key",
+        "badgeIcon": "🗝️",
+        "message": "You can now parse every word of Al-Fatiha with full grammatical understanding.",
+        "surahUnlock": "al-fatiha",
+        "unlocksLevel": "level-3"
+      },
+      "units": [
+        {
+          "id": "unit-2-1",
+          "number": 1,
+          "title": "What is an Ism?",
+          "tagline": "Recognizing the noun — the first half of the Quran",
+          "xpBonus": 15,
+          "badge": { "title": "Noun Spotter", "icon": "👁️" },
+          "unlockedBy": "level-1",
+          "lessons": [
+            {
+              "id": "l2-u1-l1",
+              "number": 1,
+              "title": "What is an Ism?",
+              "type": "concept",
+              "xpReward": 10,
+              "estimatedMinutes": 12,
+              "unlockedBy": "level-1",
+              "contentHash": "lesson-1-v1"
+            },
+            {
+              "id": "l2-u1-l2",
+              "number": 2,
+              "title": "Names of Allah",
+              "type": "vocabulary",
+              "xpReward": 10,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u1-l1",
+              "contentHash": "lesson-2-v1"
+            },
+            {
+              "id": "l2-u1-l3",
+              "number": 3,
+              "title": "Sky, Earth & Creation",
+              "type": "vocabulary",
+              "xpReward": 10,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u1-l2",
+              "contentHash": "lesson-3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-2",
+          "number": 2,
+          "title": "Definite & Indefinite",
+          "tagline": "The difference between 'a' and 'the' — and why it matters in the Quran",
+          "xpBonus": 20,
+          "badge": { "title": "The/A Master", "icon": "⚖️" },
+          "unlockedBy": "unit-2-1",
+          "lessons": [
+            {
+              "id": "l2-u2-l1",
+              "number": 1,
+              "title": "Al — The Definite Article",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "unit-2-1",
+              "contentHash": "lesson-7-v1"
+            },
+            {
+              "id": "l2-u2-l2",
+              "number": 2,
+              "title": "Sun and Moon Letters",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u2-l1",
+              "contentHash": "lesson-8-v1"
+            },
+            {
+              "id": "l2-u2-l3",
+              "number": 3,
+              "title": "Proper Nouns in the Quran",
+              "type": "application",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "l2-u2-l2",
+              "contentHash": "lesson-9-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-3",
+          "number": 3,
+          "title": "Masculine & Feminine",
+          "tagline": "Arabic nouns have gender — and the Quran uses it with precision",
+          "xpBonus": 15,
+          "badge": { "title": "Gender Aware", "icon": "🔡" },
+          "unlockedBy": "unit-2-2",
+          "lessons": [
+            {
+              "id": "l2-u3-l1",
+              "number": 1,
+              "title": "Masculine and Feminine",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "unit-2-2",
+              "contentHash": "lesson-4-v1"
+            },
+            {
+              "id": "l2-u3-l2",
+              "number": 2,
+              "title": "The Ta Marbuta — Feminine Marker",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "l2-u3-l1",
+              "contentHash": "w2-u3-l2-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-4",
+          "number": 4,
+          "title": "Singular, Dual & Plural",
+          "tagline": "Arabic has three quantities — and the Quran uses each for a reason",
+          "xpBonus": 20,
+          "badge": { "title": "Counter", "icon": "🔢" },
+          "unlockedBy": "unit-2-3",
+          "lessons": [
+            {
+              "id": "l2-u4-l1",
+              "number": 1,
+              "title": "Singular, Dual, Plural",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-2-3",
+              "contentHash": "lesson-5-v1"
+            },
+            {
+              "id": "l2-u4-l2",
+              "number": 2,
+              "title": "Sound and Broken Plurals",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u4-l1",
+              "contentHash": "lesson-6-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-5",
+          "number": 5,
+          "title": "Grammatical Case",
+          "tagline": "The endings change the meaning — case is how Arabic shows a word's role",
+          "xpBonus": 25,
+          "badge": { "title": "Case Reader", "icon": "🏷️" },
+          "unlockedBy": "unit-2-4",
+          "lessons": [
+            {
+              "id": "l2-u5-l1",
+              "number": 1,
+              "title": "The Three Cases",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-2-4",
+              "contentHash": "lesson-10-v1"
+            },
+            {
+              "id": "l2-u5-l2",
+              "number": 2,
+              "title": "Case Endings on Ism",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u5-l1",
+              "contentHash": "lesson-11-v1"
+            },
+            {
+              "id": "l2-u5-l3",
+              "number": 3,
+              "title": "Reading Cases in Ayahs",
+              "type": "application",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u5-l2",
+              "contentHash": "lesson-12-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-6",
+          "number": 6,
+          "title": "Idaafa — The Possessive Construction",
+          "tagline": "The possessive — one of the most common patterns in the Quran",
+          "xpBonus": 25,
+          "badge": { "title": "Possessive", "icon": "🔗" },
+          "unlockedBy": "unit-2-5",
+          "lessons": [
+            {
+              "id": "l2-u6-l1",
+              "number": 1,
+              "title": "The Possessive Construction",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-2-5",
+              "contentHash": "lesson-13-v1"
+            },
+            {
+              "id": "l2-u6-l2",
+              "number": 2,
+              "title": "Idhafah in Al-Fatiha",
+              "type": "application",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l2-u6-l1",
+              "contentHash": "lesson-14-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-7",
+          "number": 7,
+          "title": "Na't — Adjective-Noun Agreement",
+          "tagline": "Descriptions always follow the noun — and must match it in every property",
+          "xpBonus": 25,
+          "badge": { "title": "The Describer", "icon": "🎨" },
+          "unlockedBy": "unit-2-6",
+          "lessons": [
+            {
+              "id": "l2-u7-l1",
+              "number": 1,
+              "title": "Adjective-Noun Agreement",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-2-6",
+              "contentHash": "l1-u6-l1-v1"
+            },
+            {
+              "id": "l2-u7-l2",
+              "number": 2,
+              "title": "Reading Na't in Quranic Ayahs",
+              "type": "application",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u7-l1",
+              "contentHash": "w2-u7-l2-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-8",
+          "number": 8,
+          "title": "Mubtada & Khabar — The Verbless Sentence",
+          "tagline": "An Arabic sentence needs no verb. Subject + Predicate = complete.",
+          "xpBonus": 25,
+          "badge": { "title": "Sentence Builder", "icon": "🏗️" },
+          "unlockedBy": "unit-2-7",
+          "lessons": [
+            {
+              "id": "l2-u8-l1",
+              "number": 1,
+              "title": "The Nominal Sentence",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-2-7",
+              "contentHash": "l1-u8-l1-v1"
+            },
+            {
+              "id": "l2-u8-l2",
+              "number": 2,
+              "title": "\"HE HAS\" and \"THERE IS\"",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u8-l1",
+              "contentHash": "l1-u8-l2-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-9",
+          "number": 9,
+          "title": "Connector Letters",
+          "tagline": "و، ف، ثم، أو — the small letters that chain meaning across the Quran",
+          "xpBonus": 20,
+          "badge": { "title": "Chain Reader", "icon": "⛓️" },
+          "unlockedBy": "unit-2-8",
+          "lessons": [
+            {
+              "id": "l2-u9-l1",
+              "number": 1,
+              "title": "و، ف، ثم، أو — Meanings and Usage",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "unit-2-8",
+              "contentHash": "l1-u7-l1-v1"
+            },
+            {
+              "id": "l2-u9-l2",
+              "number": 2,
+              "title": "Reading Connector Chains in Ayahs",
+              "type": "application",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u9-l1",
+              "contentHash": "l1-u7-l2-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-10",
+          "number": 10,
+          "title": "Pronouns — Detached",
+          "tagline": "هو، هي، أنا، نحن — the words that point",
+          "xpBonus": 20,
+          "badge": { "title": "The Pointer", "icon": "👆" },
+          "unlockedBy": "unit-2-9",
+          "lessons": [
+            {
+              "id": "l2-u10-l1",
+              "number": 1,
+              "title": "The Detached Pronouns",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-2-9",
+              "contentHash": "w2-u10-l1-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-11",
+          "number": 11,
+          "title": "Pronouns — Attached",
+          "tagline": "ـه ـك ـنا — tiny suffixes that transform meaning",
+          "xpBonus": 25,
+          "badge": { "title": "Attached", "icon": "🧲" },
+          "unlockedBy": "unit-2-10",
+          "lessons": [
+            {
+              "id": "l2-u11-l1",
+              "number": 1,
+              "title": "Pronouns as Suffixes on Nouns",
+              "type": "grammar",
+              "xpReward": 25,
+              "estimatedMinutes": 15,
+              "unlockedBy": "unit-2-10",
+              "contentHash": "w2-u11-l1-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-12",
+          "number": 12,
+          "title": "Ism Ishara — Demonstratives",
+          "tagline": "This and That — but in Arabic, with theological weight",
+          "xpBonus": 20,
+          "badge": { "title": "Pointer of Reverence", "icon": "☝️" },
+          "unlockedBy": "unit-2-11",
+          "lessons": [
+            {
+              "id": "l2-u12-l1",
+              "number": 1,
+              "title": "Demonstrative Pronouns",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-2-11",
+              "contentHash": "l1-u6-l2-v1"
+            },
+            {
+              "id": "l2-u12-l2",
+              "number": 2,
+              "title": "Pointing in the Quran",
+              "type": "application",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l2-u12-l1",
+              "contentHash": "l1-u6-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-13",
+          "number": 13,
+          "title": "Ism Mawsool — Relative Pronouns",
+          "tagline": "الذي and التي — the words that connect clauses",
+          "xpBonus": 30,
+          "badge": { "title": "The Connector", "icon": "🔀" },
+          "unlockedBy": "unit-2-12",
+          "lessons": [
+            {
+              "id": "l2-u13-l1",
+              "number": 1,
+              "title": "الذي — Who / Which / That",
+              "type": "grammar",
+              "xpReward": 25,
+              "estimatedMinutes": 15,
+              "unlockedBy": "unit-2-12",
+              "contentHash": "w2-u13-l1-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-2-14",
+          "number": 14,
+          "title": "World 2 Review",
+          "tagline": "Parse Al-Fatiha. You've earned it.",
+          "xpBonus": 30,
+          "badge": { "title": "Fatiha Scholar", "icon": "📖" },
+          "unlockedBy": "unit-2-13",
+          "lessons": [
+            {
+              "id": "l2-u14-l1",
+              "number": 1,
+              "title": "Level 2 Review",
+              "type": "review",
+              "xpReward": 25,
+              "estimatedMinutes": 15,
+              "unlockedBy": "unit-2-13",
+              "contentHash": "l1-u8-l3-v1"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "level-3",
       "number": 3,
       "title": "The Connectors (Harf)",
-      "description": "Master the particles that glue Arabic sentences together — prepositions, negation, and emphasis.",
-      "units": []
+      "tagline": "The small words that hold the Quran together.",
+      "icon": "🔩",
+      "description": "Master the particles that glue Quranic Arabic together — prepositions, negation, and accusative particles. These small words carry enormous meaning.",
+      "milestone": {
+        "badge": "The Particle Hunter",
+        "badgeIcon": "🎯",
+        "message": "You can now read and parse every particle in the Quran. The small words no longer slip past you.",
+        "unlocksLevel": "level-4"
+      },
+      "units": [
+        {
+          "id": "unit-3-1",
+          "number": 1,
+          "title": "Prepositions",
+          "tagline": "في، على، من، إلى — position and direction in the Quran",
+          "xpBonus": 20,
+          "badge": { "title": "Preposition Pro", "icon": "📍" },
+          "unlockedBy": "level-2",
+          "lessons": [
+            {
+              "id": "l3-u1-l1",
+              "number": 1,
+              "title": "The Preposition Family — في، على، من، إلى، عن",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "level-2",
+              "contentHash": "l2-u1-l1-v1"
+            },
+            {
+              "id": "l3-u1-l2",
+              "number": 2,
+              "title": "ب، ل، ك — The Attached Prepositions",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "l3-u1-l1",
+              "contentHash": "l2-u1-l2-v1"
+            },
+            {
+              "id": "l3-u1-l3",
+              "number": 3,
+              "title": "الجار والمجرور in Quranic Context",
+              "type": "application",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l3-u1-l2",
+              "contentHash": "l2-u1-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-3-2",
+          "number": 2,
+          "title": "Negation",
+          "tagline": "لا، ما، لم، لن — four words, four shades of 'no'",
+          "xpBonus": 20,
+          "badge": { "title": "The Negator", "icon": "🚫" },
+          "unlockedBy": "unit-3-1",
+          "lessons": [
+            {
+              "id": "l3-u2-l1",
+              "number": 1,
+              "title": "Negating with لا and ما",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "unit-3-1",
+              "contentHash": "l2-u2-l1-v1"
+            },
+            {
+              "id": "l3-u2-l2",
+              "number": 2,
+              "title": "Negating with لم and لن",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l3-u2-l1",
+              "contentHash": "l2-u2-l2-v1"
+            },
+            {
+              "id": "l3-u2-l3",
+              "number": 3,
+              "title": "Negation in Al-Fatiha and Short Surahs",
+              "type": "application",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l3-u2-l2",
+              "contentHash": "l2-u2-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-3-3",
+          "number": 3,
+          "title": "Accusative Particles",
+          "tagline": "إنَّ and sisters — words that change the shape of the sentence",
+          "xpBonus": 25,
+          "badge": { "title": "Particle Master", "icon": "⚗️" },
+          "unlockedBy": "unit-3-2",
+          "lessons": [
+            {
+              "id": "l3-u3-l1",
+              "number": 1,
+              "title": "إنَّ and أنَّ — Emphasis and Embedded Clauses",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-3-2",
+              "contentHash": "l2-u3-l1-v1"
+            },
+            {
+              "id": "l3-u3-l2",
+              "number": 2,
+              "title": "كأنَّ، لكنَّ، ليت، لعلَّ",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l3-u3-l1",
+              "contentHash": "l2-u3-l2-v1"
+            },
+            {
+              "id": "l3-u3-l3",
+              "number": 3,
+              "title": "Reading Accusative Particles in Ayahs",
+              "type": "application",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l3-u3-l2",
+              "contentHash": "l2-u3-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-3-4",
+          "number": 4,
+          "title": "Emphasis & Review",
+          "tagline": "إنَّ at the start of a sentence — the Quran's way of saying 'Listen closely'",
+          "xpBonus": 25,
+          "badge": { "title": "Harf Scholar", "icon": "🏅" },
+          "unlockedBy": "unit-3-3",
+          "lessons": [
+            {
+              "id": "l3-u4-l1",
+              "number": 1,
+              "title": "Emphasis Particles — إنَّ at the Start",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-3-3",
+              "contentHash": "l2-u4-l1-v1"
+            },
+            {
+              "id": "l3-u4-l2",
+              "number": 2,
+              "title": "Level 3 Review",
+              "type": "review",
+              "xpReward": 25,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l3-u4-l1",
+              "contentHash": "l2-u4-l2-v1"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "level-4",
       "number": 4,
-      "title": "The Root System (Sarf)",
-      "description": "Discover how 10 verb patterns multiply your vocabulary. Knowing one root unlocks dozens of words.",
-      "units": []
+      "title": "The Engine (Fi'l)",
+      "tagline": "The verb is where the Quran comes alive.",
+      "icon": "⚙️",
+      "description": "Unlock the power of Arabic verbs. Learn past and present conjugation, commands, passive voice, and كان & sisters — ~55 high-frequency Quranic verb roots.",
+      "milestone": {
+        "badge": "The Verb Engine",
+        "badgeIcon": "⚙️",
+        "message": "You can now read verbal sentences in the Quran. Every command, every past action, every ongoing reality — you see them.",
+        "unlocksLevel": "level-5"
+      },
+      "units": [
+        {
+          "id": "unit-4-1",
+          "number": 1,
+          "title": "Past Tense Verb",
+          "tagline": "The Quran tells stories — past tense is how it begins them",
+          "xpBonus": 15,
+          "badge": { "title": "Past Master", "icon": "⏮️" },
+          "unlockedBy": "level-3",
+          "lessons": [
+            {
+              "id": "l4-u1-l1",
+              "number": 1,
+              "title": "Introducing the Past Tense",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "level-3",
+              "contentHash": "l3-u1-l1-v1"
+            },
+            {
+              "id": "l4-u1-l2",
+              "number": 2,
+              "title": "The Doer — الفاعل",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "l4-u1-l1",
+              "contentHash": "l3-u1-l2-v1"
+            },
+            {
+              "id": "l4-u1-l3",
+              "number": 3,
+              "title": "The Object — المفعول به",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l4-u1-l2",
+              "contentHash": "l3-u1-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-4-2",
+          "number": 2,
+          "title": "Present Tense Verb",
+          "tagline": "Ongoing actions, ongoing realities — the present in the Quran is eternal",
+          "xpBonus": 20,
+          "badge": { "title": "Present Aware", "icon": "▶️" },
+          "unlockedBy": "unit-4-1",
+          "lessons": [
+            {
+              "id": "l4-u2-l1",
+              "number": 1,
+              "title": "Present and Future Conjugation",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "unit-4-1",
+              "contentHash": "l3-u2-l1-v1"
+            },
+            {
+              "id": "l4-u2-l2",
+              "number": 2,
+              "title": "الفعل المضارع with حروف",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l4-u2-l1",
+              "contentHash": "l3-u2-l2-v1"
+            },
+            {
+              "id": "l4-u2-l3",
+              "number": 3,
+              "title": "نون التوكيد — The Emphatic Nun",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l4-u2-l2",
+              "contentHash": "l3-u2-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-4-3",
+          "number": 3,
+          "title": "Commands & Prohibition",
+          "tagline": "The Quran commands and forbids — now you'll hear it",
+          "xpBonus": 15,
+          "badge": { "title": "Command Heard", "icon": "📢" },
+          "unlockedBy": "unit-4-2",
+          "lessons": [
+            {
+              "id": "l4-u3-l1",
+              "number": 1,
+              "title": "The Command — الأمر",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "unit-4-2",
+              "contentHash": "l3-u3-l1-v1"
+            },
+            {
+              "id": "l4-u3-l2",
+              "number": 2,
+              "title": "Prohibition — النهي",
+              "type": "grammar",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "l4-u3-l1",
+              "contentHash": "l3-u3-l2-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-4-4",
+          "number": 4,
+          "title": "Passive Voice",
+          "tagline": "When the doer is hidden — the Quran's rhetorical power",
+          "xpBonus": 25,
+          "badge": { "title": "Passive Reader", "icon": "🔄" },
+          "unlockedBy": "unit-4-3",
+          "lessons": [
+            {
+              "id": "l4-u4-l1",
+              "number": 1,
+              "title": "Passive Voice Introduction",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-4-3",
+              "contentHash": "l3-u4-l1-v1"
+            },
+            {
+              "id": "l4-u4-l2",
+              "number": 2,
+              "title": "Passive Sentence Structure — نائب الفاعل",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l4-u4-l1",
+              "contentHash": "l3-u4-l2-v1"
+            },
+            {
+              "id": "l4-u4-l3",
+              "number": 3,
+              "title": "Rhetorical Use of Passive in the Quran",
+              "type": "application",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l4-u4-l2",
+              "contentHash": "l3-u4-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-4-5",
+          "number": 5,
+          "title": "كان and Sisters",
+          "tagline": "كان changes the sentence — it changes time itself",
+          "xpBonus": 25,
+          "badge": { "title": "Time Traveler", "icon": "🕰️" },
+          "unlockedBy": "unit-4-4",
+          "lessons": [
+            {
+              "id": "l4-u5-l1",
+              "number": 1,
+              "title": "كان — Sentence Structure",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-4-4",
+              "contentHash": "l3-u5-l1-v1"
+            },
+            {
+              "id": "l4-u5-l2",
+              "number": 2,
+              "title": "Sisters of كان — أصبح، صار، ليس",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l4-u5-l1",
+              "contentHash": "l3-u5-l2-v1"
+            },
+            {
+              "id": "l4-u5-l3",
+              "number": 3,
+              "title": "Negating and Translating كان Sentences",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l4-u5-l2",
+              "contentHash": "l3-u5-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-4-6",
+          "number": 6,
+          "title": "Verbal Sentences Come Alive",
+          "tagline": "الجملة الفعلية — the sentence structure of stories and commands",
+          "xpBonus": 30,
+          "badge": { "title": "Verb Scholar", "icon": "🏅" },
+          "unlockedBy": "unit-4-5",
+          "lessons": [
+            {
+              "id": "l4-u6-l1",
+              "number": 1,
+              "title": "الجملة الفعلية — Full Verbal Sentence",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "unit-4-5",
+              "contentHash": "l3-u6-l1-v1"
+            },
+            {
+              "id": "l4-u6-l2",
+              "number": 2,
+              "title": "Level 4 Review",
+              "type": "review",
+              "xpReward": 25,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l4-u6-l1",
+              "contentHash": "l3-u6-l2-v1"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "level-5",
       "number": 5,
-      "title": "Sentence Anatomy (Nahw)",
-      "description": "Learn how Arabic sentences are built — nominal vs verbal sentences, word order, and I'rab.",
-      "units": []
+      "title": "The Root System (Sarf)",
+      "tagline": "One root. Dozens of words. The skeleton key of Arabic.",
+      "icon": "🌳",
+      "description": "Discover how 10 verb patterns multiply your vocabulary. Knowing one root unlocks dozens of words — the Quran's ~350 high-frequency words become far more reachable.",
+      "milestone": {
+        "badge": "The Root Reader",
+        "badgeIcon": "🌳",
+        "message": "You can now recognize word families across the Quran. One root — a whole universe of meaning.",
+        "unlocksLevel": "level-6"
+      },
+      "units": [
+        {
+          "id": "unit-5-1",
+          "number": 1,
+          "title": "What is Sarf?",
+          "tagline": "Every Quranic word is a root in disguise.",
+          "xpBonus": 20,
+          "badge": { "title": "Root Hunter", "icon": "🌿" },
+          "unlockedBy": "level-4",
+          "lessons": [
+            {
+              "id": "l5-u1-l1",
+              "number": 1,
+              "title": "Sarf — The Science of Word Shape",
+              "type": "concept",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "level-4",
+              "contentHash": "l5-u1-l1-v1"
+            },
+            {
+              "id": "l5-u1-l2",
+              "number": 2,
+              "title": "One Root, Many Words — كَتَبَ in the Quran",
+              "type": "concept",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u1-l1",
+              "contentHash": "l5-u1-l2-v1"
+            },
+            {
+              "id": "l5-u1-l3",
+              "number": 3,
+              "title": "Spotting Root Families in Ayahs",
+              "type": "application",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u1-l2",
+              "contentHash": "l5-u1-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-5-2",
+          "number": 2,
+          "title": "The Bare Trilateral — ثلاثي مجرد",
+          "tagline": "The base form. Everything else is built on this.",
+          "xpBonus": 25,
+          "badge": { "title": "Base Former", "icon": "⚖️" },
+          "unlockedBy": "unit-5-1",
+          "lessons": [
+            {
+              "id": "l5-u2-l1",
+              "number": 1,
+              "title": "The 6 Verb Scales — الأوزان الستة",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-5-1",
+              "contentHash": "l5-u2-l1-v1"
+            },
+            {
+              "id": "l5-u2-l2",
+              "number": 2,
+              "title": "Past, Present & Verbal Noun Patterns",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u2-l1",
+              "contentHash": "l5-u2-l2-v1"
+            },
+            {
+              "id": "l5-u2-l3",
+              "number": 3,
+              "title": "High-Frequency ثلاثي مجرد Roots in the Quran",
+              "type": "vocabulary",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u2-l2",
+              "contentHash": "l5-u2-l3-v1"
+            },
+            {
+              "id": "l5-u2-l4",
+              "number": 4,
+              "title": "Reading Bare Trilateral Words in Ayahs",
+              "type": "application",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l5-u2-l3",
+              "contentHash": "l5-u2-l4-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-5-3",
+          "number": 3,
+          "title": "The Augmented Trilateral — ثلاثي مزيد فيه",
+          "tagline": "Add a letter. Change the meaning. Multiply your vocabulary.",
+          "xpBonus": 30,
+          "badge": { "title": "Pattern Master", "icon": "🔢" },
+          "unlockedBy": "unit-5-2",
+          "lessons": [
+            {
+              "id": "l5-u3-l1",
+              "number": 1,
+              "title": "How Augmentation Changes Meaning",
+              "type": "concept",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "unit-5-2",
+              "contentHash": "l5-u3-l1-v1"
+            },
+            {
+              "id": "l5-u3-l2",
+              "number": 2,
+              "title": "Forms II–IV — فَعَّلَ، فَاعَلَ، أَفْعَلَ",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l5-u3-l1",
+              "contentHash": "l5-u3-l2-v1"
+            },
+            {
+              "id": "l5-u3-l3",
+              "number": 3,
+              "title": "Forms V–X — تَفَعَّلَ to اسْتَفْعَلَ",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l5-u3-l2",
+              "contentHash": "l5-u3-l3-v1"
+            },
+            {
+              "id": "l5-u3-l4",
+              "number": 4,
+              "title": "Augmented Verb Families in the Quran",
+              "type": "application",
+              "xpReward": 25,
+              "estimatedMinutes": 18,
+              "unlockedBy": "l5-u3-l3",
+              "contentHash": "l5-u3-l4-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-5-4",
+          "number": 4,
+          "title": "مهموز & مثال — Hamzated & Initial Weak",
+          "tagline": "When the root itself is fragile — Hamza and Waw.",
+          "xpBonus": 25,
+          "badge": { "title": "Hamza Handler", "icon": "🔤" },
+          "unlockedBy": "unit-5-3",
+          "lessons": [
+            {
+              "id": "l5-u4-l1",
+              "number": 1,
+              "title": "Why Some Verbs Are Irregular",
+              "type": "concept",
+              "xpReward": 10,
+              "estimatedMinutes": 10,
+              "unlockedBy": "unit-5-3",
+              "contentHash": "l5-u4-l1-v1"
+            },
+            {
+              "id": "l5-u4-l2",
+              "number": 2,
+              "title": "مهموز — Verbs with Hamza as a Root Letter",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u4-l1",
+              "contentHash": "l5-u4-l2-v1"
+            },
+            {
+              "id": "l5-u4-l3",
+              "number": 3,
+              "title": "مثال — When the First Letter is Weak",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u4-l2",
+              "contentHash": "l5-u4-l3-v1"
+            },
+            {
+              "id": "l5-u4-l4",
+              "number": 4,
+              "title": "مهموز & مثال in Quranic Ayahs",
+              "type": "application",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l5-u4-l3",
+              "contentHash": "l5-u4-l4-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-5-5",
+          "number": 5,
+          "title": "مضاعف & أجوف — Doubled & Hollow",
+          "tagline": "The middle matters — contraction and elision.",
+          "xpBonus": 25,
+          "badge": { "title": "Hollow Reader", "icon": "🕳️" },
+          "unlockedBy": "unit-5-4",
+          "lessons": [
+            {
+              "id": "l5-u5-l1",
+              "number": 1,
+              "title": "مضاعف — The Doubled Root Letter",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-5-4",
+              "contentHash": "l5-u5-l1-v1"
+            },
+            {
+              "id": "l5-u5-l2",
+              "number": 2,
+              "title": "أجوف — The Hollow Verb",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u5-l1",
+              "contentHash": "l5-u5-l2-v1"
+            },
+            {
+              "id": "l5-u5-l3",
+              "number": 3,
+              "title": "Doubled & Hollow Verbs Across the Quran",
+              "type": "application",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l5-u5-l2",
+              "contentHash": "l5-u5-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-5-6",
+          "number": 6,
+          "title": "ناقص & لفيف — Deficient & Doubly Weak",
+          "tagline": "When the ending changes everything.",
+          "xpBonus": 25,
+          "badge": { "title": "Weak Ender", "icon": "🍂" },
+          "unlockedBy": "unit-5-5",
+          "lessons": [
+            {
+              "id": "l5-u6-l1",
+              "number": 1,
+              "title": "ناقص — Verbs with a Weak Final Letter",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-5-5",
+              "contentHash": "l5-u6-l1-v1"
+            },
+            {
+              "id": "l5-u6-l2",
+              "number": 2,
+              "title": "لفيف — Doubly Weak Verbs",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u6-l1",
+              "contentHash": "l5-u6-l2-v1"
+            },
+            {
+              "id": "l5-u6-l3",
+              "number": 3,
+              "title": "Weak Verb Endings in Recitation",
+              "type": "application",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l5-u6-l2",
+              "contentHash": "l5-u6-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-5-7",
+          "number": 7,
+          "title": "Sarf Word Families & الرباعي",
+          "tagline": "Beyond verbs — the full word family from one root.",
+          "xpBonus": 30,
+          "badge": { "title": "Word Family", "icon": "🌳" },
+          "unlockedBy": "unit-5-6",
+          "lessons": [
+            {
+              "id": "l5-u7-l1",
+              "number": 1,
+              "title": "الفعل الرباعي — Four-Letter Roots",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-5-6",
+              "contentHash": "l5-u7-l1-v1"
+            },
+            {
+              "id": "l5-u7-l2",
+              "number": 2,
+              "title": "المصدر — Verbal Nouns",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l5-u7-l1",
+              "contentHash": "l5-u7-l2-v1"
+            },
+            {
+              "id": "l5-u7-l3",
+              "number": 3,
+              "title": "اسم الفاعل & اسم المفعول — Participles",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l5-u7-l2",
+              "contentHash": "l5-u7-l3-v1"
+            },
+            {
+              "id": "l5-u7-l4",
+              "number": 4,
+              "title": "Sarf Word Families in the Quran",
+              "type": "application",
+              "xpReward": 25,
+              "estimatedMinutes": 18,
+              "unlockedBy": "l5-u7-l3",
+              "contentHash": "l5-u7-l4-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-5-8",
+          "number": 8,
+          "title": "Plural Patterns & Capstone",
+          "tagline": "Broken plurals are Sarf patterns in disguise.",
+          "xpBonus": 35,
+          "badge": { "title": "Sarf Scholar", "icon": "🏅" },
+          "unlockedBy": "unit-5-7",
+          "lessons": [
+            {
+              "id": "l5-u8-l1",
+              "number": 1,
+              "title": "Broken Plural Patterns — أوزان الجمع",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-5-7",
+              "contentHash": "l5-u8-l1-v1"
+            },
+            {
+              "id": "l5-u8-l2",
+              "number": 2,
+              "title": "The 10 Most Common Plural Patterns in the Quran",
+              "type": "vocabulary",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l5-u8-l1",
+              "contentHash": "l5-u8-l2-v1"
+            },
+            {
+              "id": "l5-u8-l3",
+              "number": 3,
+              "title": "Level 5 Capstone Review",
+              "type": "review",
+              "xpReward": 30,
+              "estimatedMinutes": 20,
+              "unlockedBy": "l5-u8-l2",
+              "contentHash": "l5-u8-l3-v1"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "level-6",
       "number": 6,
-      "title": "Contextual Reading",
-      "description": "Read and understand full Quranic passages. Discover the rhetorical beauty of the Quran.",
-      "units": []
+      "title": "Sentence Anatomy (Nahw)",
+      "tagline": "Parse the Quran's most complex constructions with full grammatical clarity.",
+      "icon": "🔬",
+      "description": "Master complex Arabic sentence structures — abnormal word order, full I'rab labeling, compound اسم with أنْ/أنَّ, conditional sentences, and full Quranic passage comprehension.",
+      "milestone": {
+        "badge": "Companion of the Book",
+        "badgeIcon": "📚",
+        "message": "You have completed the Language of the Quran. You are no longer a reciter — you are a reader.",
+        "unlocksLevel": null
+      },
+      "units": [
+        {
+          "id": "unit-6-1",
+          "number": 1,
+          "title": "Abnormal Sentence Structures",
+          "tagline": "When word order flips — the Quran inverts for emphasis",
+          "xpBonus": 20,
+          "badge": { "title": "Inversion Reader", "icon": "🔃" },
+          "unlockedBy": "level-5",
+          "lessons": [
+            {
+              "id": "l6-u1-l1",
+              "number": 1,
+              "title": "Fronted Predicate — خبر مقدم",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "level-5",
+              "contentHash": "l5-u1-l1-v1"
+            },
+            {
+              "id": "l6-u1-l2",
+              "number": 2,
+              "title": "Fronted Object — Verb-First Inversions",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l6-u1-l1",
+              "contentHash": "l5-u1-l2-v1"
+            },
+            {
+              "id": "l6-u1-l3",
+              "number": 3,
+              "title": "Distinguishing أسماء from أفعال",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l6-u1-l2",
+              "contentHash": "l5-u1-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-6-2",
+          "number": 2,
+          "title": "Full I'rab Labeling",
+          "tagline": "إعراب — the complete grammatical analysis of every word",
+          "xpBonus": 25,
+          "badge": { "title": "I'rab Expert", "icon": "🏷️" },
+          "unlockedBy": "unit-6-1",
+          "lessons": [
+            {
+              "id": "l6-u2-l1",
+              "number": 1,
+              "title": "إعراب الجملة الاسمية — Nominal Sentence",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-6-1",
+              "contentHash": "l5-u2-l1-v1"
+            },
+            {
+              "id": "l6-u2-l2",
+              "number": 2,
+              "title": "إعراب الجملة الفعلية — Verbal Sentence",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l6-u2-l1",
+              "contentHash": "l5-u2-l2-v1"
+            },
+            {
+              "id": "l6-u2-l3",
+              "number": 3,
+              "title": "Parsing Full Ayahs",
+              "type": "application",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l6-u2-l2",
+              "contentHash": "l5-u2-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-6-3",
+          "number": 3,
+          "title": "Compound اسم",
+          "tagline": "أنْ and أنَّ — when a whole sentence becomes a noun",
+          "xpBonus": 25,
+          "badge": { "title": "Clause Builder", "icon": "🧩" },
+          "unlockedBy": "unit-6-2",
+          "lessons": [
+            {
+              "id": "l6-u3-l1",
+              "number": 1,
+              "title": "أنْ — The Verbal Noun Maker",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-6-2",
+              "contentHash": "l5-u3-l1-v1"
+            },
+            {
+              "id": "l6-u3-l2",
+              "number": 2,
+              "title": "أنَّ — The Embedded Nominal Sentence",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "l6-u3-l1",
+              "contentHash": "l5-u3-l2-v1"
+            },
+            {
+              "id": "l6-u3-l3",
+              "number": 3,
+              "title": "Other Tools Creating Compound مضاف إليه",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l6-u3-l2",
+              "contentHash": "l5-u3-l3-v1"
+            }
+          ]
+        },
+        {
+          "id": "unit-6-4",
+          "number": 4,
+          "title": "Complex Sentences",
+          "tagline": "Relative clauses, conditional sentences, and full passage reading",
+          "xpBonus": 35,
+          "badge": { "title": "Nahw Master", "icon": "🎓" },
+          "unlockedBy": "unit-6-3",
+          "lessons": [
+            {
+              "id": "l6-u4-l1",
+              "number": 1,
+              "title": "Relative Clauses — الجملة الوصفية",
+              "type": "grammar",
+              "xpReward": 15,
+              "estimatedMinutes": 12,
+              "unlockedBy": "unit-6-3",
+              "contentHash": "l5-u4-l1-v1"
+            },
+            {
+              "id": "l6-u4-l2",
+              "number": 2,
+              "title": "Conditional Sentences — إنْ، إذا، لو",
+              "type": "grammar",
+              "xpReward": 20,
+              "estimatedMinutes": 15,
+              "unlockedBy": "l6-u4-l1",
+              "contentHash": "l5-u4-l2-v1"
+            },
+            {
+              "id": "l6-u4-l3",
+              "number": 3,
+              "title": "Level 6 Review",
+              "type": "review",
+              "xpReward": 25,
+              "estimatedMinutes": 20,
+              "unlockedBy": "l6-u4-l2",
+              "contentHash": "l5-u4-l3-v1"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

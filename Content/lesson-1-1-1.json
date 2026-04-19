@@ -1,0 +1,102 @@
+{
+  "id": "lesson-1-1-1",
+  "unitId": "unit-1-1",
+  "worldId": "world-1",
+  "number": 1,
+  "title": "Arabic Has Only Three Word Types",
+  "type": "concept",
+  "xp": 10,
+  "estimatedMinutes": 10,
+  "hook": {
+    "ayah": {
+      "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "transliteration": "Bismillahir Rahmanir Raheem",
+      "meaning": "In the name of Allah, the Most Gracious, the Most Merciful"
+    },
+    "question": "You've said this thousands of times. It has 4 words. Can you tell what grammatical role each word plays? By the end of World 1 — you will."
+  },
+  "concept": {
+    "title": "The Three Families: Ism, Fi'l, Harf",
+    "body": "Every single word in the Arabic language — and therefore every word in the Quran — belongs to exactly one of three families. Not four. Not ten. Three. This is the entire map of Arabic.",
+    "families": [
+      {
+        "name": "Ism",
+        "arabic": "اسم",
+        "transliteration": "Ism",
+        "meaning": "Noun",
+        "description": "A person, place, thing, quality, or idea. About 50% of the Quran is Ism.",
+        "quickTest": "Can you put 'the' in front of it? → It's probably an Ism. 'The book', 'the mercy', 'the Lord'"
+      },
+      {
+        "name": "Fi'l",
+        "arabic": "فعل",
+        "transliteration": "Fi'l",
+        "meaning": "Verb",
+        "description": "An action or occurrence. Carries time — past, present, or future. About 30% of the Quran.",
+        "quickTest": "Does it describe something happening? → It's probably a Fi'l. 'He said', 'they believe', 'it was created'"
+      },
+      {
+        "name": "Harf",
+        "arabic": "حرف",
+        "transliteration": "Harf",
+        "meaning": "Particle",
+        "description": "Everything else. Prepositions, conjunctions, question words, negation. No meaning alone — only with other words.",
+        "quickTest": "Not a noun, not a verb? → It's a Harf. 'In', 'and', 'from', 'not', 'indeed'"
+      }
+    ]
+  },
+  "examples": [
+    { "arabic": "اللَّهُ",  "transliteration": "Allah",   "family": "Ism",  "reason": "A name. Names are always Ism."                        },
+    { "arabic": "خَلَقَ",  "transliteration": "Khalaqa", "family": "Fi'l", "reason": "An action in the past. He created."                   },
+    { "arabic": "فِي",     "transliteration": "Fee",     "family": "Harf", "reason": "A preposition meaning 'in'. Not a noun or verb."       },
+    { "arabic": "رَحْمَة", "transliteration": "Rahma",   "family": "Ism",  "reason": "A quality — mercy. You can say 'the mercy' → Ism."    },
+    { "arabic": "وَ",      "transliteration": "Wa",      "family": "Harf", "reason": "Connector meaning 'and'. No standalone meaning → Harf." }
+  ],
+  "unlock": {
+    "ayah": {
+      "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "transliteration": "Bismillahir Rahmanir Raheem"
+    },
+    "breakdown": [
+      { "word": "بِسْمِ",      "family": "Harf + Ism", "note": "بِ = particle (in/by) + اسم = name (Ism). Together: 'in the name of'" },
+      { "word": "اللَّهِ",    "family": "Ism",        "note": "The name of God. Always Ism."                                        },
+      { "word": "الرَّحْمَٰنِ","family": "Ism",        "note": "The Most Merciful — a quality/name of Allah. Ism."                  },
+      { "word": "الرَّحِيمِ", "family": "Ism",        "note": "The Ever Merciful — another quality/name. Ism."                     }
+    ],
+    "insight": "Bismillah is almost entirely Ism. Three names of Allah. You've been beginning with the names of God — now you know it grammatically."
+  },
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "question": "How many word types exist in Arabic?",
+      "options": ["Two", "Three", "Five", "Twelve"],
+      "correctIndex": 1,
+      "explanation": "Exactly three: Ism (noun), Fi'l (verb), Harf (particle). Every word in the Quran is one of these."
+    },
+    {
+      "id": "q2",
+      "type": "classify",
+      "question": "What family does اللَّه (Allah) belong to?",
+      "options": ["Ism", "Fi'l", "Harf"],
+      "correctIndex": 0,
+      "explanation": "Allah is a name — and names are always Ism."
+    },
+    {
+      "id": "q3",
+      "type": "classify",
+      "question": "What family does وَ (and) belong to?",
+      "options": ["Ism", "Fi'l", "Harf"],
+      "correctIndex": 2,
+      "explanation": "Connectors like 'and' are Harf — they connect other words and have no standalone meaning."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "question": "Roughly what percentage of the Quran is made of Ism?",
+      "options": ["10%", "30%", "50%", "80%"],
+      "correctIndex": 2,
+      "explanation": "About 50% of Quranic words are Ism. This is why World 2 — the world of Ism — is the most important world in this course."
+    }
+  ]
+}
