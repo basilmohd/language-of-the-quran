@@ -67,34 +67,34 @@
     },
     {
       "type": "learn",
-      "wordId": "word-rahma",
-      "arabic": "رَحْمَة",
-      "transliteration": "raḥma",
-      "meaning": "mercy / compassion",
-      "rootArabic": "ر ح م",
-      "rootMeaning": "mercy, womb, compassion",
-      "frequencyInQuran": 79,
-      "specialNote": "Root: ر-ح-م (r-h-m) = mercy. رَحْمَة (mercy), رَحْمَٰن (overwhelmingly merciful), رَحِيم (continuously merciful). Two names of Allah in Bismillah — both from the same root.",
+      "wordId": "word-salam",
+      "arabic": "سَلَام",
+      "transliteration": "salām",
+      "meaning": "peace",
+      "rootArabic": "س ل م",
+      "rootMeaning": "peace, wholeness, submission",
+      "frequencyInQuran": 42,
+      "specialNote": "Root: س-ل-م (s-l-m) = peace, wholeness. سَلَام (peace), إِسْلَام (submission — entering into peace), مُسْلِم (one who submits). The word Islam itself comes from this root.",
       "ayahCards": [
         {
-          "surahName": "Al-Fatiha",
-          "surahNumber": 1,
-          "ayahNumber": 3,
-          "arabicText": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
-          "translation": "The Entirely Merciful, the Especially Merciful.",
-          "highlightedWordArabic": "ٱلرَّحْمَٰنِ"
+          "surahName": "Ar-Ra'd",
+          "surahNumber": 13,
+          "ayahNumber": 24,
+          "arabicText": "سَلَامٌ عَلَيْكُم بِمَا صَبَرْتُمْ",
+          "translation": "Peace be upon you for what you patiently endured.",
+          "highlightedWordArabic": "سَلَامٌ"
         }
       ]
     },
     {
       "id": "l1-u1-l2-ex3",
       "type": "root_recognition",
-      "arabic": "رَحْمَة",
-      "transliteration": "raḥma",
-      "choices": ["ر ح م", "ع ل م", "ك ت ب", "ح م د"],
+      "arabic": "سَلَام",
+      "transliteration": "salām",
+      "choices": ["س ل م", "ع ل م", "ك ت ب", "ح م د"],
       "correctIndex": 0,
-      "wordId": "word-rahma",
-      "rootId": "root-rhm"
+      "wordId": "word-salam",
+      "rootId": "root-slm"
     }
   ]
 }
